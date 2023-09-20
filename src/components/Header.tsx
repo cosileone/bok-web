@@ -57,7 +57,8 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Logo className="h-10 w-auto inline-block" />
+              <h1 className="text-gray-900 inline text-lg pl-6 font-semibold">BOK</h1>
             </Link>
             <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
@@ -104,22 +105,22 @@ export function Header() {
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/#features">
-                              Features
+                              Applicazione
                             </MobileNavLink>
-                            <MobileNavLink href="/#reviews">
-                              Reviews
-                            </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Pricing
-                            </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
+                            {/*<MobileNavLink href="/#reviews">*/}
+                            {/*  Reviews*/}
+                            {/*</MobileNavLink>*/}
+                            {/*<MobileNavLink href="/#pricing">*/}
+                            {/*  Pricing*/}
+                            {/*</MobileNavLink>*/}
+                            <MobileNavLink href="/#faqs">Domande frequenti</MobileNavLink>
                           </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                            <Button href="/login" variant="outline">
-                              Log in
-                            </Button>
-                            <Button href="#">Download the app</Button>
-                          </div>
+                          {/*<div className="mt-8 flex flex-col gap-4">*/}
+                          {/*  <Button href="/login" variant="outline">*/}
+                          {/*    Log in*/}
+                          {/*  </Button>*/}
+                          {/*  <Button href="#">Download the app</Button>*/}
+                          {/*</div>*/}
                         </Popover.Panel>
                       </>
                     )}
@@ -127,12 +128,12 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
-              Log in
-            </Button>
-            <Button href="#" className="hidden lg:block">
-              Download
-            </Button>
+            {/*<Button href="/login" variant="outline" className="hidden lg:block">*/}
+            {/*  Log in*/}
+            {/*</Button>*/}
+            {/*<Button href="#" className="hidden lg:block">*/}
+            {/*  Download*/}
+            {/*</Button>*/}
           </div>
         </Container>
       </nav>

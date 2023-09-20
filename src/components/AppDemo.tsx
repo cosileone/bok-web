@@ -177,9 +177,9 @@ export function AppDemo() {
         <div className="p-4">
           <div className="flex gap-2">
             <div className="text-xs leading-6 text-gray-500">
-              Tailwind Labs, Inc.
+              Totale Risparmiato
             </div>
-            <div className="text-sm text-gray-900">$CSS</div>
+            <div className="text-sm text-gray-900">€</div>
             <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">
               <path
                 d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"
@@ -195,12 +195,12 @@ export function AppDemo() {
               <div className="text-2xl tabular-nums tracking-tight text-gray-900">
                 {activeValue!.toFixed(2)}
               </div>
-              <div className="text-sm text-gray-900">USD</div>
+              <div className="text-sm text-gray-900">EUR</div>
               {percentageChange && (
                 <div
                   className={clsx(
                     'ml-auto text-sm tabular-nums tracking-tight',
-                    percentageChange >= 0 ? 'text-cyan-500' : 'text-gray-500',
+                    percentageChange >= 0 ? 'text-green-500' : 'text-gray-500',
                   )}
                 >
                   {`${
@@ -212,7 +212,7 @@ export function AppDemo() {
             <div className="mt-6 flex gap-4 text-xs text-gray-500">
               <div>1D</div>
               <div>5D</div>
-              <div className="font-semibold text-cyan-600">1M</div>
+              <div className="font-semibold text-blue-700">1M</div>
               <div>6M</div>
               <div>1Y</div>
               <div>5Y</div>
@@ -227,8 +227,8 @@ export function AppDemo() {
                 onChangeActivePointIndex={setActivePointIndex}
               />
             </div>
-            <div className="mt-4 rounded-lg bg-cyan-500 px-4 py-2 text-center text-sm font-semibold text-white">
-              Trade
+            <div className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-center text-sm font-semibold text-white">
+              Investire
             </div>
             <div className="mt-3 divide-y divide-gray-100 text-sm">
               <div className="flex justify-between py-1">

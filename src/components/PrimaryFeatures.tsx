@@ -37,23 +37,23 @@ interface CustomAnimationProps {
 
 const features = [
   {
-    name: 'Invite friends for better returns',
+    name: '🚀 Arrotondamenti Round-up',
     description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
+      'Investi il resto dei tuoi acquisti di tutti i giorni senza sforzo con la tua carta BOK personalizzabile',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Notifications on stock dips',
+    name: '🗣 Swear Jar',
     description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
+      '"Walk it like you talk it": Se spendi troppo in un negozio o un settore specifico paghi a te stesso il 10% di ogni acquisto sopra il limite',
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Invest what you want',
+    name: '💶 Competizioni e Pillole Finanziarie',
     description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
+      'Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o”bill of knowledge” sotto forma di reel.',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -217,7 +217,7 @@ function InviteScreen(props: ScreenProps) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">
             Invite person
           </div>
         </div>
@@ -313,7 +313,7 @@ function StocksScreen(props: ScreenProps) {
                   className={clsx(
                     'text-xs leading-5',
                     stock.change.startsWith('+')
-                      ? 'text-cyan-500'
+                      ? 'text-blue-600'
                       : 'text-gray-500',
                   )}
                 >
@@ -373,7 +373,7 @@ function InvestScreen(props: ScreenProps) {
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
+            <div className="rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">
               Buy shares
             </div>
           </div>
@@ -437,7 +437,7 @@ function FeaturesDesktop() {
                   {feature.name}
                 </Tab>
               </h3>
-              <p className="mt-2 text-sm text-gray-400">
+              <p className="mt-2 text-sm text-gray-200">
                 {feature.description}
               </p>
             </div>
@@ -535,7 +535,7 @@ function FeaturesMobile() {
                 <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-400">
+                <p className="mt-2 text-sm text-gray-200">
                   {feature.description}
                 </p>
               </div>
@@ -573,18 +573,15 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
+      className="bg-blue-800 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
+            Scopri le funzionalità di BOK Italia
           </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+          <p className="mt-2 text-lg text-gray-200">
+            Sblocca il potenziale delle nostre molteplici funzionalità e raggiungi la tua indipendenza finanziaria
           </p>
         </div>
       </Container>

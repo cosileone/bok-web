@@ -15,6 +15,7 @@ import logoForbes from '~/images/logos/forbes.svg'
 import logoHuffpost from '~/images/logos/huffpost.svg'
 import logoTechcrunch from '~/images/logos/techcrunch.svg'
 import logoWired from '~/images/logos/wired.svg'
+import NewsletterMiniForm from '~/components/NewsletterMiniForm';
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   const id = useId()
@@ -105,22 +106,22 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Invest at the perfect time.
+              BOK, L’app che rende l’indipendenza finanziaria un gioco da ragazzi
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              By leveraging insights from our network of industry insiders,
-              you’ll know exactly when to buy to maximize profit, and exactly
-              when to sell to avoid painful losses.
+              Raggiungi la tua indipendenza finanziaria con BOK, risparmia ed investi, creato dalla generazione Z per la Generazione Z
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <AppStoreLink />
-              <Button
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                variant="outline"
-              >
-                <PlayIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2.5">Watch the video</span>
-              </Button>
+              <NewsletterMiniForm />
+              {/* App Store Buttons */}
+              {/*<AppStoreLink />*/}
+              {/*<Button*/}
+              {/*  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"*/}
+              {/*  variant="outline"*/}
+              {/*>*/}
+              {/*  <PlayIcon className="h-6 w-6 flex-none" />*/}
+              {/*  <span className="ml-2.5">Watch the video</span>*/}
+              {/*</Button>*/}
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
@@ -131,30 +132,30 @@ export function Hero() {
               </PhoneFrame>
             </div>
           </div>
-          <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
-            <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
-              As featured in
-            </p>
-            <ul
-              role="list"
-              className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
-            >
-              {[
-                ['Forbes', logoForbes],
-                ['TechCrunch', logoTechcrunch],
-                ['Wired', logoWired],
-                ['CNN', logoCnn, 'hidden xl:block'],
-                ['BBC', logoBbc],
-                ['CBS', logoCbs],
-                ['Fast Company', logoFastCompany],
-                ['HuffPost', logoHuffpost, 'hidden xl:block'],
-              ].map(([name, logo, className]) => (
-                <li key={name as string} className={clsx('flex', className as string)}>
-                  <Image src={logo as string} alt={name as string} className="h-8" unoptimized />
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/*<div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">*/}
+          {/*  <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">*/}
+          {/*    As featured in*/}
+          {/*  </p>*/}
+          {/*  <ul*/}
+          {/*    role="list"*/}
+          {/*    className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"*/}
+          {/*  >*/}
+          {/*    {[*/}
+          {/*      ['Forbes', logoForbes],*/}
+          {/*      ['TechCrunch', logoTechcrunch],*/}
+          {/*      ['Wired', logoWired],*/}
+          {/*      ['CNN', logoCnn, 'hidden xl:block'],*/}
+          {/*      ['BBC', logoBbc],*/}
+          {/*      ['CBS', logoCbs],*/}
+          {/*      ['Fast Company', logoFastCompany],*/}
+          {/*      ['HuffPost', logoHuffpost, 'hidden xl:block'],*/}
+          {/*    ].map(([name, logo, className]) => (*/}
+          {/*      <li key={name as string} className={clsx('flex', className as string)}>*/}
+          {/*        <Image src={logo as string} alt={name as string} className="h-8" unoptimized />*/}
+          {/*      </li>*/}
+          {/*    ))}*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
         </div>
       </Container>
     </div>

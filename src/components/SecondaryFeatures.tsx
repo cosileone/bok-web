@@ -4,40 +4,40 @@ import { Container } from '~/components/Container'
 
 const features = [
   {
-    name: 'Invest any amount',
+    name: 'Pre-Iscriviti subito',
     description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
-    icon: DeviceArrowIcon,
-  },
-  {
-    name: 'Build a balanced portfolio',
-    description:
-      'Invest in different industries to find the most opportunities to win huge.',
+      'Se sei fra i primi 5000 e fai iscrivere 5 amici, vinci un premio fantastico',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Trade in real-time',
+    name: 'Il 1 Dicembre esce la app ufficiale',
     description:
-      'Get insider tips on big stock moves and act on them within seconds.',
+      'Fai il Log In e ordina la tua carta di debito BOK per cominciare subito',
     icon: DeviceClockIcon,
   },
   {
-    name: 'Profit from your network',
+    name: 'Ordina la carta',
     description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
+      'Una volta arrivata a casa, carica i tuoi primi soldi e comincia subito a risparmiare ed investire.',
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: 'Comincia ad utilizzare',
+    description:
+      'Ogni volta che farai un acquisto con la tua carta BOK potrai scegliere quanto e se mettere da parte il resto di ogni acquisto, che andrà direttamente sul tuo conto sulla nostra app. Potrai in ogni momento accedere ai tuoi soldi.',
     icon: DeviceListIcon,
   },
   {
-    name: 'Encrypted and anonymized',
+    name: 'Vinci Premi',
     description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
-    icon: DeviceLockIcon,
+      'Ogni mese premi speciali per chi risparmia di più, iscriviti a tutte le competizioni aperte per guadagnare il più possibile',
+    icon: DeviceChartIcon,
   },
   {
-    name: 'Portfolio tracking',
+    name: 'Sblocca i vari livelli disponibili ad ogni utente',
     description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
-    icon: DeviceChartIcon,
+      'Più risparmi, più sali di livello, e arriva così ad ottenere il bollino di utente GOLD, per avere benefici a vita e cashback importanti. Cosa aspetti? Comincia ora!',
+    icon: DeviceLockIcon,
   },
 ]
 
@@ -196,12 +196,12 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
+            Cosa fare nel mentre
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
-          </p>
+          {/*<p className="mt-2 text-lg text-gray-600">*/}
+          {/*  With typical market returns, you have to start young to secure your*/}
+          {/*  future. With Pocket, it’s never too late to build your nest egg.*/}
+          {/*</p>*/}
         </div>
         <ul
           role="list"

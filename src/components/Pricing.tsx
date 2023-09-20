@@ -64,7 +64,7 @@ const plans = [
       'Advanced transaction anonymization',
       'Automated tax-loss harvesting',
     ],
-    logomarkClassName: 'fill-cyan-500',
+    logomarkClassName: 'fill-blue-600',
   },
 ]
 
@@ -186,7 +186,7 @@ function Plan({
               <CheckIcon
                 className={clsx(
                   'h-6 w-6 flex-none',
-                  featured ? 'text-white' : 'text-cyan-500',
+                  featured ? 'text-white' : 'text-blue-600',
                 )}
               />
               <span className="ml-4">{feature}</span>
@@ -256,7 +256,7 @@ export function Pricing() {
             <div
               aria-hidden="true"
               className={clsx(
-                'pointer-events-none absolute inset-0 z-10 grid grid-cols-2 overflow-hidden rounded-lg bg-cyan-500 transition-all duration-300',
+                'pointer-events-none absolute inset-0 z-10 grid grid-cols-2 overflow-hidden rounded-lg bg-blue-600 transition-all duration-300',
                 activePeriod === 'Monthly'
                   ? '[clip-path:inset(0_50%_0_0)]'
                   : '[clip-path:inset(0_0_0_calc(50%-1px))]',
