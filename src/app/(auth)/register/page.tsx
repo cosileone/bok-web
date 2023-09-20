@@ -66,7 +66,7 @@ export default function Register() {
             <option>The “Never Use This” podcast</option>
           </SelectField>
         </div>
-        <Button type="submit" color="cyan" className="mt-8 w-full">
+        <Button type="submit" color="blue" className="mt-8 w-full">
           Get started today
         </Button>
       </form>
