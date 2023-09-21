@@ -105,7 +105,7 @@ export function Hero() {
     <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Image
         src={welcome as string}
-        className="absolute z-[-1] -mt-72 w-full opacity-80 lg:-mt-80"
+        className="absolute z-[-1] -mt-72 w-full lg:-mt-80"
         unoptimized
         alt=""
       />
