@@ -26,7 +26,8 @@ const people = [
     role: "Co-Founder & CTO",
     imageUrl: cosimoImage,
     linkedinUrl: "https://www.linkedin.com/in/cosimoleone/",
-    description: "",
+    description:
+      "Ex-Amazon AWS, Software Engineer e appassionato di IT. Se hai un problema.. chiama Cosimo!",
   },
 ];
 
