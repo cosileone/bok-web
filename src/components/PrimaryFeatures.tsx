@@ -57,7 +57,7 @@ const features = [
   {
     name: "Competizioni e Pillole Finanziarie",
     description:
-      "Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o”bill of knowledge” sotto forma di reel.",
+      "Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o ”bill of knowledge” sotto forma di reel.",
     icon: DeviceTouchIcon,
     screen: VideoBitsScreen,
   },
