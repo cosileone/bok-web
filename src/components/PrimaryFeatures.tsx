@@ -1,21 +1,21 @@
-'use client'
+"use client";
 
-import { Fragment, useEffect, useId, useRef, useState } from 'react'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
+import { Fragment, useEffect, useId, useRef, useState } from "react";
+import { Tab } from "@headlessui/react";
+import clsx from "clsx";
 import {
   AnimatePresence,
   type MotionProps,
   type Variant,
   type Variants,
   motion,
-} from 'framer-motion'
-import { useDebouncedCallback } from 'use-debounce'
+} from "framer-motion";
+import { useDebouncedCallback } from "use-debounce";
 
-import { AppScreen } from '~/components/AppScreen'
-import { CircleBackground } from '~/components/CircleBackground'
-import { Container } from '~/components/Container'
-import { PhoneFrame } from '~/components/PhoneFrame'
+import { AppScreen } from "~/components/AppScreen";
+import { CircleBackground } from "~/components/CircleBackground";
+import { Container } from "~/components/Container";
+import { PhoneFrame } from "~/components/PhoneFrame";
 import {
   DiageoLogo,
   LaravelLogo,
@@ -25,155 +25,89 @@ import {
   StaticKitLogo,
   TransistorLogo,
   TupleLogo,
-} from '~/components/StockLogos'
+} from "~/components/StockLogos";
 
-const MotionAppScreenHeader = motion(AppScreen.Header)
-const MotionAppScreenBody = motion(AppScreen.Body)
+const MotionAppScreenHeader = motion(AppScreen.Header);
+const MotionAppScreenBody = motion(AppScreen.Body);
 
 interface CustomAnimationProps {
-  isForwards: boolean
-  changeCount: number
+  isForwards: boolean;
+  changeCount: number;
 }
 
 const features = [
   {
-    name: '🚀 Arrotondamenti Round-up',
+    name: "Arrotondamenti Round-up",
     description:
-      'Investi il resto dei tuoi acquisti di tutti i giorni senza sforzo con la tua carta BOK personalizzabile',
-    icon: DeviceUserIcon,
+      "Investi il resto dei tuoi acquisti di tutti i giorni senza sforzo con la tua carta BOK personalizzabile. Ogni volta che acquisiti con la carta BOK risparmia il resto dei tuoi acquisti in automatico. Potrai anche attivare il moltiplicatore per amplificare ogni risparmio!",
+    icon: RocketEmoji,
     screen: InviteScreen,
   },
   {
-    name: '🗣 Swear Jar',
+    name: "Swear Jar (Barattolo delle Parolacce)",
     description:
-      '"Walk it like you talk it": Se spendi troppo in un negozio o un settore specifico paghi a te stesso il 10% di ogni acquisto sopra il limite',
+      "La nostra innovativa funzione del “Barattolo delle Parolacce” ti aiuta a mantenere il controllo delle tue abitudini di spesa in modo divertente ed efficace! Configura facilmente i tuoi obiettivi personali, quindi ogni volta che spendi troppo nel tuo negozio preferito, il “Barattolo” accumula automaticamente i fondi, Monitora il tuo progresso, ricevendo notifiche divertenti quando è il momento di pagarti 🤑",
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: '💶 Competizioni e Pillole Finanziarie',
+    name: "Competizioni e Pillole Finanziarie",
     description:
-      'Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o”bill of knowledge” sotto forma di reel.',
+      "Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o”bill of knowledge” sotto forma di reel.",
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
-]
+];
 
-function DeviceUserIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 23a3 3 0 100-6 3 3 0 000 6zm-1 2a4 4 0 00-4 4v1a2 2 0 002 2h6a2 2 0 002-2v-1a4 4 0 00-4-4h-2z"
-        fill="#737373"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 4a4 4 0 014-4h14a4 4 0 014 4v24a4.002 4.002 0 01-3.01 3.877c-.535.136-.99-.325-.99-.877s.474-.98.959-1.244A2 2 0 0025 28V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 001.041 1.756C8.525 30.02 9 30.448 9 31s-.455 1.013-.99.877A4.002 4.002 0 015 28V4z"
-        fill="#A3A3A3"
-      />
-    </svg>
-  )
+function RocketEmoji(props: React.ComponentPropsWithoutRef<"svg">) {
+  return <span className="text-[32px]">🚀</span>;
 }
 
-function DeviceNotificationIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
-        fill="#A3A3A3"
-      />
-      <path
-        d="M9 8a2 2 0 012-2h10a2 2 0 012 2v2a2 2 0 01-2 2H11a2 2 0 01-2-2V8z"
-        fill="#737373"
-      />
-    </svg>
-  )
+function DeviceNotificationIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return <span className="text-[32px]">🗣</span>;
 }
 
-function DeviceTouchIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  const id = useId()
-
-  return (
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" {...props}>
-      <defs>
-        <linearGradient
-          id={`${id}-gradient`}
-          x1={14}
-          y1={14.5}
-          x2={7}
-          y2={17}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#737373" />
-          <stop offset={1} stopColor="#D4D4D4" stopOpacity={0} />
-        </linearGradient>
-      </defs>
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 4a4 4 0 014-4h14a4 4 0 014 4v13h-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 002 2h4v2H9a4 4 0 01-4-4V4z"
-        fill="#A3A3A3"
-      />
-      <path
-        d="M7 22c0-4.694 3.5-8 8-8"
-        stroke={`url(#${id}-gradient)`}
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M21 20l.217-5.513a1.431 1.431 0 00-2.85-.226L17.5 21.5l-1.51-1.51a2.107 2.107 0 00-2.98 0 .024.024 0 00-.005.024l3.083 9.25A4 4 0 0019.883 32H25a4 4 0 004-4v-5a3 3 0 00-3-3h-5z"
-        fill="#A3A3A3"
-      />
-    </svg>
-  )
+function DeviceTouchIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return <span className="text-[32px]">💶</span>;
 }
 
 const headerAnimation: Variants = {
   initial: { opacity: 0, transition: { duration: 0.3 } },
   animate: { opacity: 1, transition: { duration: 0.3, delay: 0.3 } },
   exit: { opacity: 0, transition: { duration: 0.3 } },
-}
+};
 
-const maxZIndex = 2147483647
+const maxZIndex = 2147483647;
 
 const bodyVariantBackwards: Variant = {
   opacity: 0.4,
   scale: 0.8,
   zIndex: 0,
-  filter: 'blur(4px)',
+  filter: "blur(4px)",
   transition: { duration: 0.4 },
-}
+};
 
 const bodyVariantForwards: Variant = (custom: CustomAnimationProps) => ({
-  y: '100%',
+  y: "100%",
   zIndex: maxZIndex - custom.changeCount,
   transition: { duration: 0.4 },
-})
+});
 
 const bodyAnimation: MotionProps = {
-  initial: 'initial',
-  animate: 'animate',
-  exit: 'exit',
+  initial: "initial",
+  animate: "animate",
+  exit: "exit",
   variants: {
     initial: (custom: CustomAnimationProps, ...props) =>
       custom.isForwards
         ? bodyVariantForwards(custom, ...props)
         : bodyVariantBackwards,
     animate: (custom: CustomAnimationProps) => ({
-      y: '0%',
+      y: "0%",
       opacity: 1,
       scale: 1,
       zIndex: maxZIndex / 2 - custom.changeCount,
-      filter: 'blur(0px)',
+      filter: "blur(0px)",
       transition: { duration: 0.4 },
     }),
     exit: (custom: CustomAnimationProps, ...props) =>
@@ -181,14 +115,14 @@ const bodyAnimation: MotionProps = {
         ? bodyVariantBackwards
         : bodyVariantForwards(custom, ...props),
   },
-}
+};
 
 type ScreenProps =
   | {
-      animated: true
-      custom: CustomAnimationProps
+      animated: true;
+      custom: CustomAnimationProps;
     }
-  | { animated?: false }
+  | { animated?: false };
 
 function InviteScreen(props: ScreenProps) {
   return (
@@ -206,8 +140,8 @@ function InviteScreen(props: ScreenProps) {
         <div className="px-4 py-6">
           <div className="space-y-6">
             {[
-              { label: 'Full name', value: 'Albert H. Wiggin' },
-              { label: 'Email address', value: 'awiggin@chase.com' },
+              { label: "Full name", value: "Albert H. Wiggin" },
+              { label: "Email address", value: "awiggin@chase.com" },
             ].map((field) => (
               <div key={field.label}>
                 <div className="text-sm text-gray-500">{field.label}</div>
@@ -223,7 +157,7 @@ function InviteScreen(props: ScreenProps) {
         </div>
       </MotionAppScreenBody>
     </AppScreen>
-  )
+  );
 }
 
 function StocksScreen(props: ScreenProps) {
@@ -239,59 +173,59 @@ function StocksScreen(props: ScreenProps) {
         <div className="divide-y divide-gray-100">
           {[
             {
-              name: 'Laravel',
-              price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
+              name: "Laravel",
+              price: "4,098.01",
+              change: "+4.98%",
+              color: "#F9322C",
               logo: LaravelLogo,
             },
             {
-              name: 'Tuple',
-              price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
+              name: "Tuple",
+              price: "5,451.10",
+              change: "-3.38%",
+              color: "#5A67D8",
               logo: TupleLogo,
             },
             {
-              name: 'Transistor',
-              price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
+              name: "Transistor",
+              price: "4,098.41",
+              change: "+6.25%",
+              color: "#2A5B94",
               logo: TransistorLogo,
             },
             {
-              name: 'Diageo',
-              price: '250.65',
-              change: '+1.25%',
-              color: '#3320A7',
+              name: "Diageo",
+              price: "250.65",
+              change: "+1.25%",
+              color: "#3320A7",
               logo: DiageoLogo,
             },
             {
-              name: 'StaticKit',
-              price: '250.65',
-              change: '-3.38%',
-              color: '#2A3034',
+              name: "StaticKit",
+              price: "250.65",
+              change: "-3.38%",
+              color: "#2A3034",
               logo: StaticKitLogo,
             },
             {
-              name: 'Statamic',
-              price: '5,040.85',
-              change: '-3.11%',
-              color: '#0EA5E9',
+              name: "Statamic",
+              price: "5,040.85",
+              change: "-3.11%",
+              color: "#0EA5E9",
               logo: StatamicLogo,
             },
             {
-              name: 'Mirage',
-              price: '140.44',
-              change: '+9.09%',
-              color: '#16A34A',
+              name: "Mirage",
+              price: "140.44",
+              change: "+9.09%",
+              color: "#16A34A",
               logo: MirageLogo,
             },
             {
-              name: 'Reversable',
-              price: '550.60',
-              change: '-1.25%',
-              color: '#8D8D8D',
+              name: "Reversable",
+              price: "550.60",
+              change: "-1.25%",
+              color: "#8D8D8D",
               logo: ReversableLogo,
             },
           ].map((stock) => (
@@ -311,10 +245,10 @@ function StocksScreen(props: ScreenProps) {
                 </div>
                 <div
                   className={clsx(
-                    'text-xs leading-5',
-                    stock.change.startsWith('+')
-                      ? 'text-blue-600'
-                      : 'text-gray-500',
+                    "text-xs leading-5",
+                    stock.change.startsWith("+")
+                      ? "text-blue-600"
+                      : "text-gray-500",
                   )}
                 >
                   {stock.change}
@@ -325,7 +259,7 @@ function StocksScreen(props: ScreenProps) {
         </div>
       </MotionAppScreenBody>
     </AppScreen>
-  )
+  );
 }
 
 function InvestScreen(props: ScreenProps) {
@@ -343,9 +277,9 @@ function InvestScreen(props: ScreenProps) {
         <div className="px-4 py-6">
           <div className="space-y-4">
             {[
-              { label: 'Number of shares', value: '100' },
+              { label: "Number of shares", value: "100" },
               {
-                label: 'Current market price',
+                label: "Current market price",
                 value: (
                   <div className="flex">
                     $34.28
@@ -361,7 +295,7 @@ function InvestScreen(props: ScreenProps) {
                   </div>
                 ),
               },
-              { label: 'Estimated cost', value: '$3,428.00' },
+              { label: "Estimated cost", value: "$3,428.00" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -380,33 +314,33 @@ function InvestScreen(props: ScreenProps) {
         </div>
       </MotionAppScreenBody>
     </AppScreen>
-  )
+  );
 }
 
 function usePrevious<T>(value: T) {
-  const ref = useRef<T>()
+  const ref = useRef<T>();
 
   useEffect(() => {
-    ref.current = value
-  }, [value])
+    ref.current = value;
+  }, [value]);
 
-  return ref.current
+  return ref.current;
 }
 
 function FeaturesDesktop() {
-  const [changeCount, setChangeCount] = useState(0)
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const prevIndex = usePrevious(selectedIndex)
-  const isForwards = prevIndex === undefined ? true : selectedIndex > prevIndex
+  const [changeCount, setChangeCount] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const prevIndex = usePrevious(selectedIndex);
+  const isForwards = prevIndex === undefined ? true : selectedIndex > prevIndex;
 
   const onChange = useDebouncedCallback(
     (selectedIndex: number) => {
-      setSelectedIndex(selectedIndex)
-      setChangeCount((changeCount) => changeCount + 1)
+      setSelectedIndex(selectedIndex);
+      setChangeCount((changeCount) => changeCount + 1);
     },
     100,
     { leading: true },
-  )
+  );
 
   return (
     <Tab.Group
@@ -425,7 +359,7 @@ function FeaturesDesktop() {
             {featureIndex === selectedIndex && (
               <motion.div
                 layoutId="activeBackground"
-                className="absolute inset-0 bg-gray-800"
+                className="absolute inset-0 bg-orange-600"
                 initial={{ borderRadius: 16 }}
               />
             )}
@@ -473,21 +407,21 @@ function FeaturesDesktop() {
         </PhoneFrame>
       </div>
     </Tab.Group>
-  )
+  );
 }
 
 function FeaturesMobile() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const slideContainerRef = useRef<React.ElementRef<'div'>>(null)
-  const slideRefs = useRef<Array<React.ElementRef<'div'>>>([])
+  const [activeIndex, setActiveIndex] = useState(0);
+  const slideContainerRef = useRef<React.ElementRef<"div">>(null);
+  const slideRefs = useRef<Array<React.ElementRef<"div">>>([]);
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting && entry.target instanceof HTMLDivElement) {
-            setActiveIndex(slideRefs.current.indexOf(entry.target))
-            break
+            setActiveIndex(slideRefs.current.indexOf(entry.target));
+            break;
           }
         }
       },
@@ -495,18 +429,18 @@ function FeaturesMobile() {
         root: slideContainerRef.current,
         threshold: 0.6,
       },
-    )
+    );
 
     for (const slide of slideRefs.current) {
       if (slide) {
-        observer.observe(slide)
+        observer.observe(slide);
       }
     }
 
     return () => {
-      observer.disconnect()
-    }
-  }, [slideContainerRef, slideRefs])
+      observer.disconnect();
+    };
+  }, [slideContainerRef, slideRefs]);
 
   return (
     <>
@@ -524,7 +458,7 @@ function FeaturesMobile() {
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
                   color="#13B5C8"
-                  className={featureIndex % 2 === 1 ? 'rotate-180' : undefined}
+                  className={featureIndex % 2 === 1 ? "rotate-180" : undefined}
                 />
               </div>
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
@@ -549,15 +483,15 @@ function FeaturesMobile() {
             type="button"
             key={featureIndex}
             className={clsx(
-              'relative h-0.5 w-4 rounded-full',
-              featureIndex === activeIndex ? 'bg-gray-300' : 'bg-gray-500',
+              "relative h-0.5 w-4 rounded-full",
+              featureIndex === activeIndex ? "bg-gray-300" : "bg-gray-500",
             )}
             aria-label={`Go to slide ${featureIndex + 1}`}
             onClick={() => {
               slideRefs.current[featureIndex]!.scrollIntoView({
-                block: 'nearest',
-                inline: 'nearest',
-              })
+                block: "nearest",
+                inline: "nearest",
+              });
             }}
           >
             <span className="absolute -inset-x-1.5 -inset-y-3" />
@@ -565,7 +499,7 @@ function FeaturesMobile() {
         ))}
       </div>
     </>
-  )
+  );
 }
 
 export function PrimaryFeatures() {
@@ -581,7 +515,8 @@ export function PrimaryFeatures() {
             Scopri le funzionalità di BOK Italia
           </h2>
           <p className="mt-2 text-lg text-gray-200">
-            Sblocca il potenziale delle nostre molteplici funzionalità e raggiungi la tua indipendenza finanziaria
+            Sblocca il potenziale delle nostre molteplici funzionalità e
+            raggiungi la tua indipendenza finanziaria
           </p>
         </div>
       </Container>
@@ -592,5 +527,5 @@ export function PrimaryFeatures() {
         <FeaturesDesktop />
       </Container>
     </section>
-  )
+  );
 }

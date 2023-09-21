@@ -1,24 +1,25 @@
-import { useId } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
+import { useId } from "react";
+import Image from "next/image";
+import clsx from "clsx";
 
-import { AppDemo } from '~/components/AppDemo'
-import { AppStoreLink } from '~/components/AppStoreLink'
-import { Button } from '~/components/Button'
-import { Container } from '~/components/Container'
-import { PhoneFrame } from '~/components/PhoneFrame'
-import logoBbc from '~/images/logos/bbc.svg'
-import logoCbs from '~/images/logos/cbs.svg'
-import logoCnn from '~/images/logos/cnn.svg'
-import logoFastCompany from '~/images/logos/fast-company.svg'
-import logoForbes from '~/images/logos/forbes.svg'
-import logoHuffpost from '~/images/logos/huffpost.svg'
-import logoTechcrunch from '~/images/logos/techcrunch.svg'
-import logoWired from '~/images/logos/wired.svg'
-import NewsletterMiniForm from '~/components/NewsletterMiniForm';
+import { AppDemo } from "~/components/AppDemo";
+import { AppStoreLink } from "~/components/AppStoreLink";
+import { Button } from "~/components/Button";
+import { Container } from "~/components/Container";
+import { PhoneFrame } from "~/components/PhoneFrame";
+import logoBbc from "~/images/logos/bbc.svg";
+import logoCbs from "~/images/logos/cbs.svg";
+import logoCnn from "~/images/logos/cnn.svg";
+import logoFastCompany from "~/images/logos/fast-company.svg";
+import logoForbes from "~/images/logos/forbes.svg";
+import logoHuffpost from "~/images/logos/huffpost.svg";
+import logoTechcrunch from "~/images/logos/techcrunch.svg";
+import logoWired from "~/images/logos/wired.svg";
+import NewsletterMiniForm from "~/components/NewsletterMiniForm";
+import welcome from "~/images/welcome.svg";
 
-function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
-  const id = useId()
+function BackgroundIllustration(props: React.ComponentPropsWithoutRef<"div">) {
+  const id = useId();
 
   return (
     <div {...props}>
@@ -83,10 +84,10 @@ function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
         </defs>
       </svg>
     </div>
-  )
+  );
 }
 
-function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <circle cx="12" cy="12" r="11.5" stroke="#D4D4D4" />
@@ -96,20 +97,28 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         stroke="#A3A3A3"
       />
     </svg>
-  )
+  );
 }
 
 export function Hero() {
   return (
     <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+      <Image
+        src={welcome as string}
+        className="absolute z-[-1] -mt-72 w-full lg:-mt-80"
+        unoptimized
+        alt=""
+      />
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              BOK, L’app che rende l’indipendenza finanziaria un gioco da ragazzi
+              BOK: L’app che rende l’indipendenza finanziaria un gioco da
+              ragazzi!
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              Raggiungi la tua indipendenza finanziaria con BOK, risparmia ed investi, creato dalla generazione Z per la Generazione Z
+              Raggiungi la tua indipendenza finanziaria con BOK risparmia ed
+              investi, creato dalla Generazione Z per la Generazione Z
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <NewsletterMiniForm />
@@ -159,5 +168,5 @@ export function Hero() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
