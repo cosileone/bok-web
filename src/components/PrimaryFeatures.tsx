@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useId, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 import {
@@ -11,6 +11,10 @@ import {
   motion,
 } from "framer-motion";
 import { useDebouncedCallback } from "use-debounce";
+import Image from "next/image";
+import getStartedImage from "~/images/1-get-started.svg";
+import swearJarImage from "~/images/2-swear-jar.svg";
+import competitionsImage from "~/images/3-competizioni-finanziari.jpg";
 
 import { AppScreen } from "~/components/AppScreen";
 import { CircleBackground } from "~/components/CircleBackground";
@@ -41,21 +45,21 @@ const features = [
     description:
       "Investi il resto dei tuoi acquisti di tutti i giorni senza sforzo con la tua carta BOK personalizzabile. Ogni volta che acquisiti con la carta BOK risparmia il resto dei tuoi acquisti in automatico. Potrai anche attivare il moltiplicatore per amplificare ogni risparmio!",
     icon: RocketEmoji,
-    screen: InviteScreen,
+    screen: RoundupScreen,
   },
   {
     name: "Swear Jar (Barattolo delle Parolacce)",
     description:
       "La nostra innovativa funzione del “Barattolo delle Parolacce” ti aiuta a mantenere il controllo delle tue abitudini di spesa in modo divertente ed efficace! Configura facilmente i tuoi obiettivi personali, quindi ogni volta che spendi troppo nel tuo negozio preferito, il “Barattolo” accumula automaticamente i fondi, Monitora il tuo progresso, ricevendo notifiche divertenti quando è il momento di pagarti 🤑",
     icon: DeviceNotificationIcon,
-    screen: StocksScreen,
+    screen: SwearJarScreen,
   },
   {
     name: "Competizioni e Pillole Finanziarie",
     description:
       "Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o”bill of knowledge” sotto forma di reel.",
     icon: DeviceTouchIcon,
-    screen: InvestScreen,
+    screen: VideoBitsScreen,
   },
 ];
 
@@ -124,32 +128,28 @@ type ScreenProps =
     }
   | { animated?: false };
 
-function InviteScreen(props: ScreenProps) {
+function RoundupScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
-        <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
-        </AppScreen.Subtitle>
+        <AppScreen.Title>Arrotondamenti</AppScreen.Title>
+        {/*<AppScreen.Subtitle>*/}
+        {/*  Get tips <span className="text-white">5s sooner</span> for every*/}
+        {/*  invite.*/}
+        {/*</AppScreen.Subtitle>*/}
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
         <div className="px-4 py-6">
           <div className="space-y-6">
-            {[
-              { label: "Full name", value: "Albert H. Wiggin" },
-              { label: "Email address", value: "awiggin@chase.com" },
-            ].map((field) => (
-              <div key={field.label}>
-                <div className="text-sm text-gray-500">{field.label}</div>
-                <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
-                  {field.value}
-                </div>
-              </div>
-            ))}
+            <Image
+              unoptimized
+              className={""}
+              style={{ objectPosition: "0 -90px" }}
+              src={getStartedImage as string}
+              alt={""}
+            />
           </div>
           <div className="mt-6 rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">
             Invite person
@@ -160,153 +160,51 @@ function InviteScreen(props: ScreenProps) {
   );
 }
 
-function StocksScreen(props: ScreenProps) {
+function SwearJarScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
+        <AppScreen.Title>Swear Jar</AppScreen.Title>
+        {/*<AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>*/}
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
         <div className="divide-y divide-gray-100">
-          {[
-            {
-              name: "Laravel",
-              price: "4,098.01",
-              change: "+4.98%",
-              color: "#F9322C",
-              logo: LaravelLogo,
-            },
-            {
-              name: "Tuple",
-              price: "5,451.10",
-              change: "-3.38%",
-              color: "#5A67D8",
-              logo: TupleLogo,
-            },
-            {
-              name: "Transistor",
-              price: "4,098.41",
-              change: "+6.25%",
-              color: "#2A5B94",
-              logo: TransistorLogo,
-            },
-            {
-              name: "Diageo",
-              price: "250.65",
-              change: "+1.25%",
-              color: "#3320A7",
-              logo: DiageoLogo,
-            },
-            {
-              name: "StaticKit",
-              price: "250.65",
-              change: "-3.38%",
-              color: "#2A3034",
-              logo: StaticKitLogo,
-            },
-            {
-              name: "Statamic",
-              price: "5,040.85",
-              change: "-3.11%",
-              color: "#0EA5E9",
-              logo: StatamicLogo,
-            },
-            {
-              name: "Mirage",
-              price: "140.44",
-              change: "+9.09%",
-              color: "#16A34A",
-              logo: MirageLogo,
-            },
-            {
-              name: "Reversable",
-              price: "550.60",
-              change: "-1.25%",
-              color: "#8D8D8D",
-              logo: ReversableLogo,
-            },
-          ].map((stock) => (
-            <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
-              <div
-                className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
-              >
-                <stock.logo className="h-10 w-10" />
-              </div>
-              <div className="flex-auto text-sm text-gray-900">
-                {stock.name}
-              </div>
-              <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
-                </div>
-                <div
-                  className={clsx(
-                    "text-xs leading-5",
-                    stock.change.startsWith("+")
-                      ? "text-blue-600"
-                      : "text-gray-500",
-                  )}
-                >
-                  {stock.change}
-                </div>
-              </div>
-            </div>
-          ))}
+          <Image
+            unoptimized
+            className={""}
+            style={{ objectPosition: "0 -70px" }}
+            src={swearJarImage as string}
+            alt={""}
+          />
         </div>
       </MotionAppScreenBody>
     </AppScreen>
   );
 }
 
-function InvestScreen(props: ScreenProps) {
+function VideoBitsScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
-        <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
-        </AppScreen.Subtitle>
+        <AppScreen.Title>Pillole Finanziarie</AppScreen.Title>
+        {/*<AppScreen.Subtitle>*/}
+        {/*  <span className="text-white">$34.28</span> per share*/}
+        {/*</AppScreen.Subtitle>*/}
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
         <div className="px-4 py-6">
           <div className="space-y-4">
-            {[
-              { label: "Number of shares", value: "100" },
-              {
-                label: "Current market price",
-                value: (
-                  <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                ),
-              },
-              { label: "Estimated cost", value: "$3,428.00" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex justify-between border-b border-gray-100 pb-4"
-              >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
-                  {item.value}
-                </div>
-              </div>
-            ))}
+            <Image
+              unoptimized
+              className={""}
+              style={{ objectPosition: "0 -70px" }}
+              src={competitionsImage}
+              alt={""}
+            />{" "}
             <div className="rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">
               Buy shares
             </div>
