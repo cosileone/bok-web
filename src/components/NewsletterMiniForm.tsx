@@ -10,10 +10,26 @@ const formId = "270dcd4c-7a55-4637-aea6-8fe08df6bc90";
 const formUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
 
 const NewsletterMiniForm = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [email, setEmail] = useState("");
+
+  const buttonText = submitting
+    ? "Invio in corso..."
+    : success
+    ? "Iscrizione completata!"
+    : "Pre-Iscriviti Ora";
+  const buttonTextMobile = submitting
+    ? "Invio in corso..."
+    : success
+    ? "Iscrizione completata!"
+    : "Pre-Iscriviti";
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (submitting) return;
+
+    setSubmitting(true);
     const formPayload = {
       fields: [
         {
@@ -38,10 +54,14 @@ const NewsletterMiniForm = () => {
     })
       .then((res) => {
         console.log(res);
-        setEmail("");
+        setSuccess(true);
       })
       .catch((err) => {
         console.error(err);
+      })
+      .finally(() => {
+        setEmail("");
+        setSubmitting(false);
       });
   };
 
@@ -59,9 +79,13 @@ const NewsletterMiniForm = () => {
         className="w-60 min-w-0 shrink"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Button type="submit" color="blue" className="ml-4 flex-none">
-        <span className="hidden lg:inline">Pre-Iscriviti Ora</span>
-        <span className="lg:hidden">Pre-Iscriviti</span>
+      <Button
+        type="submit"
+        color={success ? "gray" : "blue"}
+        className="ml-4 flex-none"
+      >
+        <span className="hidden lg:inline">{buttonText}</span>
+        <span className="lg:hidden">{buttonTextMobile}</span>
       </Button>
     </form>
   );
