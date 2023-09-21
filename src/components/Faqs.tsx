@@ -1,40 +1,41 @@
-import { Container } from '~/components/Container'
+import { Container } from "~/components/Container";
 
 const faqs = [
   [
     {
-      question: 'Quale è la nostra visione?',
-      answer: 'Che tutti i Gen Z Italiani ed Europei raggiungano la stabilità finanziaria',
+      question: "Quale è la nostra visione?",
+      answer:
+        "Che tutti i Gen Z Italiani ed Europei raggiungano la stabilità finanziaria",
     },
     {
-      question: 'Come Funziona BOK?',
+      question: "Come Funziona BOK?",
       answer:
-        'BOK è una app per aiutare la generazione Z a salvare ed investire denaro in modo semplice e con il minimo sforzo. Ci saranno investimenti con amici, tornei e tanti altri modi per arricchirti, sempre divertendoti!',
+        "BOK è una app per aiutare la generazione Z a salvare ed investire denaro in modo semplice e con il minimo sforzo. Ci saranno investimenti con amici, tornei e tanti altri modi per arricchirti, sempre divertendoti!",
     },
     {
-      question: 'Quanto costa BOK?',
+      question: "Quanto costa BOK?",
       answer:
-        'Tutto gratuito! Esisterà una versione pro con funzioni amplificate a pagamento, ma vogliamo che chiunque possa avere accesso alla propria libertà finanziaria. Oltre alla spedizione della tua carta personalizzabile BOK, non pagherai nulla :)',
+        "Tutto gratuito! Esisterà una versione pro con funzioni amplificate a pagamento, ma vogliamo che chiunque possa avere accesso alla propria libertà finanziaria. Oltre alla spedizione della tua carta personalizzabile BOK, non pagherai nulla :)",
     },
   ],
   [
     {
-      question: 'Per chi è pensato BOK?',
+      question: "Per chi è pensato BOK?",
       answer:
-        'Se hai fra i 18-27 anni e stai cercando di mettere da parte soldi, investire denaro e raggiungere la tua indipendenza finanziaria, questo è il posto e il momento giusto!',
+        "Se hai fra i 18-27 anni e stai cercando di mettere da parte soldi, investire denaro e raggiungere la tua indipendenza finanziaria, questo è il posto e il momento giusto!",
     },
     {
-      question: 'Pre-Iscrizione',
+      question: "Pre-Iscrizione",
       answer:
-        'Lascia i tuoi dati e verrai notificato non appena la app sarà disponibile. Tieniti aggiornato sulla nostra newsletter e social media Instagram e TikTok per rimanere sempre al passo',
+        "Lascia i tuoi dati e verrai notificato non appena la app sarà disponibile. Tieniti aggiornato sulla nostra newsletter e social media Instagram e TikTok per rimanere sempre al passo",
     },
     {
-      question: 'Devo già avere un conto?',
+      question: "Devo già avere un conto?",
       answer:
-        'Non necessariamente! Potrai connettere il tuo conto alla app e ordinare la nostra carta personalizzabile BOK. Fatta a seconda delle tue preferenze ti verrà inviata entro il 31 Novembre.',
+        "Non necessariamente! Potrai connettere il tuo conto alla app e ordinare la nostra carta personalizzabile BOK. Fatta a seconda delle tue preferenze ti verrà inviata entro il 30 Novembre.",
     },
   ],
-]
+];
 
 export function Faqs() {
   return (
@@ -52,7 +53,7 @@ export function Faqs() {
             Domande frequenti
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            Se hai qualsiasi altra domanda, non esitare a {' '}
+            Se hai qualsiasi altra domanda, non esitare a{" "}
             <a
               href="mailto:info@billsofknowledge.com"
               className="text-gray-900 underline"
@@ -83,5 +84,5 @@ export function Faqs() {
         </ul>
       </Container>
     </section>
-  )
+  );
 }
