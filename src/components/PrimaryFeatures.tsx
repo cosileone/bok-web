@@ -43,7 +43,7 @@ const features = [
   {
     name: "Arrotondamenti Round-up",
     description:
-      "Investi il resto dei tuoi acquisti di tutti i giorni senza sforzo con la tua carta BOK personalizzabile. Ogni volta che acquisiti con la carta BOK risparmia il resto dei tuoi acquisti in automatico. Potrai anche attivare il moltiplicatore per amplificare ogni risparmio!",
+      "Ogni volta che fai un acquisto con la tua carta BOK, potrai arrotondare l’importo speso all’euro successivo, risparmiandolo nel tuo conto salvadanaio in automatico. Inoltre, potrai moltiplicare la cifra raddoppiando, triplicando come vorrai tu. Attiva subito le funzioni!",
     icon: RocketEmoji,
     screen: RoundupScreen,
   },
