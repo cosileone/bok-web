@@ -48,16 +48,23 @@ const features = [
     screen: RoundupScreen,
   },
   {
-    name: "Swear Jar (Barattolo delle Parolacce)",
-    description:
-      "La nostra innovativa funzione del “Barattolo delle Parolacce” ti aiuta a mantenere il controllo delle tue abitudini di spesa in modo divertente ed efficace! Configura facilmente i tuoi obiettivi personali, quindi ogni volta che spendi troppo nel tuo negozio preferito, il “Barattolo” accumula automaticamente i fondi, Monitora il tuo progresso, ricevendo notifiche divertenti quando è il momento di pagarti 🤑",
+    name: '“Swear Jar” o "Barattolo delle penitenze"',
+    description: (
+      <>
+        &quot;Il barattolo delle penitenze&quot; è il modo divertente per
+        superare le cattive abitudini senza svuotare il portafoglio! <br />
+        <br /> Crea delle regole personalizzate e imposta limiti di spesa nei
+        tuoi negozi preferiti. Ad esempio, ogni volta che senti nominare un
+        personaggio famoso o che spendi più di 50 euro da Zara, risparmia 5 euro
+      </>
+    ),
     icon: DeviceNotificationIcon,
     screen: SwearJarScreen,
   },
   {
     name: "Competizioni e Pillole Finanziarie",
     description:
-      "Partecipa in competizioni da solo o con amici e sfida gli altri user per vedere chi risparmia ed investe di più, e aggiudicati i premi più ambiti. Apprendi nozioni tramite le nostre pillole finanziarie o ”bill of knowledge” sotto forma di reel.",
+      "Partecipa in competizioni avvincenti, sia in singolo che con amici, sfidando gli altri utenti per chi riesce a risparmiare più soldi con la app! Vinci premi fantastici quali ricompense in denaro, viaggi e tanto altro.",
     icon: DeviceTouchIcon,
     screen: VideoBitsScreen,
   },
@@ -72,7 +79,7 @@ function DeviceNotificationIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 function DeviceTouchIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return <span className="text-[32px]">💶</span>;
+  return <span className="text-[32px]">💰</span>;
 }
 
 const headerAnimation: Variants = {
