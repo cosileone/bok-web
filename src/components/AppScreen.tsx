@@ -1,7 +1,7 @@
-import { forwardRef } from 'react'
-import clsx from 'clsx'
+import { forwardRef } from "react";
+import clsx from "clsx";
 
-function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
+function Logo(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -9,10 +9,10 @@ function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="fill-blue-600"
       />
     </svg>
-  )
+  );
 }
 
-function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -23,10 +23,10 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
-function UserIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function UserIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -37,72 +37,72 @@ function UserIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 export function AppScreen({
   children,
   className,
   ...props
-}: React.ComponentPropsWithoutRef<'div'>) {
+}: React.ComponentPropsWithoutRef<"div">) {
   return (
-    <div className={clsx('flex flex-col', className)} {...props}>
+    <div className={clsx("flex flex-col", className)} {...props}>
       <div className="flex justify-between px-4 pt-4">
         <MenuIcon className="h-6 w-6 flex-none" />
         <div className="flex">
-          <Logo className="h-6 flex-none"/>
-          <h2 className="pl-4 text-white font-semibold">BOK Italia</h2>
+          {/*<Logo className="h-6 flex-none"/>*/}
+          <h2 className="font-semibold text-white">BOK Italia</h2>
         </div>
         <UserIcon className="h-6 w-6 flex-none" />
       </div>
       {children}
     </div>
-  )
+  );
 }
 
 AppScreen.Header = forwardRef<
-  React.ElementRef<'div'>,
+  React.ElementRef<"div">,
   { children: React.ReactNode }
 >(function AppScreenHeader({ children }, ref) {
   return (
     <div ref={ref} className="mt-6 px-4 text-white">
       {children}
     </div>
-  )
-})
+  );
+});
 
 AppScreen.Title = forwardRef<
-  React.ElementRef<'div'>,
+  React.ElementRef<"div">,
   { children: React.ReactNode }
 >(function AppScreenTitle({ children }, ref) {
   return (
     <div ref={ref} className="text-2xl text-white">
       {children}
     </div>
-  )
-})
+  );
+});
 
 AppScreen.Subtitle = forwardRef<
-  React.ElementRef<'div'>,
+  React.ElementRef<"div">,
   { children: React.ReactNode }
 >(function AppScreenSubtitle({ children }, ref) {
   return (
     <div ref={ref} className="text-sm text-gray-500">
       {children}
     </div>
-  )
-})
+  );
+});
 
 AppScreen.Body = forwardRef<
-  React.ElementRef<'div'>,
+  React.ElementRef<"div">,
   { className?: string; children: React.ReactNode }
 >(function AppScreenBody({ children, className }, ref) {
   return (
     <div
       ref={ref}
-      className={clsx('mt-6 flex-auto rounded-t-2xl bg-white', className)}
+      className={clsx("mt-6 flex-auto rounded-t-2xl bg-white", className)}
     >
       {children}
     </div>
-  )
-})
+  );
+});

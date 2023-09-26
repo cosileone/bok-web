@@ -12,9 +12,9 @@ import {
 } from "framer-motion";
 import { useDebouncedCallback } from "use-debounce";
 import Image from "next/image";
-import getStartedImage from "~/images/1-get-started.svg";
-import swearJarImage from "~/images/2-swear-jar.svg";
-import competitionsImage from "~/images/3-competizioni-finanziari.jpg";
+import arrotondamentiImage from "~/images/1-arrotondamenti.jpeg";
+import swearJarImage from "~/images/2-swear-jar.jpeg";
+import cassetteImage from "~/images/3-pillole-finanziarie.jpeg";
 
 import { AppScreen } from "~/components/AppScreen";
 import { CircleBackground } from "~/components/CircleBackground";
@@ -148,13 +148,13 @@ function RoundupScreen(props: ScreenProps) {
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="px-4 py-6">
-          <div className="space-y-6">
+        <div className="h-full px-4 py-6">
+          <div className="h-full space-y-6">
             <Image
               unoptimized
-              className={""}
-              style={{ objectPosition: "0 -90px" }}
-              src={getStartedImage as string}
+              className={"h-full object-cover object-left"}
+              style={{ objectPosition: "-90px 0px" }}
+              src={arrotondamentiImage}
               alt={""}
             />
           </div>
@@ -177,12 +177,12 @@ function SwearJarScreen(props: ScreenProps) {
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="divide-y divide-gray-100">
+        <div className="h-full divide-y divide-gray-100">
           <Image
             unoptimized
-            className={""}
-            style={{ objectPosition: "0 -70px" }}
-            src={swearJarImage as string}
+            className={"h-full object-cover object-left"}
+            style={{ objectPosition: "-90px 0px" }}
+            src={swearJarImage}
             alt={""}
           />
         </div>
@@ -203,18 +203,18 @@ function VideoBitsScreen(props: ScreenProps) {
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="px-4 py-6">
-          <div className="space-y-4">
+        <div className="h-full px-4 py-6">
+          <div className="h-full space-y-4">
             <Image
               unoptimized
-              className={""}
-              style={{ objectPosition: "0 -70px" }}
-              src={competitionsImage}
+              className={"h-full object-cover object-left"}
+              style={{ objectPosition: "-110px 0px" }}
+              src={cassetteImage}
               alt={""}
             />{" "}
-            <div className="rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">
-              Buy shares
-            </div>
+            {/*<div className="rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">*/}
+            {/*  Buy shares*/}
+            {/*</div>*/}
           </div>
         </div>
       </MotionAppScreenBody>
@@ -271,12 +271,12 @@ function FeaturesDesktop() {
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
               <h3 className="mt-6 text-lg font-semibold text-white">
-                <Tab className="text-left ui-not-focus-visible:outline-none">
+                <Tab className="unbounded text-left focus:outline-none ui-not-focus-visible:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
                 </Tab>
               </h3>
-              <p className="mt-2 text-sm text-gray-200">
+              <p className="urbanist mt-2 text-gray-200">
                 {feature.description}
               </p>
             </div>
@@ -371,10 +371,10 @@ function FeaturesMobile() {
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
-                <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
+                <h3 className="unbounded mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-200">
+                <p className="urbanist mt-2 text-sm text-gray-200">
                   {feature.description}
                 </p>
               </div>

@@ -1,19 +1,21 @@
-'use client'
+"use client";
 
-import { useId, useRef, useState } from 'react'
-import clsx from 'clsx'
-import { motion, useInView, useMotionValue } from 'framer-motion'
+import { useId, useRef, useState } from "react";
+import clsx from "clsx";
+import { motion, useInView, useMotionValue } from "framer-motion";
 
-import { AppScreen } from '~/components/AppScreen'
+import { AppScreen } from "~/components/AppScreen";
+import getStartedImage from "~/images/1-get-started.svg";
+import Image from "next/image";
 
 const prices = [
   997.56, 944.34, 972.25, 832.4, 888.76, 834.8, 805.56, 767.38, 861.21, 669.6,
   694.39, 721.32, 694.03, 610.1, 502.2, 549.56, 611.03, 583.4, 610.14, 660.6,
   752.11, 721.19, 638.89, 661.7, 694.51, 580.3, 638.0, 613.3, 651.64, 560.51,
   611.45, 670.68, 752.56,
-]
-const maxPrice = Math.max(...prices)
-const minPrice = Math.min(...prices)
+];
+const maxPrice = Math.max(...prices);
+const minPrice = Math.min(...prices);
 
 function Chart({
   className,
@@ -25,76 +27,76 @@ function Chart({
   paddingY = 0,
   gridLines = 6,
   ...props
-}: React.ComponentPropsWithoutRef<'svg'> & {
-  activePointIndex: number | null
-  onChangeActivePointIndex: (index: number | null) => void
-  width: number
-  height: number
-  paddingX?: number
-  paddingY?: number
-  gridLines?: number
+}: React.ComponentPropsWithoutRef<"svg"> & {
+  activePointIndex: number | null;
+  onChangeActivePointIndex: (index: number | null) => void;
+  width: number;
+  height: number;
+  paddingX?: number;
+  paddingY?: number;
+  gridLines?: number;
 }) {
-  const width = totalWidth - paddingX * 2
-  const height = totalHeight - paddingY * 2
+  const width = totalWidth - paddingX * 2;
+  const height = totalHeight - paddingY * 2;
 
-  const id = useId()
-  const svgRef = useRef<React.ElementRef<'svg'>>(null)
-  const pathRef = useRef<React.ElementRef<'path'>>(null)
-  const isInView = useInView(svgRef, {amount: 0.5, once: true})
-  const pathWidth = useMotionValue(0)
-  const [interactionEnabled, setInteractionEnabled] = useState(false)
+  const id = useId();
+  const svgRef = useRef<React.ElementRef<"svg">>(null);
+  const pathRef = useRef<React.ElementRef<"path">>(null);
+  const isInView = useInView(svgRef, { amount: 0.5, once: true });
+  const pathWidth = useMotionValue(0);
+  const [interactionEnabled, setInteractionEnabled] = useState(false);
 
-  let path = ''
-  const points: Array<{ x: number; y: number }> = []
+  let path = "";
+  const points: Array<{ x: number; y: number }> = [];
 
   for (let index = 0; index < prices.length; index++) {
-    const x = paddingX + (index / (prices.length - 1)) * width
+    const x = paddingX + (index / (prices.length - 1)) * width;
     const y =
       paddingY +
-      (1 - (prices[index]! - minPrice) / (maxPrice - minPrice)) * height
-    points.push({x, y})
-    path += `${index === 0 ? 'M' : 'L'} ${x.toFixed(4)} ${y.toFixed(4)}`
+      (1 - (prices[index]! - minPrice) / (maxPrice - minPrice)) * height;
+    points.push({ x, y });
+    path += `${index === 0 ? "M" : "L"} ${x.toFixed(4)} ${y.toFixed(4)}`;
   }
 
   return (
     <svg
       ref={svgRef}
       viewBox={`0 0 ${totalWidth} ${totalHeight}`}
-      className={clsx(className, 'overflow-visible')}
+      className={clsx(className, "overflow-visible")}
       {...(interactionEnabled
         ? {
-          onPointerLeave: () => onChangeActivePointIndex(null),
-          onPointerMove: (event) => {
-            const x = event.nativeEvent.offsetX
-            let closestPointIndex: number | null = null
-            let closestDistance = Infinity
-            for (
-              let pointIndex = 0;
-              pointIndex < points.length;
-              pointIndex++
-            ) {
-              const point = points[pointIndex]
-              const distance = Math.abs(point!.x - x)
-              if (distance < closestDistance) {
-                closestDistance = distance
-                closestPointIndex = pointIndex
-              } else {
-                break
+            onPointerLeave: () => onChangeActivePointIndex(null),
+            onPointerMove: (event) => {
+              const x = event.nativeEvent.offsetX;
+              let closestPointIndex: number | null = null;
+              let closestDistance = Infinity;
+              for (
+                let pointIndex = 0;
+                pointIndex < points.length;
+                pointIndex++
+              ) {
+                const point = points[pointIndex];
+                const distance = Math.abs(point!.x - x);
+                if (distance < closestDistance) {
+                  closestDistance = distance;
+                  closestPointIndex = pointIndex;
+                } else {
+                  break;
+                }
               }
-            }
-            onChangeActivePointIndex(closestPointIndex)
-          },
-        }
+              onChangeActivePointIndex(closestPointIndex);
+            },
+          }
         : {})}
       {...props}
     >
       <defs>
         <clipPath id={`${id}-clip`}>
-          <path d={`${path} V ${height + paddingY} H ${paddingX} Z`}/>
+          <path d={`${path} V ${height + paddingY} H ${paddingX} Z`} />
         </clipPath>
         <linearGradient id={`${id}-gradient`} x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stopColor="#13B5C8"/>
-          <stop offset="100%" stopColor="#13B5C8" stopOpacity="0"/>
+          <stop offset="0%" stopColor="#13B5C8" />
+          <stop offset="100%" stopColor="#13B5C8" stopOpacity="0" />
         </linearGradient>
       </defs>
       {[...Array(gridLines - 1).keys()].map((index) => (
@@ -123,16 +125,16 @@ function Chart({
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        initial={{pathLength: 0}}
-        transition={{duration: 1}}
-        {...(isInView ? {stroke: '#06b6d4', animate: {pathLength: 1}} : {})}
-        onUpdate={({pathLength}) => {
-          if (pathRef.current && typeof pathLength === 'number') {
+        initial={{ pathLength: 0 }}
+        transition={{ duration: 1 }}
+        {...(isInView ? { stroke: "#06b6d4", animate: { pathLength: 1 } } : {})}
+        onUpdate={({ pathLength }) => {
+          if (pathRef.current && typeof pathLength === "number") {
             pathWidth.set(
               pathRef.current.getPointAtLength(
                 pathLength * pathRef.current.getTotalLength(),
               ).x,
-            )
+            );
           }
         }}
         onAnimationComplete={() => setInteractionEnabled(true)}
@@ -158,38 +160,45 @@ function Chart({
         </>
       )}
     </svg>
-  )
+  );
 }
 
 export function AppDemo() {
-  const [activePointIndex, setActivePointIndex] = useState<number | null>(null)
-  const activePriceIndex = activePointIndex ?? prices.length - 1
-  const activeValue = prices[activePriceIndex]
-  const previousValue = prices[activePriceIndex - 1]
+  const [activePointIndex, setActivePointIndex] = useState<number | null>(null);
+  const activePriceIndex = activePointIndex ?? prices.length - 1;
+  const activeValue = prices[activePriceIndex];
+  const previousValue = prices[activePriceIndex - 1];
   const percentageChange =
     activePriceIndex === 0
       ? null
-      : ((activeValue! - previousValue!) / previousValue!) * 100
+      : ((activeValue! - previousValue!) / previousValue!) * 100;
 
   return (
     <AppScreen>
       <AppScreen.Body>
         <div className="p-4">
-          <div className="flex gap-2">
-            <div className="text-xs leading-6 text-gray-500">
-              Totale Risparmiato
-            </div>
-            <div className="text-sm text-gray-900">€</div>
-            <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">
-              <path
-                d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"
-                stroke="#171717"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          {/*<div className="flex gap-2">*/}
+          {/*  <div className="text-xs leading-6 text-gray-500">*/}
+          {/*    Totale Risparmiato*/}
+          {/*  </div>*/}
+          {/*  <div className="text-sm text-gray-900">€</div>*/}
+          {/*  <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">*/}
+          {/*    <path*/}
+          {/*      d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"*/}
+          {/*      stroke="#171717"*/}
+          {/*      strokeWidth="2"*/}
+          {/*      strokeLinecap="round"*/}
+          {/*      strokeLinejoin="round"*/}
+          {/*    />*/}
+          {/*  </svg>*/}
+          {/*</div>*/}
+          <Image
+            unoptimized
+            className={""}
+            style={{ objectPosition: "0 -90px" }}
+            src={getStartedImage as string}
+            alt={""}
+          />
           <div className="mt-3 border-t border-gray-200 pt-5">
             <div className="flex items-baseline gap-2">
               <div className="text-2xl tabular-nums tracking-tight text-gray-900">
@@ -199,12 +208,12 @@ export function AppDemo() {
               {percentageChange && (
                 <div
                   className={clsx(
-                    'ml-auto text-sm tabular-nums tracking-tight',
-                    percentageChange >= 0 ? 'text-green-500' : 'text-gray-500',
+                    "ml-auto text-sm tabular-nums tracking-tight",
+                    percentageChange >= 0 ? "text-green-500" : "text-gray-500",
                   )}
                 >
                   {`${
-                    percentageChange >= 0 ? '+' : ''
+                    percentageChange >= 0 ? "+" : ""
                   }${percentageChange.toFixed(2)}%`}
                 </div>
               )}
@@ -248,5 +257,5 @@ export function AppDemo() {
         </div>
       </AppScreen.Body>
     </AppScreen>
-  )
+  );
 }

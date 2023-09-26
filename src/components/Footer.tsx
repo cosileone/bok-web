@@ -1,13 +1,13 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-import { Container } from '~/components/Container'
-import { Logomark } from '~/components/Logo'
-import { NavLinks } from '~/components/NavLinks'
-import qrCode from '~/images/qr-code.svg'
-import NewsletterMiniForm from '~/components/NewsletterMiniForm';
+import { Container } from "~/components/Container";
+import { Logomark } from "~/components/Logo";
+import { NavLinks } from "~/components/NavLinks";
+import qrCode from "~/images/qr-code.svg";
+import NewsletterMiniForm from "~/components/NewsletterMiniForm";
 
-function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
+function QrCodeBorder(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 96 96" fill="none" aria-hidden="true" {...props}>
       <path
@@ -16,7 +16,7 @@ function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinecap="round"
       />
     </svg>
-  )
+  );
 }
 
 export function Footer() {
@@ -26,10 +26,12 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-y-12 pb-6 pt-16 lg:flex-row lg:items-center lg:py-16">
           <div>
             <div className="flex items-center text-gray-900">
-              <Logomark className="h-10 w-10 flex-none fill-blue-600" />
-              <div className="ml-4">
-                <p className="text-base font-semibold">BOK Italia</p>
-                <p className="mt-1 text-sm">Raggiungi la tua indipendenza finanziaria</p>
+              {/*<Logomark className="h-10 w-10 flex-none fill-blue-600" />*/}
+              <div className="">
+                <p className="unbounded text-base font-semibold">BOK Italia</p>
+                <p className="urbanist mt-1">
+                  Raggiungi la tua indipendenza finanziaria
+                </p>
               </div>
             </div>
             <nav className="mt-11 flex gap-8">
@@ -62,5 +64,5 @@ export function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }

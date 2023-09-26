@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Popover } from '@headlessui/react'
-import { AnimatePresence, motion } from 'framer-motion'
+import Link from "next/link";
+import { Popover } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { Button } from '~/components/Button'
-import { Container } from '~/components/Container'
-import { Logo } from '~/components/Logo'
-import { NavLinks } from '~/components/NavLinks'
+import { Button } from "~/components/Button";
+import { Container } from "~/components/Container";
+import { Logo } from "~/components/Logo";
+import { NavLinks } from "~/components/NavLinks";
 
-function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -19,10 +19,10 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
-function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ChevronUpIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -32,13 +32,13 @@ function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function MobileNavLink(
   props: Omit<
     React.ComponentPropsWithoutRef<typeof Popover.Button<typeof Link>>,
-    'as' | 'className'
+    "as" | "className"
   >,
 ) {
   return (
@@ -47,7 +47,7 @@ function MobileNavLink(
       className="block text-base leading-7 tracking-tight text-gray-700"
       {...props}
     />
-  )
+  );
 }
 
 export function Header() {
@@ -57,8 +57,10 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto inline-block" />
-              <h1 className="text-gray-900 inline text-lg pl-6 font-semibold">BOK</h1>
+              {/*<Logo className="inline-block h-10 w-auto" />*/}
+              <h1 className="unbounded inline pl-6 text-lg font-semibold text-gray-900">
+                BOK
+              </h1>
             </Link>
             <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
@@ -113,7 +115,7 @@ export function Header() {
                             {/*<MobileNavLink href="/#pricing">*/}
                             {/*  Pricing*/}
                             {/*</MobileNavLink>*/}
-                            <MobileNavLink href="/#faqs">Domande frequenti</MobileNavLink>
+                            <MobileNavLink href="/#faqs">FAQ</MobileNavLink>
                           </div>
                           {/*<div className="mt-8 flex flex-col gap-4">*/}
                           {/*  <Button href="/login" variant="outline">*/}
@@ -138,5 +140,5 @@ export function Header() {
         </Container>
       </nav>
     </header>
-  )
+  );
 }

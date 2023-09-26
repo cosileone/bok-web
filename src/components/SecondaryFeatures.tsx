@@ -1,47 +1,47 @@
-import { useId } from 'react'
+import { useId } from "react";
 
-import { Container } from '~/components/Container'
+import { Container } from "~/components/Container";
 
 const features = [
   {
-    name: 'Pre-Iscriviti subito',
+    name: "Pre-Iscriviti subito",
     description:
-      'Se sei fra i primi 5000 e fai iscrivere 5 amici, vinci un premio fantastico',
+      "Se sei fra i primi 5000 e fai iscrivere 5 amici, vinci un premio fantastico",
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Il 1 Dicembre esce la app ufficiale',
+    name: "Il 1 Dicembre esce la app ufficiale",
     description:
-      'Fai il Log In e ordina la tua carta di debito BOK per cominciare subito',
+      "Fai il Log In e ordina la tua carta di debito BOK per cominciare subito",
     icon: DeviceClockIcon,
   },
   {
-    name: 'Ordina la carta',
+    name: "Ordina la carta",
     description:
-      'Una volta arrivata a casa, carica i tuoi primi soldi e comincia subito a risparmiare ed investire.',
+      "Una volta arrivata a casa, carica i tuoi primi soldi e comincia subito a risparmiare ed investire.",
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Comincia ad utilizzare',
+    name: "Comincia ad utilizzare",
     description:
-      'Ogni volta che farai un acquisto con la tua carta BOK potrai scegliere quanto e se mettere da parte il resto di ogni acquisto, che andrà direttamente sul tuo conto sulla nostra app. Potrai in ogni momento accedere ai tuoi soldi.',
+      "Ogni volta che farai un acquisto con la tua carta BOK potrai scegliere quanto e se mettere da parte il resto di ogni acquisto, che andrà direttamente sul tuo conto sulla nostra app. Potrai in ogni momento accedere ai tuoi soldi.",
     icon: DeviceListIcon,
   },
   {
-    name: 'Vinci Premi',
+    name: "Vinci Premi",
     description:
-      'Ogni mese premi speciali per chi risparmia di più, iscriviti a tutte le competizioni aperte per guadagnare il più possibile',
+      "Ogni mese premi speciali per chi risparmia di più, iscriviti a tutte le competizioni aperte per guadagnare il più possibile",
     icon: DeviceChartIcon,
   },
   {
-    name: 'Sblocca i vari livelli disponibili ad ogni utente',
+    name: "Sblocca i vari livelli disponibili ad ogni utente",
     description:
-      'Più risparmi, più sali di livello, e arriva così ad ottenere il bollino di utente GOLD, per avere benefici a vita e cashback importanti. Cosa aspetti? Comincia ora!',
+      "Più risparmi, più sali di livello, e arriva così ad ottenere il bollino di utente GOLD, per avere benefici a vita e cashback importanti. Cosa aspetti? Comincia ora!",
     icon: DeviceLockIcon,
   },
-]
+];
 
-function DeviceArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function DeviceArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <path
@@ -58,11 +58,11 @@ function DeviceArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       />
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
     </svg>
-  )
+  );
 }
 
-function DeviceCardsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  const id = useId()
+function DeviceCardsIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  const id = useId();
 
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
@@ -94,10 +94,10 @@ function DeviceCardsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         </linearGradient>
       </defs>
     </svg>
-  )
+  );
 }
 
-function DeviceClockIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function DeviceClockIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -114,10 +114,10 @@ function DeviceClockIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         fill="#171717"
       />
     </svg>
-  )
+  );
 }
 
-function DeviceListIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function DeviceListIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" {...props}>
       <path
@@ -137,10 +137,10 @@ function DeviceListIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       />
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
     </svg>
-  )
+  );
 }
 
-function DeviceLockIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function DeviceLockIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -157,10 +157,10 @@ function DeviceLockIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         fill="#171717"
       />
     </svg>
-  )
+  );
 }
 
-function DeviceChartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function DeviceChartIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" {...props}>
       <path
@@ -183,7 +183,7 @@ function DeviceChartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       />
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
     </svg>
-  )
+  );
 }
 
 export function SecondaryFeatures() {
@@ -195,8 +195,8 @@ export function SecondaryFeatures() {
     >
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Cosa fare nel mentre
+          <h2 className="unbounded text-3xl font-medium tracking-tight text-gray-900">
+            Perché aspettare? Comincia a ricevere I primi consigli già da ora!
           </h2>
           {/*<p className="mt-2 text-lg text-gray-600">*/}
           {/*  With typical market returns, you have to start young to secure your*/}
@@ -222,5 +222,5 @@ export function SecondaryFeatures() {
         </ul>
       </Container>
     </section>
-  )
+  );
 }

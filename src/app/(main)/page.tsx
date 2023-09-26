@@ -7,6 +7,7 @@ import { Reviews } from "~/components/Reviews";
 import { SecondaryFeatures } from "~/components/SecondaryFeatures";
 import Team from "~/components/Team";
 import "~/styles/cursor.css";
+import "~/styles/google-fonts.css";
 
 export default function Home() {
   return (
