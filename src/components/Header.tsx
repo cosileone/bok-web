@@ -8,6 +8,8 @@ import { Button } from "~/components/Button";
 import { Container } from "~/components/Container";
 import { Logo } from "~/components/Logo";
 import { NavLinks } from "~/components/NavLinks";
+import Image from "next/image";
+import bokLogo from "/public/BOK.png";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -52,15 +54,21 @@ function MobileNavLink(
 
 export function Header() {
   return (
-    <header>
+    <header className={"bg-[#2e00f9]"}>
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
+              <Image
+                unoptimized
+                src={bokLogo}
+                alt={""}
+                className={"h-10 w-auto"}
+              />
               {/*<Logo className="inline-block h-10 w-auto" />*/}
-              <h1 className="unbounded inline pl-6 text-lg font-semibold text-gray-900">
-                BOK
-              </h1>
+              {/*<h1 className="unbounded inline pl-6 text-xl font-semibold text-gray-200">*/}
+              {/*  BOK*/}
+              {/*</h1>*/}
             </Link>
             <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
@@ -71,7 +79,7 @@ export function Header() {
               {({ open }) => (
                 <>
                   <Popover.Button
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 ui-not-focus-visible:outline-none"
+                    className="ui-not-focus-visible:outline-none relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-200 p-2 hover:bg-gray-200/50 hover:stroke-white active:stroke-gray-300"
                     aria-label="Toggle site navigation"
                   >
                     {({ open }) =>

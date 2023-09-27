@@ -271,7 +271,7 @@ function FeaturesDesktop() {
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
               <h3 className="mt-6 text-lg font-semibold text-white">
-                <Tab className="unbounded text-left focus:outline-none ui-not-focus-visible:outline-none">
+                <Tab className="unbounded ui-not-focus-visible:outline-none text-left focus:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
                 </Tab>
@@ -298,7 +298,7 @@ function FeaturesDesktop() {
                   <Tab.Panel
                     static
                     key={feature.name + changeCount}
-                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px] ui-not-focus-visible:outline-none"
+                    className="ui-not-focus-visible:outline-none col-start-1 row-start-1 flex focus:outline-offset-[32px]"
                   >
                     <feature.screen
                       animated
@@ -412,7 +412,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for investing all your money"
-      className="bg-blue-800 py-20 sm:py-32"
+      className="bg-[#2e00f9] py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">

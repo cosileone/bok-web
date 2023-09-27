@@ -17,6 +17,7 @@ import logoTechcrunch from "~/images/logos/techcrunch.svg";
 import logoWired from "~/images/logos/wired.svg";
 import NewsletterMiniForm from "~/components/NewsletterMiniForm";
 import welcome from "~/images/welcome.svg";
+import handImage from "/public/blue-hero-gfx.jpeg";
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<"div">) {
   const id = useId();
@@ -102,25 +103,50 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden bg-blue-800 py-20 sm:py-32 lg:pb-32 xl:pb-36">
-      {/*<video*/}
-      {/*  className="absolute z-[-1] -mt-72 w-full object-cover lg:-mt-[224px]"*/}
-      {/*  autoPlay*/}
-      {/*  muted*/}
-      {/*  loop*/}
-      {/*>*/}
-      {/*  <source src={"/hero_video.mp4"} type="video/mp4" />*/}
-      {/*</video>*/}
+    <div className="relative overflow-hidden bg-[#2e00f9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
+      <div
+        className={
+          "absolute left-16 top-0 z-10 w-[130px] lg:left-56 lg:z-auto lg:-mt-10 lg:w-[300px]"
+        }
+      >
+        <video className={"object-cover"} autoPlay muted loop>
+          <source src={"/eyes.mp4"} type="video/mp4" />
+        </video>
+      </div>
+      <div
+        className={
+          "absolute right-10 top-0 h-[500px] w-[350px] overflow-hidden lg:right-0 lg:w-[500px]"
+        }
+      >
+        <video
+          className={"object-cover"}
+          style={{ objectPosition: "100px -20px" }}
+          autoPlay
+          muted
+          loop
+        >
+          <source src={"/blob.mp4"} type="video/mp4" />
+        </video>
+      </div>
+      <Image
+        unoptimized
+        src={handImage}
+        className={
+          "absolute left-0 top-0 h-auto max-h-[200px] w-auto max-w-[200px] lg:left-40 lg:max-h-[320px]"
+        }
+        alt={""}
+      />
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="unbounded text-4xl font-medium tracking-tight text-gray-900">
+            <h1 className="unbounded mt-[200px] text-4xl font-medium tracking-tight text-white">
               BOK: L’app che rende l’indipendenza finanziaria un gioco da
               ragazzi!
             </h1>
-            <p className="urbanist mt-6 text-lg text-gray-600">
-              Raggiungi la tua indipendenza finanziaria con BOK risparmia ed
-              investi, creato dalla Generazione Z per la Generazione Z
+            <p className="urbanist mt-6 text-lg text-gray-200">
+              Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed
+              investi in modo semplice ed efficace. Dalla Generazione Z per la
+              generazione Z
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <NewsletterMiniForm />
