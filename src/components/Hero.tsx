@@ -109,7 +109,7 @@ export function Hero() {
           "absolute left-16 top-0 z-10 w-[130px] lg:left-40 lg:z-auto lg:-mt-10 lg:w-[300px]"
         }
       >
-        <video className={"object-cover"} autoPlay muted loop>
+        <video className={"object-cover"} autoPlay loop>
           <source src={"/eyes.mp4"} type="video/mp4" />
         </video>
       </div>
@@ -122,7 +122,6 @@ export function Hero() {
           className={"object-cover"}
           style={{ objectPosition: "100px -20px" }}
           autoPlay
-          muted
           loop
         >
           <source src={"/blob.mp4"} type="video/mp4" />
