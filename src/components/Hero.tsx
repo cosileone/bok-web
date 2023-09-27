@@ -18,6 +18,8 @@ import logoWired from "~/images/logos/wired.svg";
 import NewsletterMiniForm from "~/components/NewsletterMiniForm";
 import welcome from "~/images/welcome.svg";
 import handImage from "/public/blue-hero-gfx.jpeg";
+import eyes from "/public/eyes.gif";
+import blob from "/public/blob.gif";
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<"div">) {
   const id = useId();
@@ -109,23 +111,20 @@ export function Hero() {
           "absolute left-16 top-0 z-10 w-[130px] lg:left-40 lg:z-auto lg:-mt-10 lg:w-[300px]"
         }
       >
-        <video className={"object-cover"} autoPlay loop>
-          <source src={"/eyes.mp4"} type="video/mp4" />
-        </video>
+        <Image unoptimized className={"object-cover"} src={eyes} alt={""} />
       </div>
       <div
         className={
           "absolute right-10 top-0 h-[500px] w-[350px] overflow-hidden lg:right-0 lg:w-[500px]"
         }
       >
-        <video
+        <Image
+          unoptimized
           className={"object-cover"}
-          style={{ objectPosition: "100px -20px" }}
-          autoPlay
-          loop
-        >
-          <source src={"/blob.mp4"} type="video/mp4" />
-        </video>
+          src={blob}
+          alt={""}
+          style={{ objectPosition: "100px 0px" }}
+        />
       </div>
       <Image
         unoptimized

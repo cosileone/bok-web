@@ -9,7 +9,7 @@ import { Container } from "~/components/Container";
 import { Logo } from "~/components/Logo";
 import { NavLinks } from "~/components/NavLinks";
 import Image from "next/image";
-import bokLogo from "/public/BOK.png";
+import bokLogo from "/public/bok-logo.png";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
