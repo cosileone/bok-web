@@ -106,7 +106,7 @@ export function Hero() {
     <div className="relative overflow-hidden bg-[#2e00f9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <div
         className={
-          "absolute left-16 top-0 z-10 w-[130px] lg:left-56 lg:z-auto lg:-mt-10 lg:w-[300px]"
+          "absolute left-16 top-0 z-10 w-[130px] lg:left-40 lg:z-auto lg:-mt-10 lg:w-[300px]"
         }
       >
         <video className={"object-cover"} autoPlay muted loop>
@@ -132,7 +132,7 @@ export function Hero() {
         unoptimized
         src={handImage}
         className={
-          "absolute left-0 top-0 h-auto max-h-[200px] w-auto max-w-[200px] lg:left-40 lg:max-h-[320px]"
+          "absolute left-0 top-0 h-auto max-h-[200px] w-auto max-w-[200px] lg:left-24 lg:max-h-[320px]"
         }
         alt={""}
       />
