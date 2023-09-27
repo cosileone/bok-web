@@ -102,7 +102,7 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="overflow-hidden bg-blue-800 py-20 sm:py-32 lg:pb-32 xl:pb-36">
       {/*<video*/}
       {/*  className="absolute z-[-1] -mt-72 w-full object-cover lg:-mt-[224px]"*/}
       {/*  autoPlay*/}
