@@ -123,7 +123,7 @@ export function Hero() {
           className={"object-cover"}
           src={blob}
           alt={""}
-          style={{ objectPosition: "100px 0px" }}
+          style={{ objectPosition: "100px -20px" }}
         />
       </div>
       <Image
