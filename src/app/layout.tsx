@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "BOK - L’app che rende l’indipendenza finanziaria un gioco da ragazzi!",
   },
   description:
-    "Raggiungi la tua indipendenza finanziaria con BOK risparmia ed investi, creato dalla Generazione Z per la Generazione Z",
+    "Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed investi in modo semplice ed efficace. Dalla Generazione Z per la generazione Z",
 };
 
 export default function RootLayout({

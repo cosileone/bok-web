@@ -108,14 +108,14 @@ export function Hero() {
     <div className="relative overflow-hidden bg-[#2e00f9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <div
         className={
-          "absolute left-16 top-0 z-10 w-[130px] lg:left-40 lg:z-auto lg:-mt-10 lg:w-[300px]"
+          "absolute left-16 top-0 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
         }
       >
         <Image unoptimized className={"object-cover"} src={eyes} alt={""} />
       </div>
       <div
         className={
-          "absolute right-10 top-0 h-[500px] w-[350px] overflow-hidden lg:right-0 lg:w-[500px]"
+          "absolute right-10 top-72 h-[500px] w-[200px] overflow-hidden lg:left-80 lg:top-[500px] lg:w-[400px]"
         }
       >
         <Image
@@ -123,28 +123,30 @@ export function Hero() {
           className={"object-cover"}
           src={blob}
           alt={""}
-          style={{ objectPosition: "100px -20px" }}
+          style={{ objectPosition: "50px 0" }}
         />
       </div>
       <Image
         unoptimized
         src={handImage}
         className={
-          "absolute left-0 top-0 h-auto max-h-[200px] w-auto max-w-[200px] lg:left-24 lg:max-h-[320px]"
+          "absolute top-0 hidden h-auto max-h-[200px] w-auto max-w-[200px] lg:left-10 lg:block lg:max-h-[320px]"
         }
         alt={""}
       />
+      {/*<h2 className={"absolute text-gray-200"}>*/}
+      {/*  Dalla Generazione Z per la generazione Z*/}
+      {/*</h2>*/}
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
-          <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="unbounded mt-[200px] text-4xl font-medium tracking-tight text-white">
+          <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pl-28 lg:pt-6 xl:col-span-6">
+            <h1 className="unbounded text-4xl font-medium tracking-tight text-white">
               BOK: L’app che rende l’indipendenza finanziaria un gioco da
               ragazzi!
             </h1>
             <p className="urbanist mt-6 text-lg text-gray-200">
               Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed
-              investi in modo semplice ed efficace. Dalla Generazione Z per la
-              generazione Z
+              investi in modo semplice ed efficace.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <NewsletterMiniForm />

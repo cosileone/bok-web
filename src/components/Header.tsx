@@ -56,21 +56,21 @@ export function Header() {
   return (
     <header className={"bg-[#2e00f9]"}>
       <nav>
-        <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
-            <Link href="/" aria-label="Home">
+        <Container className="relative z-50 flex justify-between pt-8">
+          <div className="relative z-10 flex w-full items-center justify-center gap-16">
+            <Link href="/" aria-label="Home" className={""}>
               <Image
                 unoptimized
                 src={bokLogo}
                 alt={""}
-                className={"h-10 w-auto"}
+                className={"h-24 w-auto lg:ml-80 lg:pl-40"}
               />
               {/*<Logo className="inline-block h-10 w-auto" />*/}
               {/*<h1 className="unbounded inline pl-6 text-xl font-semibold text-gray-200">*/}
               {/*  BOK*/}
               {/*</h1>*/}
             </Link>
-            <div className="hidden lg:flex lg:gap-10">
+            <div className="hidden w-full lg:flex lg:justify-end lg:gap-10">
               <NavLinks />
             </div>
           </div>

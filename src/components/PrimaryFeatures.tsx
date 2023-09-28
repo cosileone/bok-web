@@ -152,7 +152,7 @@ function RoundupScreen(props: ScreenProps) {
           <div className="h-full space-y-6">
             <Image
               unoptimized
-              className={"h-full object-cover object-left"}
+              className={"h-full rounded-lg object-cover object-left"}
               style={{ objectPosition: "-90px 0px" }}
               src={arrotondamentiImage}
               alt={""}
@@ -177,14 +177,16 @@ function SwearJarScreen(props: ScreenProps) {
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="h-full divide-y divide-gray-100">
-          <Image
-            unoptimized
-            className={"h-full object-cover object-left"}
-            style={{ objectPosition: "-90px 0px" }}
-            src={swearJarImage}
-            alt={""}
-          />
+        <div className="h-full px-4 py-6">
+          <div className="h-full space-y-6">
+            <Image
+              unoptimized
+              className={"h-full rounded-lg object-cover object-left"}
+              style={{ objectPosition: "-90px 0px" }}
+              src={swearJarImage}
+              alt={""}
+            />
+          </div>
         </div>
       </MotionAppScreenBody>
     </AppScreen>
@@ -207,7 +209,7 @@ function VideoBitsScreen(props: ScreenProps) {
           <div className="h-full space-y-4">
             <Image
               unoptimized
-              className={"h-full object-cover object-left"}
+              className={"h-full rounded-lg object-cover object-left"}
               style={{ objectPosition: "-110px 0px" }}
               src={cassetteImage}
               alt={""}
@@ -415,11 +417,11 @@ export function PrimaryFeatures() {
       className="bg-[#2e00f9] py-20 sm:py-32"
     >
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-medium tracking-tight text-white">
+        <div className="mx-auto max-w-2xl lg:max-w-3xl lg:text-center">
+          <h2 className="unbounded text-3xl font-medium tracking-tight text-white">
             Scopri le funzionalità di BOK Italia
           </h2>
-          <p className="mt-2 text-lg text-gray-200">
+          <p className="urbanist mt-2 text-lg text-gray-200">
             Sblocca il potenziale delle nostre molteplici funzionalità e
             raggiungi la tua indipendenza finanziaria
           </p>

@@ -51,7 +51,7 @@ export function AppScreen({
         <MenuIcon className="h-6 w-6 flex-none" />
         <div className="flex">
           {/*<Logo className="h-6 flex-none"/>*/}
-          <h2 className="font-semibold text-white">BOK Italia</h2>
+          <h2 className="unbounded font-semibold text-white">BOK</h2>
         </div>
         <UserIcon className="h-6 w-6 flex-none" />
       </div>
