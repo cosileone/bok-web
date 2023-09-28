@@ -8,8 +8,6 @@ import { SecondaryFeatures } from "~/components/SecondaryFeatures";
 import Team from "~/components/Team";
 import "~/styles/cursor.css";
 import "~/styles/google-fonts.css";
-import handImage from "/public/blue-hero-gfx.jpeg";
-import Image from "next/image";
 
 export default function Home() {
   return (
