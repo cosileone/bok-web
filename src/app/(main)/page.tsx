@@ -14,14 +14,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className={"relative z-50 m-0 p-0"}>
-        <Image
-          unoptimized
-          src={handImage}
-          className={"absolute -top-24 left-4 h-[150px] w-auto sm:hidden"}
-          alt={""}
-        />
-      </div>
       <Hero />
       <PrimaryFeatures />
       <SecondaryFeatures />

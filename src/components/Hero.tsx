@@ -108,10 +108,15 @@ export function Hero() {
     <div className="relative overflow-hidden bg-[#2e00f9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <div
         className={
-          "absolute left-16 top-0 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
+          "absolute left-6 top-0 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
         }
       >
-        <Image unoptimized className={"object-cover"} src={eyes} alt={""} />
+        <Image
+          unoptimized
+          className={"-scale-x-100 object-cover sm:scale-x-100"}
+          src={eyes}
+          alt={""}
+        />
       </div>
       <div
         className={
