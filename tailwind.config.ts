@@ -2,7 +2,7 @@ import { type Config } from "tailwindcss";
 import formsPlugin from "@tailwindcss/forms";
 
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.tsx"],
   theme: {
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
