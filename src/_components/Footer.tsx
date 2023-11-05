@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Container } from "~/_components/Container";
 import { Logomark } from "~/_components/Logo";
 import { NavLinks } from "~/_components/NavLinks";
-import qrCode from "~/images/qr-code.svg";
+import qrCode from "~/_images/qr-code.svg";
 import NewsletterMiniForm from "~/_components/NewsletterMiniForm";
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<"svg">) {

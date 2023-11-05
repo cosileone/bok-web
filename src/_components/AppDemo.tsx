@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { motion, useInView, useMotionValue } from "framer-motion";
 
 import { AppScreen } from "~/_components/AppScreen";
-import getStartedImage from "~/images/0-get-started.svg";
+import getStartedImage from "~/_images/0-get-started.svg";
 import Image from "next/image";
 
 const prices = [
