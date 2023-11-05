@@ -1,3 +1,4 @@
+import { type ReactNode } from "react";
 import { Inter } from "next/font/google";
 import clsx from "clsx";
 
@@ -21,11 +22,7 @@ export const metadata: Metadata = {
     "Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed investi in modo semplice ed efficace. Dalla Generazione Z per la generazione Z",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
