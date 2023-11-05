@@ -15,6 +15,11 @@ import { ZodError } from "zod";
 
 import { getServerAuthSession } from "~/server/auth";
 import { db } from "~/server/db";
+import {
+  getAuth,
+  type SignedInAuthObject,
+  type SignedOutAuthObject,
+} from "@clerk/nextjs/server";
 
 /**
  * 1. CONTEXT
@@ -26,6 +31,7 @@ import { db } from "~/server/db";
 
 interface CreateContextOptions {
   session: Session | null;
+  auth: SignedInAuthObject | SignedOutAuthObject;
 }
 
 /**
@@ -40,6 +46,7 @@ interface CreateContextOptions {
  */
 const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
+    auth: opts.auth,
     session: opts.session,
     db,
   };
@@ -58,8 +65,9 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
   const session = await getServerAuthSession({ req, res });
 
   return createInnerTRPCContext({
+    auth: getAuth(opts.req),
     session,
-  });
+  } as CreateContextOptions);
 };
 
 /**
@@ -116,6 +124,7 @@ const enforceUserIsAuthed = t.middleware(({ ctx, next }) => {
     ctx: {
       // infers the `session` as non-nullable
       session: { ...ctx.session, user: ctx.session.user },
+      auth: ctx.auth,
     },
   });
 });
