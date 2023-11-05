@@ -1,7 +1,7 @@
-import { AppStoreLink } from "~/components/AppStoreLink";
-import { CircleBackground } from "~/components/CircleBackground";
-import { Container } from "~/components/Container";
-import NewsletterMiniForm from "~/components/NewsletterMiniForm";
+import { AppStoreLink } from "~/_components/AppStoreLink";
+import { CircleBackground } from "~/_components/CircleBackground";
+import { Container } from "~/_components/Container";
+import NewsletterMiniForm from "~/_components/NewsletterMiniForm";
 
 export function CallToAction() {
   return (

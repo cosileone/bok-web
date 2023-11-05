@@ -1,13 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { AuthLayout } from '~/components/AuthLayout'
-import { Button } from '~/components/Button'
-import { SelectField, TextField } from '~/components/Fields'
-import { type Metadata } from 'next'
+import { AuthLayout } from "~/_components/AuthLayout";
+import { Button } from "~/_components/Button";
+import { SelectField, TextField } from "~/_components/Fields";
+import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Sign Up',
-}
+  title: "Sign Up",
+};
 
 export default function Register() {
   return (
@@ -15,10 +15,10 @@ export default function Register() {
       title="Sign up for an account"
       subtitle={
         <>
-          Already registered?{' '}
+          Already registered?{" "}
           <Link href="/login" className="text-cyan-600">
             Sign in
-          </Link>{' '}
+          </Link>{" "}
           to your account.
         </>
       }
@@ -71,5 +71,5 @@ export default function Register() {
         </Button>
       </form>
     </AuthLayout>
-  )
+  );
 }

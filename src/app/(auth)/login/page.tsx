@@ -1,13 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { AuthLayout } from '~/components/AuthLayout'
-import { Button } from '~/components/Button'
-import { TextField } from '~/components/Fields'
-import { type Metadata } from 'next'
+import { AuthLayout } from "~/_components/AuthLayout";
+import { Button } from "~/_components/Button";
+import { TextField } from "~/_components/Fields";
+import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Sign In',
-}
+  title: "Sign In",
+};
 
 export default function Login() {
   return (
@@ -15,10 +15,10 @@ export default function Login() {
       title="Sign in to account"
       subtitle={
         <>
-          Don’t have an account?{' '}
+          Don’t have an account?{" "}
           <Link href="/register" className="text-cyan-600">
             Sign up
-          </Link>{' '}
+          </Link>{" "}
           for a free trial.
         </>
       }
@@ -45,5 +45,5 @@ export default function Login() {
         </Button>
       </form>
     </AuthLayout>
-  )
+  );
 }

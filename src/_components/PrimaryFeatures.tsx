@@ -16,10 +16,10 @@ import arrotondamentiImage from "~/images/1-arrotondamenti.jpeg";
 import swearJarImage from "~/images/2-swear-jar.jpeg";
 import cassetteImage from "~/images/3-pillole-finanziarie.jpeg";
 
-import { AppScreen } from "~/components/AppScreen";
-import { CircleBackground } from "~/components/CircleBackground";
-import { Container } from "~/components/Container";
-import { PhoneFrame } from "~/components/PhoneFrame";
+import { AppScreen } from "~/_components/AppScreen";
+import { CircleBackground } from "~/_components/CircleBackground";
+import { Container } from "~/_components/Container";
+import { PhoneFrame } from "~/_components/PhoneFrame";
 import {
   DiageoLogo,
   LaravelLogo,
@@ -29,7 +29,7 @@ import {
   StaticKitLogo,
   TransistorLogo,
   TupleLogo,
-} from "~/components/StockLogos";
+} from "~/_components/StockLogos";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);

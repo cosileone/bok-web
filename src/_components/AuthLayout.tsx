@@ -1,16 +1,16 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { CirclesBackground } from '~/components/CirclesBackground'
-import { Logo } from '~/components/Logo'
+import { CirclesBackground } from "~/_components/CirclesBackground";
+import { Logo } from "~/_components/Logo";
 
 export function AuthLayout({
   title,
   subtitle,
   children,
 }: {
-  title: string
-  subtitle: React.ReactNode
-  children: React.ReactNode
+  title: string;
+  subtitle: React.ReactNode;
+  children: React.ReactNode;
 }) {
   return (
     <main className="flex min-h-full overflow-hidden pt-16 sm:py-28">
@@ -36,5 +36,5 @@ export function AuthLayout({
         </div>
       </div>
     </main>
-  )
+  );
 }
