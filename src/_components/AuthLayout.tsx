@@ -1,7 +1,9 @@
+import { type ReactNode } from "react";
 import Link from "next/link";
 
 import { CirclesBackground } from "~/_components/CirclesBackground";
-import { Logo } from "~/_components/Logo";
+import bokLogo from "/public/bok-logo.png";
+import Image from "next/image";
 
 export function AuthLayout({
   title,
@@ -9,14 +11,19 @@ export function AuthLayout({
   children,
 }: {
   title: string;
-  subtitle: React.ReactNode;
-  children: React.ReactNode;
+  subtitle: ReactNode;
+  children: ReactNode;
 }) {
   return (
     <main className="flex min-h-full overflow-hidden pt-16 sm:py-28">
       <div className="mx-auto flex w-full max-w-2xl flex-col px-4 sm:px-6">
         <Link href="/" aria-label="Home">
-          <Logo className="mx-auto h-10 w-auto" />
+          <Image
+            unoptimized
+            src={bokLogo}
+            alt={""}
+            className={"mx-auto h-24 w-auto"}
+          />
         </Link>
         <div className="relative mt-12 sm:mt-16">
           <CirclesBackground
