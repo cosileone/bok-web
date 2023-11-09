@@ -4,6 +4,7 @@ import { AuthLayout } from "~/_components/AuthLayout";
 import { Button } from "~/_components/Button";
 import { TextField } from "~/_components/Fields";
 import { type Metadata } from "next";
+import { SignIn } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Sign In",
@@ -19,31 +20,11 @@ export default function Login() {
           <Link href="/register" className="text-cyan-600">
             Sign up
           </Link>{" "}
-          for a free trial.
+          for free!
         </>
       }
     >
-      <form>
-        <div className="space-y-6">
-          <TextField
-            label="Email address"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-          />
-          <TextField
-            label="Password"
-            name="password"
-            type="password"
-            autoComplete="current-password"
-            required
-          />
-        </div>
-        <Button type="submit" color="blue" className="mt-8 w-full">
-          Sign in to account
-        </Button>
-      </form>
+      <SignIn />
     </AuthLayout>
   );
 }

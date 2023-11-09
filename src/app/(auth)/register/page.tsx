@@ -4,6 +4,7 @@ import { AuthLayout } from "~/_components/AuthLayout";
 import { Button } from "~/_components/Button";
 import { SelectField, TextField } from "~/_components/Fields";
 import { type Metadata } from "next";
+import { SignUp } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Sign Up",
@@ -23,53 +24,7 @@ export default function Register() {
         </>
       }
     >
-      <form>
-        <div className="grid grid-cols-2 gap-6">
-          <TextField
-            label="First name"
-            name="first_name"
-            type="text"
-            autoComplete="given-name"
-            required
-          />
-          <TextField
-            label="Last name"
-            name="last_name"
-            type="text"
-            autoComplete="family-name"
-            required
-          />
-          <TextField
-            className="col-span-full"
-            label="Email address"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-          />
-          <TextField
-            className="col-span-full"
-            label="Password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
-            required
-          />
-          <SelectField
-            className="col-span-full"
-            label="How did you hear about us?"
-            name="referral_source"
-          >
-            <option>AltaVista search</option>
-            <option>Super Bowl commercial</option>
-            <option>Our route 34 city bus ad</option>
-            <option>The “Never Use This” podcast</option>
-          </SelectField>
-        </div>
-        <Button type="submit" color="blue" className="mt-8 w-full">
-          Get started today
-        </Button>
-      </form>
+      <SignUp />
     </AuthLayout>
   );
 }
