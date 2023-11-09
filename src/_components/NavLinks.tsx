@@ -4,17 +4,19 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
+export const homepageNavigationItems = [
+  ["Funzioni", "/#features"],
+  // ['Reviews', '/#reviews'],
+  // ['Pricing', '/#pricing'],
+  ["Chi Siamo", "/#team"],
+  ["FAQ", "/#faqs"],
+];
+
 export function NavLinks() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const timeoutRef = useRef<number | null>(null);
 
-  return [
-    ["Funzioni", "/#features"],
-    // ['Reviews', '/#reviews'],
-    // ['Pricing', '/#pricing'],
-    ["Chi Siamo", "/#team"],
-    ["FAQ", "/#faqs"],
-  ].map(([label, href], index) => (
+  return homepageNavigationItems.map(([label, href], index) => (
     <Link
       key={label}
       href={href ?? ""}

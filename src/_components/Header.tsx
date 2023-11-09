@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "~/_components/Button";
 import { Container } from "~/_components/Container";
 import { Logo } from "~/_components/Logo";
-import { NavLinks } from "~/_components/NavLinks";
+import { homepageNavigationItems, NavLinks } from "~/_components/NavLinks";
 import Image from "next/image";
 import bokLogo from "/public/bok-logo.png";
 
@@ -114,16 +114,13 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#features">
-                              Applicazione
-                            </MobileNavLink>
-                            {/*<MobileNavLink href="/#reviews">*/}
-                            {/*  Reviews*/}
-                            {/*</MobileNavLink>*/}
-                            {/*<MobileNavLink href="/#pricing">*/}
-                            {/*  Pricing*/}
-                            {/*</MobileNavLink>*/}
-                            <MobileNavLink href="/#faqs">FAQ</MobileNavLink>
+                            {homepageNavigationItems.map(
+                              ([label, href], index) => (
+                                <MobileNavLink key={label} href={href ?? ""}>
+                                  {label}
+                                </MobileNavLink>
+                              ),
+                            )}
                           </div>
                           {/*<div className="mt-8 flex flex-col gap-4">*/}
                           {/*  <Button href="/login" variant="outline">*/}
