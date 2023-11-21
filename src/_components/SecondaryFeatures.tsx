@@ -10,7 +10,7 @@ const features = [
     icon: DeviceCardsIcon,
   },
   {
-    name: "Il 1 Dicembre esce la app ufficiale",
+    name: "Nel 2024 esce la app ufficiale",
     description:
       "Fai il Log In e ordina la tua carta di debito BOK per cominciare subito",
     icon: DeviceClockIcon,
