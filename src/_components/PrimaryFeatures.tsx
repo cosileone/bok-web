@@ -20,16 +20,6 @@ import { AppScreen } from "~/_components/AppScreen";
 import { CircleBackground } from "~/_components/CircleBackground";
 import { Container } from "~/_components/Container";
 import { PhoneFrame } from "~/_components/PhoneFrame";
-import {
-  DiageoLogo,
-  LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
-  TupleLogo,
-} from "~/_components/StockLogos";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
@@ -283,9 +273,9 @@ function FeaturesDesktop() {
                   {feature.name}
                 </Tab>
               </h3>
-              <p className="urbanist mt-2 text-gray-200">
+              <span className="urbanist mt-2 text-gray-200">
                 {feature.description}
-              </p>
+              </span>
             </div>
           </div>
         ))}
@@ -381,9 +371,9 @@ function FeaturesMobile() {
                 <h3 className="unbounded mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <p className="urbanist mt-2 text-sm text-gray-200">
+                <span className="urbanist mt-2 text-sm text-gray-200">
                   {feature.description}
-                </p>
+                </span>
               </div>
             </div>
           </div>
