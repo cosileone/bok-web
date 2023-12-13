@@ -51,11 +51,16 @@ const features = [
     name: '“Swear Jar” o "Barattolo delle penitenze"',
     description: (
       <>
-        &quot;Il barattolo delle penitenze&quot; è il modo divertente per
-        superare le cattive abitudini senza svuotare il portafoglio! <br />
-        <br /> Crea delle regole personalizzate e imposta limiti di spesa nei
-        tuoi negozi preferiti. Ad esempio, ogni volta che senti nominare un
-        personaggio famoso o che spendi più di 50 euro da Zara, risparmia 5 euro
+        <p>Quando risparmi, fallo divertendoti!</p>
+        <br />
+        <p>Crea le tue regole di risparmio personalizzate. Un esempio?</p>
+        <br />
+        <p>
+          Tutte le volte che un tweet di Elon Musk supera i 200k like metti via
+          20 euro, oppure ogni volta che spendi oltre un certo limite nel tuo
+          negozio preferito metti via 50 euro. Crea le regole vedi gli effetti
+          nel tuo portafolgio alla fine del mese :).
+        </p>
       </>
     ),
     icon: DeviceNotificationIcon,
