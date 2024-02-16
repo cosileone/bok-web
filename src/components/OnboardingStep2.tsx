@@ -26,41 +26,40 @@ export function OnboardingStep2() {
               Step 1 of 3
             </p>
           </div>
-          <span className={""}></span>
         </div>
       </CardHeader>
       <CardContent className="p-6">
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="first-name">First name</Label>
+              <Label htmlFor="first-name">Nome</Label>
               <Input id="first-name" placeholder="Lee" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="last-name">Last name</Label>
+              <Label htmlFor="last-name">Cognome</Label>
               <Input id="last-name" placeholder="Robinson" required />
             </div>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="dob">Date of birth</Label>
+            <Label htmlFor="dob">Data di nascita</Label>
             <Input id="dob" required type="date" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
-              placeholder="esempio@gmail.com"
+              placeholder="nome.cognome@gmail.com"
               required
               type="email"
             />
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between p-6">
+      <CardFooter className="flex justify-end p-6">
         {/*<Button className="w-20" variant="outline">*/}
         {/*  Skip*/}
         {/*</Button>*/}
-        <Link href={"/onboarding/step3"} className="w-20">
+        <Link href={"/onboarding/step3"} className={"self-end"}>
           <Button className="w-20">Next</Button>
         </Link>
       </CardFooter>
