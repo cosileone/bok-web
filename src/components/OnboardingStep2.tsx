@@ -10,9 +10,11 @@ import {
 } from "~/components/ui/card";
 import { Label } from "~/components/ui/label";
 import { Input } from "~/components/ui/input";
+import Link from "next/link";
+import UserIcon from "~/components/UserIcon";
 import { Button } from "~/components/ui/button";
 
-export function OnboardingStep1() {
+export function OnboardingStep2() {
   return (
     <Card className="mx-auto w-full max-w-md space-y-6">
       <CardHeader className="p-6">
@@ -24,6 +26,7 @@ export function OnboardingStep1() {
               Step 1 of 3
             </p>
           </div>
+          <span className={""}></span>
         </div>
       </CardHeader>
       <CardContent className="p-6">
@@ -54,31 +57,13 @@ export function OnboardingStep1() {
         </div>
       </CardContent>
       <CardFooter className="flex justify-between p-6">
-        <Button className="w-20" variant="outline">
-          Skip
-        </Button>
-        <Button className="w-20">Next</Button>
+        {/*<Button className="w-20" variant="outline">*/}
+        {/*  Skip*/}
+        {/*</Button>*/}
+        <Link href={"/onboarding/step3"} className="w-20">
+          <Button className="w-20">Next</Button>
+        </Link>
       </CardFooter>
     </Card>
-  );
-}
-
-function UserIcon({ ...rest }) {
-  return (
-    <svg
-      {...rest}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M19 21v-2a4 4 0 0-4-4H9a4 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
-    </svg>
   );
 }
