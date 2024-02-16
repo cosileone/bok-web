@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import { SignOutButton } from "@clerk/nextjs";
+import { SignOutButton, UserButton } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 export default function Onboarding() {
   return (
     <div>
+      <UserButton afterSignOutUrl={"/"} />
       Onboarding
       <br />
       <SignOutButton />

@@ -64,5 +64,5 @@ export default {
       },
     },
   },
-  plugins: [formsPlugin],
+  plugins: [formsPlugin, require("tailwindcss-animate")],
 } satisfies Config;
