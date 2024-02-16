@@ -1,8 +1,9 @@
 import { type Metadata } from "next";
 import { SignOutButton, UserButton } from "@clerk/nextjs";
+import { OnboardingStep1 } from "~/components/OnboardingStep1";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Welcome to BOK!",
 };
 
 export default function Onboarding() {
@@ -12,6 +13,7 @@ export default function Onboarding() {
       Onboarding
       <br />
       <SignOutButton />
+      <OnboardingStep1 />
     </div>
   );
 }

@@ -12,9 +12,9 @@ import {
 } from "framer-motion";
 import { useDebouncedCallback } from "use-debounce";
 import Image from "next/image";
-import arrotondamentiImage from "~/_images/1-arrotondamenti.jpeg";
-import swearJarImage from "~/_images/2-swear-jar.jpeg";
-import cassetteImage from "~/_images/3-pillole-finanziarie.jpeg";
+import arrotondamentiImage from "~/images/1-arrotondamenti.jpeg";
+import swearJarImage from "~/images/2-swear-jar.jpeg";
+import cassetteImage from "~/images/3-pillole-finanziarie.jpeg";
 
 import { AppScreen } from "~/components/frontpage/AppScreen";
 import { CircleBackground } from "~/components/frontpage/CircleBackground";

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import matteoImage from "~/_images/headshots/matteo.png";
-import eugeniaImage from "~/_images/headshots/eugenia.png";
-import cosimoImage from "~/_images/headshots/cosi.png";
+import matteoImage from "~/images/headshots/matteo.png";
+import eugeniaImage from "~/images/headshots/eugenia.png";
+import cosimoImage from "~/images/headshots/cosi.png";
 
 const people = [
   {
