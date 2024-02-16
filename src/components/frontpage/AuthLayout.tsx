@@ -29,13 +29,15 @@ export function AuthLayout({
           <CirclesBackground
             width="1090"
             height="1090"
-            className="absolute -top-7 left-1/2 -z-10 h-[788px] -translate-x-1/2 stroke-gray-300/30 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:-top-9 sm:h-auto"
+            className="absolute -top-7 left-1/2 -z-10 h-[788px] -translate-x-1/2 stroke-neutral-300/30 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:-top-9 sm:h-auto"
           />
-          <h1 className="text-center text-2xl font-medium tracking-tight text-gray-900">
+          <h1 className="text-center text-2xl font-medium tracking-tight text-neutral-900">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-3 text-center text-lg text-gray-600">{subtitle}</p>
+            <p className="mt-3 text-center text-lg text-neutral-600">
+              {subtitle}
+            </p>
           )}
         </div>
         <div className="-mx-4 flex-auto px-4 py-10 sm:mx-0 sm:flex-none sm:rounded-5xl sm:p-16">

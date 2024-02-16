@@ -22,7 +22,7 @@ export function OnboardingStep1() {
           <UserIcon className="h-6 w-6" />
           <div className="space-y-1.5">
             <h2 className="text-lg font-bold">Personal Information</h2>
-            <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
+            <p className="text-sm leading-none text-neutral-500 dark:text-neutral-400">
               Step 1 of 3
             </p>
           </div>

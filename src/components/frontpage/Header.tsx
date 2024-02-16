@@ -49,7 +49,7 @@ function MobileNavLink(
   return (
     <Popover.Button
       as={Link}
-      className="block text-base leading-7 tracking-tight text-gray-700"
+      className="block text-base leading-7 tracking-tight text-neutral-700"
       {...props}
     />
   );
@@ -69,7 +69,7 @@ export function Header() {
                 className={"h-24 w-auto lg:ml-80 lg:pl-40"}
               />
               {/*<Logo className="inline-block h-10 w-auto" />*/}
-              {/*<h1 className="unbounded inline pl-6 text-xl font-semibold text-gray-200">*/}
+              {/*<h1 className="unbounded inline pl-6 text-xl font-semibold text-neutral-200">*/}
               {/*  BOK*/}
               {/*</h1>*/}
             </Link>
@@ -82,7 +82,7 @@ export function Header() {
               {({ open }) => (
                 <>
                   <Popover.Button
-                    className="ui-not-focus-visible:outline-none relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-200 p-2 hover:bg-gray-200/50 hover:stroke-white active:stroke-gray-300"
+                    className="ui-not-focus-visible:outline-none relative z-10 -m-2 inline-flex items-center rounded-lg stroke-neutral-200 p-2 hover:bg-neutral-200/50 hover:stroke-white active:stroke-neutral-300"
                     aria-label="Toggle site navigation"
                   >
                     {({ open }) =>
@@ -102,7 +102,7 @@ export function Header() {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          className="fixed inset-0 z-0 bg-gray-300/60 backdrop-blur"
+                          className="fixed inset-0 z-0 bg-neutral-300/60 backdrop-blur"
                         />
                         <Popover.Panel
                           static
@@ -114,7 +114,7 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-neutral-50 px-6 pb-6 pt-32 shadow-2xl shadow-neutral-900/20"
                         >
                           <div className="space-y-4">
                             {homepageNavigationItems.map(

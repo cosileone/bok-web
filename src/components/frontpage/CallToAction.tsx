@@ -17,7 +17,7 @@ export function CallToAction() {
           <h2 className="unbounded text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Ricevi i primi <br /> consigli da subito!
           </h2>
-          <p className="urbanist mt-4 text-lg text-gray-300">
+          <p className="urbanist mt-4 text-lg text-neutral-300">
             Iscriviti alla nostra newsletter
           </p>
           <br />

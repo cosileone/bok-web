@@ -256,7 +256,7 @@ function FeaturesDesktop() {
         {features.map((feature, featureIndex) => (
           <div
             key={feature.name}
-            className="relative rounded-2xl transition-colors hover:bg-gray-800/30"
+            className="relative rounded-2xl transition-colors hover:bg-neutral-800/30"
           >
             {featureIndex === selectedIndex && (
               <motion.div
@@ -273,7 +273,7 @@ function FeaturesDesktop() {
                   {feature.name}
                 </Tab>
               </h3>
-              <span className="urbanist mt-2 text-gray-200">
+              <span className="urbanist mt-2 text-neutral-200">
                 {feature.description}
               </span>
             </div>
@@ -356,7 +356,7 @@ function FeaturesMobile() {
             ref={(ref) => ref && (slideRefs.current[featureIndex] = ref)}
             className="w-full flex-none snap-center px-4 sm:px-6"
           >
-            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
+            <div className="relative transform overflow-hidden rounded-2xl bg-neutral-800 px-5 py-6">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
                   color="#13B5C8"
@@ -366,12 +366,12 @@ function FeaturesMobile() {
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
+              <div className="absolute inset-x-0 bottom-0 bg-neutral-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
                 <h3 className="unbounded mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <span className="urbanist mt-2 text-sm text-gray-200">
+                <span className="urbanist mt-2 text-sm text-neutral-200">
                   {feature.description}
                 </span>
               </div>
@@ -386,7 +386,9 @@ function FeaturesMobile() {
             key={featureIndex}
             className={clsx(
               "relative h-0.5 w-4 rounded-full",
-              featureIndex === activeIndex ? "bg-gray-300" : "bg-gray-500",
+              featureIndex === activeIndex
+                ? "bg-neutral-300"
+                : "bg-neutral-500",
             )}
             aria-label={`Go to slide ${featureIndex + 1}`}
             onClick={() => {
@@ -416,7 +418,7 @@ export function PrimaryFeatures() {
           <h2 className="unbounded text-3xl font-medium tracking-tight text-white">
             Scopri le funzionalità di BOK Italia
           </h2>
-          <p className="urbanist mt-2 text-lg text-gray-200">
+          <p className="urbanist mt-2 text-lg text-neutral-200">
             Sblocca il potenziale delle nostre molteplici funzionalità e
             raggiungi la tua indipendenza finanziaria
           </p>

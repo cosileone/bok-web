@@ -87,7 +87,7 @@ AppScreen.Subtitle = forwardRef<
   { children: React.ReactNode }
 >(function AppScreenSubtitle({ children }, ref) {
   return (
-    <div ref={ref} className="text-sm text-gray-500">
+    <div ref={ref} className="text-sm text-neutral-500">
       {children}
     </div>
   );

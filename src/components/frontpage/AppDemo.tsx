@@ -178,10 +178,10 @@ export function AppDemo() {
       <AppScreen.Body>
         <div className="p-4">
           {/*<div className="flex gap-2">*/}
-          {/*  <div className="text-xs leading-6 text-gray-500">*/}
+          {/*  <div className="text-xs leading-6 text-neutral-500">*/}
           {/*    Totale Risparmiato*/}
           {/*  </div>*/}
-          {/*  <div className="text-sm text-gray-900">€</div>*/}
+          {/*  <div className="text-sm text-neutral-900">€</div>*/}
           {/*  <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">*/}
           {/*    <path*/}
           {/*      d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"*/}
@@ -199,17 +199,19 @@ export function AppDemo() {
             src={getStartedImage as string}
             alt={""}
           />
-          <div className="mt-3 border-t border-gray-200 pt-5">
+          <div className="mt-3 border-t border-neutral-200 pt-5">
             <div className="flex items-baseline gap-2">
-              <div className="text-2xl tabular-nums tracking-tight text-gray-900">
+              <div className="text-2xl tabular-nums tracking-tight text-neutral-900">
                 {activeValue!.toFixed(2)}
               </div>
-              <div className="text-sm text-gray-900">EUR</div>
+              <div className="text-sm text-neutral-900">EUR</div>
               {percentageChange && (
                 <div
                   className={clsx(
                     "ml-auto text-sm tabular-nums tracking-tight",
-                    percentageChange >= 0 ? "text-green-500" : "text-gray-500",
+                    percentageChange >= 0
+                      ? "text-green-500"
+                      : "text-neutral-500",
                   )}
                 >
                   {`${
@@ -218,7 +220,7 @@ export function AppDemo() {
                 </div>
               )}
             </div>
-            <div className="mt-6 flex gap-4 text-xs text-gray-500">
+            <div className="mt-6 flex gap-4 text-xs text-neutral-500">
               <div>1D</div>
               <div>5D</div>
               <div className="font-semibold text-blue-700">1M</div>
@@ -226,7 +228,7 @@ export function AppDemo() {
               <div>1Y</div>
               <div>5Y</div>
             </div>
-            <div className="mt-3 rounded-lg bg-gray-50 ring-1 ring-inset ring-black/5">
+            <div className="mt-3 rounded-lg bg-neutral-50 ring-1 ring-inset ring-black/5">
               <Chart
                 width={286}
                 height={208}
@@ -239,18 +241,18 @@ export function AppDemo() {
             <div className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-center text-sm font-semibold text-white">
               Investire
             </div>
-            <div className="mt-3 divide-y divide-gray-100 text-sm">
+            <div className="mt-3 divide-y divide-neutral-100 text-sm">
               <div className="flex justify-between py-1">
-                <div className="text-gray-500">Open</div>
-                <div className="font-medium text-gray-900">6,387.55</div>
+                <div className="text-neutral-500">Open</div>
+                <div className="font-medium text-neutral-900">6,387.55</div>
               </div>
               <div className="flex justify-between py-1">
-                <div className="text-gray-500">Closed</div>
-                <div className="font-medium text-gray-900">6,487.09</div>
+                <div className="text-neutral-500">Closed</div>
+                <div className="font-medium text-neutral-900">6,487.09</div>
               </div>
               <div className="flex justify-between py-1">
-                <div className="text-gray-500">Low</div>
-                <div className="font-medium text-gray-900">6,322.01</div>
+                <div className="text-neutral-500">Low</div>
+                <div className="font-medium text-neutral-900">6,322.01</div>
               </div>
             </div>
           </div>

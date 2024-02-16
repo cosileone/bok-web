@@ -25,7 +25,7 @@ const plans = [
       "One tip every day",
       "Invest up to $1,500 each month",
     ],
-    logomarkClassName: "fill-gray-300",
+    logomarkClassName: "fill-neutral-300",
   },
   {
     name: "Investor",
@@ -44,7 +44,7 @@ const plans = [
       "Invest up to $15,000 each month",
       "Basic transaction anonymization",
     ],
-    logomarkClassName: "fill-gray-500",
+    logomarkClassName: "fill-neutral-500",
   },
   {
     name: "VIP",
@@ -117,14 +117,14 @@ function Plan({
   return (
     <section
       className={clsx(
-        "flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5",
-        featured ? "order-first bg-gray-900 lg:order-none" : "bg-white",
+        "flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-neutral-900/5",
+        featured ? "order-first bg-neutral-900 lg:order-none" : "bg-white",
       )}
     >
       <h3
         className={clsx(
           "flex items-center text-sm font-semibold",
-          featured ? "text-white" : "text-gray-900",
+          featured ? "text-white" : "text-neutral-900",
         )}
       >
         <Logomark className={clsx("h-6 w-6 flex-none", logomarkClassName)} />
@@ -133,7 +133,7 @@ function Plan({
       <p
         className={clsx(
           "relative mt-5 flex text-3xl tracking-tight",
-          featured ? "text-white" : "text-gray-900",
+          featured ? "text-white" : "text-neutral-900",
         )}
       >
         {price.Monthly === price.Annually ? (
@@ -166,7 +166,7 @@ function Plan({
       <p
         className={clsx(
           "mt-3 text-sm",
-          featured ? "text-gray-300" : "text-gray-700",
+          featured ? "text-neutral-300" : "text-neutral-700",
         )}
       >
         {description}
@@ -177,8 +177,8 @@ function Plan({
           className={clsx(
             "-my-2 divide-y text-sm",
             featured
-              ? "divide-gray-800 text-gray-300"
-              : "divide-gray-200 text-gray-700",
+              ? "divide-neutral-800 text-neutral-300"
+              : "divide-neutral-200 text-neutral-700",
           )}
         >
           {features.map((feature) => (
@@ -215,17 +215,17 @@ export function Pricing() {
     <section
       id="pricing"
       aria-labelledby="pricing-title"
-      className="border-t border-gray-200 bg-gray-100 py-20 sm:py-32"
+      className="border-t border-neutral-200 bg-neutral-100 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="pricing-title"
-            className="text-3xl font-medium tracking-tight text-gray-900"
+            className="text-3xl font-medium tracking-tight text-neutral-900"
           >
             Flat pricing, no management fees.
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-lg text-neutral-600">
             Whether you’re one person trying to get ahead or a big firm trying
             to take over the world, we’ve got a plan for you.
           </p>
@@ -243,7 +243,7 @@ export function Pricing() {
                   key={period}
                   value={period}
                   className={clsx(
-                    "cursor-pointer border border-gray-300 px-[calc(theme(spacing.3)-1px)] py-[calc(theme(spacing.2)-1px)] text-sm text-gray-700 outline-2 outline-offset-2 transition-colors hover:border-gray-400",
+                    "cursor-pointer border border-neutral-300 px-[calc(theme(spacing.3)-1px)] py-[calc(theme(spacing.2)-1px)] text-sm text-neutral-700 outline-2 outline-offset-2 transition-colors hover:border-neutral-400",
                     period === "Monthly"
                       ? "rounded-l-lg"
                       : "-ml-px rounded-r-lg",

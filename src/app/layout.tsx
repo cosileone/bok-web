@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <ClerkProvider>
       <html
         lang="en"
-        className={clsx("h-full bg-gray-50 antialiased", inter.variable)}
+        className={clsx("h-full bg-neutral-50 antialiased", inter.variable)}
       >
         <body className="flex h-full flex-col">
           <div className="flex min-h-full flex-col">{children}</div>

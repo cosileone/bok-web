@@ -42,21 +42,21 @@ export function Faqs() {
     <section
       id="faqs"
       aria-labelledby="faqs-title"
-      className="border-t border-gray-200 bg-orange-600 py-20 sm:py-32"
+      className="border-t border-neutral-200 bg-orange-600 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="faqs-title"
-            className="unbounded text-3xl font-medium tracking-tight text-gray-100"
+            className="unbounded text-3xl font-medium tracking-tight text-neutral-100"
           >
             FAQ
           </h2>
-          <p className="urbanist mt-2 text-lg text-gray-200">
+          <p className="urbanist mt-2 text-lg text-neutral-200">
             Se hai qualsiasi altra domanda, non esitare a{" "}
             <a
               href="mailto:info@billsofknowledge.com"
-              className="text-gray-200 underline"
+              className="text-neutral-200 underline"
             >
               contattarci
             </a>
@@ -72,10 +72,12 @@ export function Faqs() {
               <ul role="list" className="space-y-10">
                 {column.map((faq, faqIndex) => (
                   <li key={faqIndex}>
-                    <h3 className="unbounded text-lg font-semibold leading-6 text-gray-100">
+                    <h3 className="unbounded text-lg font-semibold leading-6 text-neutral-100">
                       {faq.question}
                     </h3>
-                    <p className="urbanist mt-4 text-gray-200">{faq.answer}</p>
+                    <p className="urbanist mt-4 text-neutral-200">
+                      {faq.answer}
+                    </p>
                   </li>
                 ))}
               </ul>
