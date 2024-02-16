@@ -15,7 +15,7 @@ export function AuthLayout({
   children: ReactNode;
 }) {
   return (
-    <main className="flex min-h-full overflow-hidden pt-16 sm:py-28">
+    <main className="flex min-h-full pt-16 sm:py-28">
       <div className="mx-auto flex w-full max-w-2xl flex-col px-4 sm:px-6">
         {/*<Link href="/" aria-label="Home">*/}
         {/*  <Image*/}
