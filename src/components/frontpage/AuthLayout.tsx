@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import Link from "next/link";
 
-import { CirclesBackground } from "~/_components/CirclesBackground";
+import { CirclesBackground } from "~/components/frontpage/CirclesBackground";
 import bokLogo from "/public/bok-logo.png";
 import Image from "next/image";
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { AuthLayout } from "~/_components/AuthLayout";
+import { AuthLayout } from "~/components/frontpage/AuthLayout";
 import { type Metadata } from "next";
 import { SignIn } from "@clerk/nextjs";
 

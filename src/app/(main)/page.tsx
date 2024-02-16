@@ -1,11 +1,11 @@
-import { CallToAction } from "~/_components/CallToAction";
-import { Faqs } from "~/_components/Faqs";
-import { Hero } from "~/_components/Hero";
-import { Pricing } from "~/_components/Pricing";
-import { PrimaryFeatures } from "~/_components/PrimaryFeatures";
-import { Reviews } from "~/_components/Reviews";
-import { SecondaryFeatures } from "~/_components/SecondaryFeatures";
-import Team from "~/_components/Team";
+import { CallToAction } from "~/components/frontpage/CallToAction";
+import { Faqs } from "~/components/frontpage/Faqs";
+import { Hero } from "~/components/frontpage/Hero";
+import { Pricing } from "~/components/frontpage/Pricing";
+import { PrimaryFeatures } from "~/components/frontpage/PrimaryFeatures";
+import { Reviews } from "~/components/frontpage/Reviews";
+import { SecondaryFeatures } from "~/components/frontpage/SecondaryFeatures";
+import Team from "~/components/frontpage/Team";
 import "~/styles/cursor.css";
 import "~/styles/google-fonts.css";
 

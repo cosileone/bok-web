@@ -4,7 +4,7 @@ import { useId, useRef, useState } from "react";
 import clsx from "clsx";
 import { motion, useInView, useMotionValue } from "framer-motion";
 
-import { AppScreen } from "~/_components/AppScreen";
+import { AppScreen } from "~/components/frontpage/AppScreen";
 import getStartedImage from "~/_images/0-get-started.svg";
 import Image from "next/image";
 

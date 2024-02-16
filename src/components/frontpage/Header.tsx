@@ -4,10 +4,13 @@ import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { Button } from "~/_components/Button";
-import { Container } from "~/_components/Container";
-import { Logo } from "~/_components/Logo";
-import { homepageNavigationItems, NavLinks } from "~/_components/NavLinks";
+import { Button } from "~/components/frontpage/Button";
+import { Container } from "~/components/frontpage/Container";
+import { Logo } from "~/components/frontpage/Logo";
+import {
+  homepageNavigationItems,
+  NavLinks,
+} from "~/components/frontpage/NavLinks";
 import Image from "next/image";
 import bokLogo from "/public/bok-logo.png";
 

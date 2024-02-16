@@ -1,7 +1,7 @@
 "use client";
 
-import { TextField } from "~/_components/Fields";
-import { Button } from "~/_components/Button";
+import { TextField } from "~/components/frontpage/Fields";
+import { Button } from "~/components/frontpage/Button";
 import { env } from "~/env.mjs";
 import { useState, type FormEvent } from "react";
 

@@ -16,10 +16,10 @@ import arrotondamentiImage from "~/_images/1-arrotondamenti.jpeg";
 import swearJarImage from "~/_images/2-swear-jar.jpeg";
 import cassetteImage from "~/_images/3-pillole-finanziarie.jpeg";
 
-import { AppScreen } from "~/_components/AppScreen";
-import { CircleBackground } from "~/_components/CircleBackground";
-import { Container } from "~/_components/Container";
-import { PhoneFrame } from "~/_components/PhoneFrame";
+import { AppScreen } from "~/components/frontpage/AppScreen";
+import { CircleBackground } from "~/components/frontpage/CircleBackground";
+import { Container } from "~/components/frontpage/Container";
+import { PhoneFrame } from "~/components/frontpage/PhoneFrame";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
