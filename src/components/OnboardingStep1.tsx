@@ -11,8 +11,8 @@ import {
 import { Label } from "~/components/ui/label";
 import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
-import UserIcon from "~/components/UserIcon";
 import Link from "next/link";
+import { UserIcon } from "lucide-react";
 
 export function OnboardingStep1() {
   return (
@@ -33,16 +33,12 @@ export function OnboardingStep1() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="first-name">Nome</Label>
-              <Input id="first-name" placeholder="Lee" required />
+              <Input id="first-name" placeholder="Nome" required />
             </div>
             <div className="space-y-2">
               <Label htmlFor="last-name">Cognome</Label>
-              <Input id="last-name" placeholder="Robinson" required />
+              <Input id="last-name" placeholder="Cognome" required />
             </div>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="dob">Data di nascita</Label>
-            <Input id="dob" required type="date" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
@@ -52,6 +48,10 @@ export function OnboardingStep1() {
               required
               type="email"
             />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="dob">Data di nascita</Label>
+            <Input id="dob" required type="date" />
           </div>
         </div>
       </CardContent>
