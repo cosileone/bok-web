@@ -55,10 +55,10 @@ export function OnboardingStep1() {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between p-6">
-        <Button className="w-20" variant="outline">
-          Skip
-        </Button>
+      <CardFooter className="flex justify-end p-6">
+        {/*<Button className="w-20" variant="outline">*/}
+        {/*  Back*/}
+        {/*</Button>*/}
         <Link href={"/onboarding/step2"}>
           <Button className="w-20">Next</Button>
         </Link>

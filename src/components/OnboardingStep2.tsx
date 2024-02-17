@@ -23,7 +23,7 @@ export function OnboardingStep2() {
           <div className="space-y-1.5">
             <h2 className="text-lg font-bold">Personal Information</h2>
             <p className="text-sm leading-none text-neutral-500 dark:text-neutral-400">
-              Step 1 of 3
+              Step 2 of 3
             </p>
           </div>
         </div>
@@ -55,11 +55,13 @@ export function OnboardingStep2() {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-end p-6">
-        {/*<Button className="w-20" variant="outline">*/}
-        {/*  Skip*/}
-        {/*</Button>*/}
-        <Link href={"/onboarding/step3"} className={"self-end"}>
+      <CardFooter className="flex justify-between p-6">
+        <Link href={"/onboarding"}>
+          <Button className="w-20" variant="outline">
+            Back
+          </Button>
+        </Link>
+        <Link href={"/onboarding/step3"}>
           <Button className="w-20">Next</Button>
         </Link>
       </CardFooter>
