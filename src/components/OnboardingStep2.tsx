@@ -85,7 +85,7 @@ export function OnboardingStep2() {
             Back
           </Button>
         </Link>
-        <Link href={"/onboarding/step3"}>
+        <Link href={"/onboarding/thank-you"}>
           <Button className="w-20">Next</Button>
         </Link>
       </CardFooter>
