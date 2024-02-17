@@ -12,14 +12,14 @@ export type Question = {
 export const question1: Question = {
   question: "Quale secondo te è accaduto più volte quest'anno?",
   options: [
-    { id: "a", label: "Le volte che Elon Musk ha twittato", value: 100 },
+    { id: "a", label: "Le volte che Elon Musk ha twittato", value: 400 },
     {
       id: "b",
       label: "Le volte che Fedez ha postato su Instagram",
       value: 200,
     },
     { id: "c", label: "Le volte che la Juve ha fatto gol", value: 300 },
-    { id: "d", label: "I discorsi di Papa Francesco", value: 400 },
+    { id: "d", label: "I discorsi di Papa Francesco", value: 100 },
   ],
 };
 
@@ -29,22 +29,22 @@ export const question2 = {
     {
       id: "a",
       label: "Tutte le volte che piove a Milano metti via 1 euro",
-      value: 100,
+      value: 200,
     },
     {
       id: "b",
       label: "Tutte le volte che piove a Singapore metti via 1 euro",
-      value: 200,
+      value: 400,
     },
     {
       id: "c",
       label: "Tutte le volte che piove a New York metti via 1 euro",
-      value: 300,
+      value: 100,
     },
     {
       id: "d",
       label: "Tutte le volte che piove a Londra metti via 1 euro",
-      value: 400,
+      value: 300,
     },
   ],
 };
@@ -54,23 +54,23 @@ export const question3 = {
   options: [
     {
       id: "a",
-      label: "SP 500 Index fund",
-      value: 100,
+      label: "S&P 500 Index fund",
+      value: 400,
     },
     {
       id: "b",
       label: "High Yield Savings account",
-      value: 200,
+      value: 100,
     },
     {
       id: "c",
       label: "Apple Stocks",
-      value: 300,
+      value: 200,
     },
     {
       id: "d",
       label: "Cryptocurrency",
-      value: 400,
+      value: 300,
     },
   ],
 };
