@@ -1,9 +1,5 @@
-interface VerifyEmailAddressProps {
-  foo: string;
-}
-
-const Page = ({ foo }: VerifyEmailAddressProps) => {
+const VerifyEmailAddressPage = () => {
   return <>VerifyEmailAddress</>;
 };
 
-export default Page;
+export default VerifyEmailAddressPage;
