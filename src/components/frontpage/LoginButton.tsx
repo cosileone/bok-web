@@ -11,7 +11,7 @@ const LoginButton = ({ className }: LoginButtonProps) => {
     <>
       <SignedOut>
         <Button href={"/register"} className={cn(className)}>
-          Login Qui!
+          Registrati
         </Button>
       </SignedOut>
       <SignedIn>
