@@ -20,6 +20,7 @@ import welcome from "~/images/welcome.svg";
 import handImage from "/public/blue-hero-gfx.jpeg";
 import eyes from "/public/eyes.gif";
 import blob from "/public/blob.gif";
+import LoginButton from "~/components/frontpage/LoginButton";
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<"div">) {
   const id = useId();
@@ -154,7 +155,8 @@ export function Hero() {
               investi in modo semplice ed efficace.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <NewsletterMiniForm />
+              <LoginButton />
+              {/*<NewsletterMiniForm />*/}
               {/* App Store Buttons */}
               {/*<AppStoreLink />*/}
               {/*<Button*/}

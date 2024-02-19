@@ -13,6 +13,7 @@ import {
 } from "~/components/frontpage/NavLinks";
 import Image from "next/image";
 import bokLogo from "/public/bok-logo.png";
+import LoginButton from "~/components/frontpage/LoginButton";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -75,6 +76,7 @@ export function Header() {
             </Link>
             <div className="hidden w-full lg:flex lg:justify-end lg:gap-10">
               <NavLinks />
+              <LoginButton className={"-mt-2"} />
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -125,12 +127,13 @@ export function Header() {
                               ),
                             )}
                           </div>
-                          {/*<div className="mt-8 flex flex-col gap-4">*/}
-                          {/*  <Button href="/login" variant="outline">*/}
-                          {/*    Log in*/}
-                          {/*  </Button>*/}
-                          {/*  <Button href="#">Download the app</Button>*/}
-                          {/*</div>*/}
+                          <div className="mt-8 flex flex-col gap-4">
+                            {/*  <Button href="/login" variant="outline">*/}
+                            {/*    Log in*/}
+                            {/*  </Button>*/}
+                            {/*  <Button href="#">Download the app</Button>*/}
+                            <LoginButton />
+                          </div>
                         </Popover.Panel>
                       </>
                     )}
