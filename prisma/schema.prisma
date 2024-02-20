@@ -105,6 +105,20 @@ model User {
   sessions      Session[]
   quizAnswers   QuizAnswer[]
   quizResult    QuizResult?
+  userProfile   UserProfile?
+}
+
+model UserProfile {
+  id                     Int      @id @default(autoincrement())
+  userId                 Int      @unique
+  user                   User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  industry               String
+  estimatedMonthlyIncome Int
+  savingsRate            Int
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  @@index([userId])
 }
 
 model VerificationToken {

@@ -20,15 +20,21 @@ import {
   savePreregistration,
   type SavePreregistrationProps,
 } from "~/server/actions/preregistration";
+import useUserStore from "~/state/useUserStore";
+import { useRouter } from "next/navigation";
 
 export function OnboardingStep1() {
   const [firstName, setFirstName] = useState<string>();
   const [lastName, setLastName] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [dob, setDob] = useState<Date>();
+  const setUser = useUserStore((state) => state.setUser);
+  const router = useRouter();
 
   const handleOnSubmit = async (payload: SavePreregistrationProps) => {
-    await savePreregistration(payload);
+    const user = await savePreregistration(payload);
+    setUser(user);
+    router.push("/onboarding/step2");
   };
 
   return (
@@ -91,23 +97,21 @@ export function OnboardingStep1() {
         {/*<Button className="w-20" variant="outline">*/}
         {/*  Back*/}
         {/*</Button>*/}
-        <Link href={"/onboarding/step2"}>
-          <Button
-            className="w-20"
-            onClick={(e) => {
-              if (firstName && lastName && email) {
-                void handleOnSubmit({
-                  firstName,
-                  lastName,
-                  email,
-                  dateOfBirth: dob,
-                });
-              }
-            }}
-          >
-            Next
-          </Button>
-        </Link>
+        <Button
+          className="w-20"
+          onClick={(e) => {
+            if (firstName && lastName && email) {
+              void handleOnSubmit({
+                firstName,
+                lastName,
+                email,
+                dateOfBirth: dob,
+              });
+            }
+          }}
+        >
+          Next
+        </Button>
       </CardFooter>
     </Card>
   );

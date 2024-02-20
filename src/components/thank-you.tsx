@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function ThankYou() {
   return (
-    <div className="flex flex-col items-center space-y-4 py-8">
+    <div className="flex flex-col items-center space-y-20 py-8">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           Volete scoprire <br /> come si risparmia usando BOK?

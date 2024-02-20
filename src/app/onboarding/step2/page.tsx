@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Welcome to BOK!",
 };
 
-export default function Onboarding() {
+export default function OnboardingPage2() {
   return (
-    <div>
-      <UserButton afterSignOutUrl={"/"} />
-      Onboarding
-      <br />
-      <SignOutButton />
+    <div className={"pt-20 sm:pt-40"}>
+      {/*<UserButton afterSignOutUrl={"/"} />*/}
+      {/*Onboarding*/}
+      {/*<br />*/}
+      {/*<SignOutButton />*/}
       <OnboardingStep2 />
     </div>
   );
