@@ -58,6 +58,30 @@ model Preregistration {
   updatedAt  DateTime @updatedAt
 }
 
+model QuizAnswer {
+  id        Int      @id @default(autoincrement())
+  question  Int // 1-4
+  answer    String
+  score     Int
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model QuizResult {
+  id        Int      @id @default(autoincrement())
+  score     Int
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
@@ -69,14 +93,16 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String       @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?      @unique
   emailVerified DateTime?
   image         String?
   clerkId       String?
   accounts      Account[]
   sessions      Session[]
+  quizAnswers   QuizAnswer[]
+  quizResult    QuizResult?
 }
 
 model VerificationToken {
