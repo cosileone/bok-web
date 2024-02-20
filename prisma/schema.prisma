@@ -53,8 +53,8 @@ model Preregistration {
   firstName   String
   lastName    String
   email       String    @unique
-  newsletter  Boolean
-  dateOfBirth DateTime?
+  newsletter  Boolean   @default(false)
+  dateOfBirth DateTime? @db.Date
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
