@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 
 export default function Onboarding() {
   return (
-    <div>
-      <UserButton afterSignOutUrl={"/"} />
-      Onboarding
-      <br />
-      <SignOutButton />
+    <div className={"pt-20 sm:pt-40"}>
+      {/*<UserButton afterSignOutUrl={"/"} />*/}
+      {/*Onboarding*/}
+      {/*<br />*/}
+      {/*<SignOutButton />*/}
       <OnboardingStep1 />
     </div>
   );

@@ -15,10 +15,10 @@ const QuizPage = () => {
   const [page, setPage] = useState(1);
   return (
     <div>
-      <UserButton afterSignOutUrl={"/"} />
-      <SignOutButton />
-      <h1>Quiz Page</h1>
-      <div className={"flex justify-center pt-20"}>
+      {/*<UserButton afterSignOutUrl={"/"} />*/}
+      {/*<SignOutButton />*/}
+      {/*<h1>Quiz Page</h1>*/}
+      <div className={"flex justify-center pt-40 sm:pt-20"}>
         <QuizStep
           page={page}
           totalPages={questions.length}
