@@ -10,7 +10,7 @@ const LoginButton = ({ className }: LoginButtonProps) => {
   return (
     <>
       <SignedOut>
-        <Button href={"/register"} className={cn(className)}>
+        <Button href={"/onboarding"} className={cn(className)}>
           Registrati
         </Button>
       </SignedOut>
