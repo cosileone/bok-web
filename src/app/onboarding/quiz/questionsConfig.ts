@@ -50,26 +50,26 @@ export const question2 = {
 };
 
 export const question3 = {
-  question: "What investment vehicle would return the best results?",
+  question: "quale tipo di investimento avrebbe i migliori rendimenti?",
   options: [
     {
       id: "a",
-      label: "S&P 500 Index fund",
+      label: "Fondo indicizzato S&P 500",
       value: 400,
     },
     {
       id: "b",
-      label: "High Yield Savings account",
+      label: "Conto deposito",
       value: 100,
     },
     {
       id: "c",
-      label: "Apple Stocks",
+      label: "Azioni Apple",
       value: 200,
     },
     {
       id: "d",
-      label: "Cryptocurrency",
+      label: "Cryptovaluta",
       value: 300,
     },
   ],
@@ -81,22 +81,22 @@ export const question4 = {
   options: [
     {
       id: "a",
-      label: "20",
+      label: "10",
       value: 100,
     },
     {
       id: "b",
-      label: "50",
+      label: "20",
       value: 200,
     },
     {
       id: "c",
-      label: "100",
+      label: "50",
       value: 300,
     },
     {
       id: "d",
-      label: "200+",
+      label: "100+",
       value: 400,
     },
   ],
