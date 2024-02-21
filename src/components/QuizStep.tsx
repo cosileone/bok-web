@@ -15,19 +15,18 @@ type QuizStepProps = {
   question: Question;
   page: number;
   totalPages: number;
-  ctaUrl: string;
   onBack?: () => void;
-  onNext: (value: number) => void;
+  onNext: (value: { answer: string; score: number }) => void;
 };
 export function QuizStep({
   question,
   page,
   totalPages,
-  ctaUrl,
   onNext,
   onBack,
 }: QuizStepProps) {
-  const [answer, setAnswer] = useState<number | null>(null);
+  const [answer, setAnswer] = useState<string>();
+
   return (
     <Card className="w-full max-w-lg">
       <CardHeader className="flex items-center space-x-4">
@@ -42,7 +41,7 @@ export function QuizStep({
           <RadioGroup
             aria-labelledby={`q${page}`}
             value={answer?.toString() ?? ""}
-            onValueChange={(value) => setAnswer(+value)}
+            onValueChange={(value) => setAnswer(value)}
           >
             <h3 className="sr-only" id={`q${page}`}>
               {question.question}
@@ -56,8 +55,8 @@ export function QuizStep({
                 >
                   <RadioGroupItem
                     id={`q${page}-${option.id}`}
-                    value={`${option.value}`}
-                    onClick={() => setAnswer(option.value)}
+                    value={`${option.id}`}
+                    onClick={() => setAnswer(option.id)}
                   />
                   <span>
                     {option.id}) {option.label}
@@ -81,11 +80,14 @@ export function QuizStep({
           <Button
             size="sm"
             onClick={() => {
-              if (answer === null) return;
-              onNext(answer);
-              setAnswer(null);
+              if (answer === undefined) return;
+              onNext({
+                answer,
+                score: question.options.find((o) => o.id === answer)!.value,
+              });
+              setAnswer(undefined);
             }}
-            disabled={answer === null}
+            disabled={answer === undefined}
             className={"ml-auto"}
           >
             Next
