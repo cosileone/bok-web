@@ -9,7 +9,9 @@ import { Label } from "~/components/ui/label";
 import { Button } from "~/components/ui/button";
 import { type Question } from "~/app/onboarding/quiz/questionsConfig";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useUserStore from "~/state/useUserStore";
+import { getQuizAnswer } from "~/server/actions/quizAnswers";
 
 type QuizStepProps = {
   question: Question;
@@ -26,6 +28,19 @@ export function QuizStep({
   onBack,
 }: QuizStepProps) {
   const [answer, setAnswer] = useState<string>();
+  const user = useUserStore((state) => state.user);
+
+  useEffect(() => {
+    if (!user) return;
+    void getQuizAnswer({
+      userId: user.id,
+      question: page,
+    }).then((answer) => {
+      if (answer) {
+        setAnswer(answer.answer);
+      }
+    });
+  }, []);
 
   return (
     <Card className="w-full max-w-lg">

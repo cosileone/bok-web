@@ -10,12 +10,23 @@ type SaveQuizAnswerProps = {
   userId: number;
 };
 export const saveQuizAnswer = async ({
-  quizAnswerId,
   question,
   answer,
   score,
   userId,
 }: SaveQuizAnswerProps) => {
+  const existingAnswer = await db.quizAnswer.findFirst({
+    where: { userId, question },
+  });
+  if (existingAnswer?.answer === answer) return existingAnswer;
+
+  if (existingAnswer) {
+    return db.quizAnswer.update({
+      where: { id: existingAnswer.id },
+      data: { answer, score },
+    });
+  }
+
   return db.quizAnswer.create({
     data: { question, answer, score, userId },
   });
@@ -28,7 +39,7 @@ export const getQuizAnswer = async ({
   userId: number;
   question: number;
 }) => {
-  return db.quizAnswer.findMany({
+  return db.quizAnswer.findFirst({
     where: { userId, question },
     take: 1,
   });
