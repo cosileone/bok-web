@@ -35,8 +35,8 @@ export function OnboardingStep2() {
       </CardHeader>
       <CardContent className="p-6">
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
+          <div className="grid grid-cols-4 gap-4">
+            <div className="col-span-3 space-y-2">
               <div className="space-y-2">
                 <Label htmlFor="industry">Settore</Label>
                 <Input id="industry" placeholder="Settore" />
@@ -55,9 +55,9 @@ export function OnboardingStep2() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className={"space-y-2"}>
-              <Label htmlFor="savings">Quanto vuoi risparmiare?</Label>
+          <div className="grid grid-cols-4 gap-4">
+            <div className={"col-span-3 space-y-2"}>
+              <Label htmlFor="savings">Quanto (%) vuoi risparmiare?</Label>
               <Input
                 id="savings"
                 placeholder="10%"
