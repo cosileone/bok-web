@@ -42,7 +42,7 @@ const Quiz = () => {
 
     if (page === questions.length) {
       await calculateQuizResults({ userId: user.id });
-      router.push("/onboarding/results");
+      router.push("/onboarding/quiz/results");
     }
   };
 
