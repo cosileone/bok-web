@@ -49,14 +49,15 @@ model Account {
 }
 
 model Preregistration {
-  id          Int       @id @default(autoincrement())
+  id          Int         @id @default(autoincrement())
   firstName   String
   lastName    String
-  email       String    @unique
-  newsletter  Boolean   @default(false)
-  dateOfBirth DateTime? @db.Date
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  email       String      @unique
+  newsletter  Boolean     @default(false)
+  dateOfBirth DateTime?   @db.Date
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  QuizResult  QuizResult?
 }
 
 model QuizAnswer {
@@ -74,12 +75,12 @@ model QuizAnswer {
 }
 
 model QuizResult {
-  id        Int      @id @default(autoincrement())
+  id        Int             @id @default(autoincrement())
   score     Int
-  userId    Int      @unique
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  userId    Int             @unique
+  user      Preregistration @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
 
   @@index([userId])
 }
@@ -105,7 +106,6 @@ model User {
   accounts      Account[]
   sessions      Session[]
   quizAnswers   QuizAnswer[]
-  quizResult    QuizResult?
   userProfile   UserProfile?
 }
 

@@ -17,3 +17,12 @@ export const calculateQuizResults = async ({ userId }: { userId: number }) => {
     },
   });
 };
+
+export const getAllQuizResults = async () => {
+  return db.quizResult.findMany({
+    orderBy: [{ score: "desc" }, { id: "desc" }],
+    include: {
+      user: true,
+    },
+  });
+};

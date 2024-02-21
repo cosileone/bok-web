@@ -28,7 +28,7 @@ export function OnboardingStep2() {
           <div className="space-y-1.5">
             <h2 className="text-lg font-bold">Financial Information</h2>
             <p className="text-sm leading-none text-neutral-500 dark:text-neutral-400">
-              Step 2 of 3
+              Pagina 3 di 3
             </p>
           </div>
         </div>

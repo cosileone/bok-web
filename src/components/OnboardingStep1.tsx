@@ -45,7 +45,7 @@ export function OnboardingStep1() {
           <div className="space-y-1.5">
             <h2 className="text-lg font-bold">Personal Information</h2>
             <p className="text-sm leading-none text-neutral-500 dark:text-neutral-400">
-              Step 1 of 3
+              Pagina 2 di 3
             </p>
           </div>
         </div>
