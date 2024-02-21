@@ -4,8 +4,8 @@ import ForecastChart from "~/components/ForecastChart";
 const QuizResultsPage = () => {
   return (
     <>
-      <div className={"flex flex-col items-center pt-20 sm:pt-40"}>
-        <ForecastChart />
+      <div className={"flex flex-col items-center pt-6 sm:pt-40"}>
+        <ForecastChart className={"mb-6 sm:mb-20"} />
         <Leaderboard className={"w-[400px]"} />
       </div>
     </>
