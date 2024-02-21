@@ -9,10 +9,10 @@ export function ThankYou() {
     <div className="flex flex-col items-center space-y-20 py-8">
       <div className="space-y-2 text-center">
         <h1 className="mb-10 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Grazie!
+          Benvenuti!
         </h1>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Volete scoprire come <br /> si risparmia usando BOK?
+          Adesso volete scoprire come <br /> si risparmia usando BOK?
         </h2>
         <p className="text-balance text-gray-500 dark:text-gray-400 md:text-xl/relaxed">
           Fai il nostro quiz per scoprire come BOK può aiutarti a mettere da
