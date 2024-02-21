@@ -27,6 +27,7 @@ export function QuizStep({
   onNext,
   onBack,
 }: QuizStepProps) {
+  const isLastPage = page === totalPages;
   const [answer, setAnswer] = useState<string>();
   const user = useUserStore((state) => state.user);
 
@@ -40,7 +41,7 @@ export function QuizStep({
         setAnswer(answer.answer);
       }
     });
-  }, []);
+  }, [page]);
 
   return (
     <Card className="w-full max-w-lg">
@@ -105,7 +106,7 @@ export function QuizStep({
             disabled={answer === undefined}
             className={"ml-auto"}
           >
-            Next
+            {isLastPage ? "Finish" : "Next"}
           </Button>
           {/*</Link>*/}
         </div>
