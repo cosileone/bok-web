@@ -9,7 +9,7 @@ import {
 } from "~/app/onboarding/quiz/questionsConfig";
 import { useState } from "react";
 import useUserStore from "~/state/useUserStore";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { saveQuizAnswer } from "~/server/actions/quizAnswers";
 import { calculateQuizResults } from "~/server/actions/quizResults";
 
@@ -27,7 +27,8 @@ const Quiz = () => {
     score: number;
   }) => {
     if (!user) {
-      redirect("/onboarding");
+      router.push("/onboarding");
+      return null;
     }
     await saveQuizAnswer({
       question: page,
