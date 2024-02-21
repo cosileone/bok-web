@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         lang="en"
         className={clsx("h-full bg-neutral-50 antialiased", inter.variable)}
       >
-        <body className="flex h-full flex-col">
+        <body className="flex min-h-full flex-col">
           <div className="flex min-h-full flex-col">{children}</div>
           <Analytics />
         </body>

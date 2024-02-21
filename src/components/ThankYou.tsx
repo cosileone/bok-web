@@ -3,11 +3,12 @@
  * @see https://v0.dev/t/QH7CtckXneq
  */
 import Link from "next/link";
+import { Card } from "~/components/ui/card";
 
 export function ThankYou() {
   return (
     <div className="flex flex-col items-center space-y-20 py-8">
-      <div className="space-y-2 text-center">
+      <Card className="space-y-2 p-20 text-center">
         <h1 className="mb-10 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           Benvenuti!
         </h1>
@@ -18,7 +19,7 @@ export function ThankYou() {
           Fai il nostro quiz per scoprire come BOK può aiutarti a mettere da
           parte i soldi.
         </p>
-      </div>
+      </Card>
       <Link
         className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-neutral-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-neutral-800 dark:bg-gray-950 dark:text-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
         href={"/onboarding/quiz"}

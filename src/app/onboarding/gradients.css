@@ -1,0 +1,5 @@
+body {
+    cursor: initial;
+    /*background: radial-gradient(592px at 50% 40%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);*/
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 100%);
+}
