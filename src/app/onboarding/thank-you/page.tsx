@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import { SignOutButton, UserButton } from "@clerk/nextjs";
-import { ThankYou } from "~/components/thank-you";
+import { ThankYou } from "~/components/ThankYou";
 
 export const metadata: Metadata = {
   title: "Benvenuti a BOK!",
