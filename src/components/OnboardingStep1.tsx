@@ -21,7 +21,7 @@ import {
   type SavePreregistrationProps,
 } from "~/server/actions/preregistration";
 import useUserStore from "~/state/useUserStore";
-import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 export function OnboardingStep1() {
   const [firstName, setFirstName] = useState<string>();
@@ -29,12 +29,11 @@ export function OnboardingStep1() {
   const [email, setEmail] = useState<string>();
   const [dob, setDob] = useState<Date>();
   const setUser = useUserStore((state) => state.setUser);
-  const router = useRouter();
 
   const handleOnSubmit = async (payload: SavePreregistrationProps) => {
     const user = await savePreregistration(payload);
     setUser(user);
-    router.push("/onboarding/step2");
+    redirect("/onboarding/step2");
   };
 
   return (
