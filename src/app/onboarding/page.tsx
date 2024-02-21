@@ -3,7 +3,7 @@ import { SignOutButton, UserButton } from "@clerk/nextjs";
 import { OnboardingStep1 } from "~/components/OnboardingStep1";
 
 export const metadata: Metadata = {
-  title: "Welcome to BOK!",
+  title: "Benvenuti a BOK!",
 };
 
 export default function Onboarding() {
