@@ -74,9 +74,9 @@ export function Header() {
               {/*  BOK*/}
               {/*</h1>*/}
             </Link>
-            <div className="hidden w-full lg:flex lg:justify-end lg:gap-10">
+            <div className="hidden w-full items-center lg:flex lg:justify-end lg:gap-10">
               <NavLinks />
-              <LoginButton className={"-mt-2"} />
+              <LoginButton />
             </div>
           </div>
           <div className="flex items-center gap-6">
