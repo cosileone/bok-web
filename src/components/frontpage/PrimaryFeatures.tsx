@@ -70,7 +70,7 @@ function RocketEmoji(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 function DeviceNotificationIcon(props: React.ComponentPropsWithoutRef<"svg">) {
-  return <span className="text-[32px]">🗣</span>;
+  return <span className="text-[32px]">🗣️</span>;
 }
 
 function DeviceTouchIcon(props: React.ComponentPropsWithoutRef<"svg">) {
