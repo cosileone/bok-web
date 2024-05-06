@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "~/lib/utils";
 
 export const homepageNavigationItems = [
+  ["Business", "/business"],
   ["Funzioni", "/#features"],
   // ['Reviews', '/#reviews'],
   // ['Pricing', '/#pricing'],

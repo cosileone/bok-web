@@ -12,6 +12,7 @@ export default authMiddleware({
     "/onboarding/thank-you",
     "/onboarding/quiz",
     "/onboarding/quiz/results",
+    "/business",
   ],
 });
 
