@@ -14,11 +14,11 @@ import { ZodError } from "zod";
 
 import { getServerAuthSession } from "~/server/auth";
 import { db } from "~/server/db";
+import { getAuth } from "@clerk/nextjs/server";
 import {
-  getAuth,
   type SignedInAuthObject,
   type SignedOutAuthObject,
-} from "@clerk/nextjs/server";
+} from "@clerk/backend/internal";
 
 /**
  * 1. CONTEXT
