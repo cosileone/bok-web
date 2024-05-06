@@ -9,6 +9,19 @@ import logoStaticKit from "~/images/salient/logos/statickit.svg";
 import logoTransistor from "~/images/salient/logos/transistor.svg";
 import logoTuple from "~/images/salient/logos/tuple.svg";
 
+const logoGroups: { name: string; logo: unknown }[][] = [
+  [
+    { name: "Transistor", logo: logoTransistor },
+    { name: "Tuple", logo: logoTuple },
+    { name: "StaticKit", logo: logoStaticKit },
+  ],
+  [
+    { name: "Mirage", logo: logoMirage },
+    { name: "Laravel", logo: logoLaravel },
+    { name: "Statamic", logo: logoStatamic },
+  ],
+];
+
 export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
@@ -54,18 +67,7 @@ export function Hero() {
           role="list"
           className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
         >
-          {[
-            [
-              { name: "Transistor", logo: logoTransistor },
-              { name: "Tuple", logo: logoTuple },
-              { name: "StaticKit", logo: logoStaticKit },
-            ],
-            [
-              { name: "Mirage", logo: logoMirage },
-              { name: "Laravel", logo: logoLaravel },
-              { name: "Statamic", logo: logoStatamic },
-            ],
-          ].map((group, groupIndex) => (
+          {logoGroups.map((group, groupIndex) => (
             <li key={groupIndex}>
               <ul
                 role="list"
@@ -73,7 +75,11 @@ export function Hero() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                    <Image
+                      src={company.logo as string}
+                      alt={company.name}
+                      unoptimized
+                    />
                   </li>
                 ))}
               </ul>
