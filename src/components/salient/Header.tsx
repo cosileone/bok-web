@@ -97,6 +97,13 @@ function MobileNavigation() {
   );
 }
 
+const navigationLinks = [
+  { href: "/", text: "Per Gen Z" },
+  { href: "#funzioni", text: "Funzioni" },
+  { href: "#prezzi", text: "Prezzi" },
+  // { href: "#testimonials", text: "Testimonials" },
+];
+
 export function Header() {
   return (
     <header className="py-10">
@@ -107,16 +114,18 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              {navigationLinks.map(({ href, text }) => (
+                <NavLink key={href} href={href}>
+                  {text}
+                </NavLink>
+              ))}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+              <NavLink href="/business/login">Log in</NavLink>
             </div>
-            <Button href="/register" color="blue">
+            <Button href="/business/register" color="blue">
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>

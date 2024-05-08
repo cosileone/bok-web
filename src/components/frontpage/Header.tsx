@@ -11,8 +11,6 @@ import {
   homepageNavigationItems,
   NavLinks,
 } from "~/components/frontpage/NavLinks";
-import Image from "next/image";
-import bokLogo from "/public/bok-logo.png";
 import LoginButton from "~/components/frontpage/LoginButton";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -63,12 +61,7 @@ export function Header() {
         <Container className="relative z-50 flex justify-between pt-8">
           <div className="relative z-10 flex w-full items-center justify-center gap-16">
             <Link href="/" aria-label="Home" className={""}>
-              <Image
-                unoptimized
-                src={bokLogo}
-                alt={""}
-                className={"h-24 w-auto lg:ml-80 lg:pl-40"}
-              />
+              <Logo />
               {/*<Logo className="inline-block h-10 w-auto" />*/}
               {/*<h1 className="unbounded inline pl-6 text-xl font-semibold text-neutral-200">*/}
               {/*  BOK*/}

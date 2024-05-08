@@ -8,6 +8,8 @@ import { PrimaryFeatures } from "~/components/salient/PrimaryFeatures";
 import { SecondaryFeatures } from "~/components/salient/SecondaryFeatures";
 import { Testimonials } from "~/components/salient/Testimonials";
 
+import "~/styles/cursor-reset.css";
+
 export default function Home() {
   return (
     <>
