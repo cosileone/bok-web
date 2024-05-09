@@ -14,21 +14,21 @@ import screenshotVatReturns from "~/images/salient/screenshots/vat-returns.png";
 
 const features = [
   {
-    title: "Payroll",
+    title: "Contenuti Finanziari",
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Contenuti da Gen Z per Gen Z, dalle techniche di risparmio a quelle di investimento passando per curiose nozioni e notizie di attualità economico finanziaria!",
     image: screenshotPayroll,
   },
   {
-    title: "Claim expenses",
+    title: "App di risparmio",
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "Sei un Gen Z  e stai cercando la tua app per risparmiare divertendoti? A breve disponibile tante nuove funzioni con risparmio a regole, competizione e tanti elementi di Gamification.  Resta aggiornato/a qui e su @bokfinanza",
     image: screenshotExpenses,
   },
   {
-    title: "VAT handling",
+    title: "Investi con noi",
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "I risparmi cher hai creato sono finalmente pronti a fruttare. Comincia adesso ad accrescere il tuo patrimonio,  utilizza la nostra IA per settare obiettivi e profilo d’investimento",
     image: screenshotVatReturns,
   },
   {

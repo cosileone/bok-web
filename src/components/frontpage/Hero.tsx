@@ -106,7 +106,7 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export function Hero() {
   return (
-    <div className="relative overflow-hidden bg-[#2e00f9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="relative overflow-hidden bg-[#2E01F9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <div
         className={
           "absolute left-6 top-0 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
