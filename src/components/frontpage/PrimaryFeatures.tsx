@@ -12,9 +12,9 @@ import {
 } from "framer-motion";
 import { useDebouncedCallback } from "use-debounce";
 import Image from "next/image";
-import arrotondamentiImage from "~/images/1-arrotondamenti.jpeg";
-import swearJarImage from "~/images/2-swear-jar.jpeg";
-import cassetteImage from "~/images/3-pillole-finanziarie.jpeg";
+import bokCardImage from "~/images/1.png";
+import roundupsImage from "~/images/2.png";
+import moviesImage from "~/images/3.png";
 
 import { AppScreen } from "~/components/frontpage/AppScreen";
 import { CircleBackground } from "~/components/frontpage/CircleBackground";
@@ -31,35 +31,24 @@ interface CustomAnimationProps {
 
 const features = [
   {
-    name: "Arrotondamenti Round-up",
+    name: "Arrotondamenti",
     description:
-      "Ogni volta che fai un acquisto con la tua carta BOK, potrai arrotondare l’importo speso all’euro successivo, risparmiandolo nel tuo conto salvadanaio in automatico. Inoltre, potrai moltiplicare la cifra raddoppiando, triplicando come vorrai tu. Attiva subito le funzioni!",
+      "Gli arrotondamenti con la nostra carta sono come il tuo assistente di risparmio personale. Ogni volta che fai un acquisto il sistema arrotonda l'importo al numero intero successivo e mette da parte la differenza. Ad esempio, se spendi 1,20€ per un caffè, verranno addebitati 2€ sul tuo conto e i restanti 80 centesimi  andranno direttamente nel tuo salvadanaio digitale. È un modo semplice e automatico per accumulare risparmi senza neanche renderci conto!",
     icon: RocketEmoji,
     screen: RoundupScreen,
   },
   {
-    name: '“Swear Jar” o "Barattolo delle penitenze"',
-    description: (
-      <>
-        <p>Quando risparmi, fallo divertendoti!</p>
-        <br />
-        <p>Crea le tue regole di risparmio personalizzate. Un esempio?</p>
-        <br />
-        <p>
-          Tutte le volte che un tweet di Elon Musk supera i 200k like metti via
-          20 euro, oppure ogni volta che spendi oltre un certo limite nel tuo
-          negozio preferito metti via 50 euro. Crea le regole vedi gli effetti
-          nel tuo portafolgio alla fine del mese :).
-        </p>
-      </>
-    ),
+    name: "Risparmio a regole e Gamification",
+    description:
+      'Con questa funzionalità, puoi inventare regole che ti fanno risparmiare soldi ogni volta che succede qualcosa che stabilisci tu Ad esempio, potresti dire: "Ogni volta che Elon Musk twitta risparmia 20 centesimi”, et voila 20 centesimi vanno direttamente nel tuo salvadanaio digitale! Potrai inoltre partecipare a competizioni avvincenti per chi risparmia di più e vincere premi in denaro',
     icon: DeviceNotificationIcon,
     screen: SwearJarScreen,
   },
   {
-    name: "Competizioni e Pillole Finanziarie",
+    name: "Pillole Finanziarie: Le nostre “bills of knowledge”",
     description:
-      "Partecipa in competizioni avvincenti, sia in singolo che con amici, sfidando gli altri utenti per chi riesce a risparmiare più soldi con la app! Vinci premi fantastici quali ricompense in denaro, viaggi e tanto altro.",
+      "Video con temi sempre attuali sulla finanza, l’economia, il risparmio e gli investimenti. I contenuti saranno sempre nuovi ed i nostri formati stile Gen Z ti terranno sempre sul pezzo!\n" +
+      "\nTi aspettiamo :)",
     icon: DeviceTouchIcon,
     screen: VideoBitsScreen,
   },
@@ -147,14 +136,11 @@ function RoundupScreen(props: ScreenProps) {
           <div className="h-full space-y-6">
             <Image
               unoptimized
-              className={"h-full rounded-lg object-cover object-left"}
-              style={{ objectPosition: "-90px 0px" }}
-              src={arrotondamentiImage}
+              className={"h-full scale-[200%] object-cover object-left"}
+              style={{ objectPosition: "-80px 0px" }}
+              src={bokCardImage}
               alt={""}
             />
-          </div>
-          <div className="mt-6 rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">
-            Invite person
           </div>
         </div>
       </MotionAppScreenBody>
@@ -166,7 +152,7 @@ function SwearJarScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Swear Jar</AppScreen.Title>
+        <AppScreen.Title>Risparmio a regole</AppScreen.Title>
         {/*<AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>*/}
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -176,9 +162,11 @@ function SwearJarScreen(props: ScreenProps) {
           <div className="h-full space-y-6">
             <Image
               unoptimized
-              className={"h-full rounded-lg object-cover object-left"}
-              style={{ objectPosition: "-90px 0px" }}
-              src={swearJarImage}
+              className={
+                "h-full scale-[175%] rounded-lg object-cover object-left"
+              }
+              style={{ objectPosition: "-70px 5px" }}
+              src={roundupsImage}
               alt={""}
             />
           </div>
@@ -204,9 +192,11 @@ function VideoBitsScreen(props: ScreenProps) {
           <div className="h-full space-y-4">
             <Image
               unoptimized
-              className={"h-full rounded-lg object-cover object-left"}
-              style={{ objectPosition: "-110px 0px" }}
-              src={cassetteImage}
+              className={
+                "h-full scale-[175%] rounded-lg object-cover object-left"
+              }
+              style={{ objectPosition: "-50px 5px" }}
+              src={moviesImage}
               alt={""}
             />{" "}
             {/*<div className="rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white">*/}
