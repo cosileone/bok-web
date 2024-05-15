@@ -61,7 +61,7 @@ export function Header() {
         <Container className="relative z-50 flex justify-between pt-8">
           <div className="relative z-10 flex w-full items-center justify-center gap-16">
             <Link href="/" aria-label="Home" className={""}>
-              <Logo />
+              <Logo className={"absolute -top-10 h-72 lg:ml-0 lg:pl-0"} />
               {/*<Logo className="inline-block h-10 w-auto" />*/}
               {/*<h1 className="unbounded inline pl-6 text-xl font-semibold text-neutral-200">*/}
               {/*  BOK*/}

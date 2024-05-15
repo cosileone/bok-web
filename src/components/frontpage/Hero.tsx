@@ -106,10 +106,10 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export function Hero() {
   return (
-    <div className="relative overflow-hidden bg-[#2E01F9] py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="relative overflow-hidden bg-[#2E01F9] py-20 sm:py-32 lg:pb-32 xl:pb-80 xl:pt-64">
       <div
         className={
-          "absolute left-6 top-0 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
+          "absolute left-6 top-40 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
         }
       >
         <Image
@@ -121,7 +121,7 @@ export function Hero() {
       </div>
       <div
         className={
-          "absolute right-10 top-72 h-[500px] w-[200px] overflow-hidden lg:left-80 lg:top-[500px] lg:w-[400px]"
+          "absolute right-10 top-72 h-[500px] w-[200px] overflow-hidden lg:left-80 lg:top-[660px] lg:w-[400px]"
         }
       >
         <Image
@@ -136,7 +136,7 @@ export function Hero() {
         unoptimized
         src={handImage}
         className={
-          "absolute top-0 hidden h-auto max-h-[200px] w-auto max-w-[200px] lg:left-10 lg:block lg:max-h-[320px]"
+          "absolute top-40 hidden h-auto max-h-[200px] w-auto max-w-[200px] lg:left-10 lg:block lg:max-h-[320px]"
         }
         alt={""}
       />
@@ -147,12 +147,11 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pl-28 lg:pt-6 xl:col-span-6">
             <h1 className="unbounded text-4xl font-medium tracking-tight text-white">
-              BOK: L’app che rende l’indipendenza finanziaria un gioco da
-              ragazzi!
+              La finanza degli Z
             </h1>
             <p className="urbanist mt-6 text-lg text-neutral-200">
-              Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed
-              investi in modo semplice ed efficace.
+              Risparmia divertendoti e accresci il tuo patrimonio con le nostre
+              fantastiche funzioni. Registrati ora!
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <LoginButton />
