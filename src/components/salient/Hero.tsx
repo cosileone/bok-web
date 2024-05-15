@@ -44,11 +44,8 @@ export function Hero() {
         i nostri contenuti pensati apposta per il tuo pubblico di giovani.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Prova Subito</Button>
-        <Button
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          variant="outline"
-        >
+        <Button href="/business/register">Prova Subito</Button>
+        <Button href="https://vimeo.com/946554155" variant="outline">
           <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
