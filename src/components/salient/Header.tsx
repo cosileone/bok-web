@@ -130,12 +130,13 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/business/login">Log in</NavLink>
+              <NavLink href="/business/login">Accedi</NavLink>
             </div>
             <Button href="/business/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
+              Comincia Subito
+              {/*<span>*/}
+              {/*  Get started <span className="hidden lg:inline">today</span>*/}
+              {/*</span>*/}
             </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
