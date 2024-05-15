@@ -114,7 +114,7 @@ function Plan({
 export function Pricing() {
   return (
     <section
-      id="pricing"
+      id="prezzi"
       aria-label="Pricing"
       className="bg-slate-900 py-20 sm:py-32"
     >

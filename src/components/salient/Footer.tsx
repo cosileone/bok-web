@@ -1,20 +1,27 @@
 import Link from "next/link";
 
 import { Container } from "~/components/salient/Container";
-import { Logo } from "~/components/salient/Logo";
 import { NavLink } from "~/components/salient/NavLink";
+import bokLogo from "public/bok_logo_black.svg";
+import type { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="bg-slate-50">
       <Container>
         <div className="py-16">
-          <Logo className="mx-auto h-10 w-auto" />
+          <Image
+            unoptimized
+            src={bokLogo as StaticImport}
+            alt={""}
+            className="mx-auto h-24 w-auto drop-shadow"
+          />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="/">Gen Z</NavLink>
+              <NavLink href="#funzioni">Funzioni</NavLink>
+              <NavLink href="#prezzi">Prezzi</NavLink>
             </div>
           </nav>
         </div>

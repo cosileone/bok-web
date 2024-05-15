@@ -6,53 +6,54 @@ import backgroundImage from "~/images/salient/background-faqs.jpg";
 const faqs = [
   [
     {
-      question: "Does TaxPal handle VAT?",
+      question:
+        "Se comincio un contratto mensile per i contenuti finanziari posso disdire in qualsiasi momento?",
       answer:
-        "Well no, but if you move your company offshore you can probably ignore it.",
+        "Certamente. Ogni mese, prima della fatturazione è possibile cancellare la sottoscirzione al servizio per quanto riguarda il piano mensile. Non verranno effettuati rimborsi su mensilità passate.",
     },
     {
-      question: "Can I pay for my subscription via purchase order?",
-      answer: "Absolutely, we are happy to take your money in all forms.",
+      question: "A chi è diretto questo prodotto e servizio",
+      answer:
+        "Per le banche ed istituti finanziari offriamo contenuti da Gen Z per Gen Z, fornendo video per aiutare i ragazzi/e a rimanere interessati agli aspetti della finanza ed economia. Inoltre avremo un app di risparmio disponibile per i giovani a breve, che si baserà sulla gamification ed il divertimento",
     },
     {
-      question: "How do I apply for a job at TaxPal?",
+      question: "Devo già avere una banca?",
       answer:
-        "We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.",
+        "I nostri contenuti educativi saranno disponibili sulle app dei partner bancari/finanziari e quindi servirà essere cleinte di quell’istituto specifico. \n" +
+        "\nPer la app di risparmio non servirà avere già un conto o una banca",
     },
   ],
   [
     {
-      question: "What was that testimonial about tax fraud all about?",
+      question: "Di cosa trattano nello specifico i contenuti?",
       answer:
-        "TaxPal is just a software application, ultimately your books are your responsibility.",
+        "Il contenuto specifico dipende dal bisogno dell’istituzione finanzaria e di temi importanti per la nostra categoria Gen Z. Nello specifico tratteremo di tecniche pratiche di risparmo e di come metterle in atto, concetti finanziari, di attualità e sugli investimenti.",
     },
     {
-      question:
-        "TaxPal sounds horrible but why do I still feel compelled to purchase?",
-      answer:
-        "This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.",
+      question: "Dove posso trovare update sull’app di risparmio?",
+      answer: "Su instagram su @bokfinanza e direttamente qui sul sito!",
     },
     {
-      question:
-        "I found other companies called TaxPal, are you sure you can use this name?",
-      answer:
-        "Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.",
+      question: "In che lingua saranno i contenuti",
+      answer: "Per adesso in Italiano ed in Inglese",
     },
   ],
   [
     {
-      question: "How do you generate reports?",
+      question: "Qaundo sarà disponibile l’app di risparmio?",
       answer:
-        "You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.",
+        "Esattamente un mese prima faremo un annuncio sulle piattaforme social... stay tuned!",
     },
     {
-      question: "Can we expect more inventory features?",
-      answer: "In life it’s really better to never expect anything at all.",
+      question: "Cercate personale?",
+      answer:
+        "Sempre! Se pensi che le tue skill possano essere di aiuto, mandaci un messaggio sui social oppure scrivi una mail a\n" +
+        "matteodamiani@billsofknowledge.com",
     },
     {
-      question: "I lost my password, how do I get into my account?",
+      question: "Ci sarà una linea telefonica in caso di problemi?",
       answer:
-        "Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.",
+        "Assolutamente, per i nostri clienti Pro. Ti verrà assegnato un numero specifico dove avrai un assistente/riferimento personale per personalizzare le tue esigenze e risolvere qualsiasi problema tu possa avere!",
     },
   ],
 ];
@@ -78,11 +79,14 @@ export function Faqs() {
             id="faq-title"
             className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
-            Frequently asked questions
+            FAQ
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            Se hai qualsiasi altra domanda, non esitare a{" "}
+            <a href="mailto:info@billsofknowledge.com" className="underline">
+              contattarci
+            </a>
+            !
           </p>
         </div>
         <ul
