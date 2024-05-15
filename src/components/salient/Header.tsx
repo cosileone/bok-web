@@ -133,7 +133,7 @@ export function Header() {
               <NavLink href="/business/login">Accedi</NavLink>
             </div>
             <Button href="/business/register" color="blue">
-              Comincia Subito
+              Comincia qui
               {/*<span>*/}
               {/*  Get started <span className="hidden lg:inline">today</span>*/}
               {/*</span>*/}

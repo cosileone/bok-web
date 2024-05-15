@@ -26,7 +26,7 @@ export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
       <h1 className="font-display mx-auto max-w-4xl text-4xl font-medium tracking-tight text-slate-700 sm:text-7xl">
-        BOK: Una Gen Z economicamente independente?{" "}
+        Una Gen Z economicamente independente?{" "}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
