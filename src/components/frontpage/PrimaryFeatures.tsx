@@ -165,7 +165,7 @@ function SwearJarScreen(props: ScreenProps) {
               className={
                 "h-full scale-[175%] rounded-lg object-cover object-left"
               }
-              style={{ objectPosition: "-70px 5px" }}
+              style={{ objectPosition: "-70px 0px" }}
               src={roundupsImage}
               alt={""}
             />
@@ -195,7 +195,7 @@ function VideoBitsScreen(props: ScreenProps) {
               className={
                 "h-full scale-[175%] rounded-lg object-cover object-left"
               }
-              style={{ objectPosition: "-50px 5px" }}
+              style={{ objectPosition: "-50px 0px" }}
               src={moviesImage}
               alt={""}
             />{" "}

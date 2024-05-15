@@ -147,7 +147,7 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pl-28 lg:pt-6 xl:col-span-6">
             <h1 className="unbounded text-4xl font-medium tracking-tight text-white">
-              La finanza degli Z
+              La finanza <br className={"sm:hidden"} /> degli Z
             </h1>
             <p className="urbanist mt-6 text-lg text-neutral-200">
               Risparmia divertendoti e accresci il tuo patrimonio con le nostre
