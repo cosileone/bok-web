@@ -1,6 +1,7 @@
 import bokLogo from "/public/bok_logo.svg";
 import Image from "next/image";
 import { type StaticImport } from "next/dist/shared/lib/get-img-props";
+import { cn } from "~/lib/utils";
 
 export function Logomark(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -14,13 +15,13 @@ export function Logomark(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function Logo() {
+export function Logo({ className }: { className?: string }) {
   return (
     <Image
       unoptimized
       src={bokLogo as StaticImport}
       alt={""}
-      className={"h-24 w-auto lg:ml-80 lg:pl-40"}
+      className={cn("h-24 w-auto lg:ml-80 lg:pl-40", className)}
     />
   );
 }

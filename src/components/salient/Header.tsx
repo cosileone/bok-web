@@ -7,8 +7,10 @@ import clsx from "clsx";
 
 import { Button } from "~/components/salient/Button";
 import { Container } from "~/components/salient/Container";
-import { Logo } from "~/components/salient/Logo";
 import { NavLink } from "~/components/salient/NavLink";
+import bokLogo from "/public/bok_logo_black.svg";
+import type { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 
 function MobileNavLink({
   href,
@@ -111,7 +113,12 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Image
+                unoptimized
+                src={bokLogo as StaticImport}
+                alt={""}
+                className="h-24 w-auto drop-shadow lg:ml-20 lg:pl-0"
+              />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
               {navigationLinks.map(({ href, text }) => (
