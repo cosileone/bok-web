@@ -31,12 +31,12 @@ const features = [
       "I risparmi cher hai creato sono finalmente pronti a fruttare. Comincia adesso ad accrescere il tuo patrimonio,  utilizza la nostra IA per settare obiettivi e profilo d’investimento",
     image: screenshotVatReturns,
   },
-  {
-    title: "Reporting",
-    description:
-      "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
-    image: screenshotReporting,
-  },
+  // {
+  //   title: "Reporting",
+  //   description:
+  //     "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
+  //   image: screenshotReporting,
+  // },
 ];
 
 export function PrimaryFeatures() {
@@ -76,12 +76,12 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            Il nostro prodotto ad un tiro di schioppo!
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
-          </p>
+          {/*<p className="mt-6 text-lg tracking-tight text-blue-100">*/}
+          {/*  Well everything you need if you aren’t that picky about minor*/}
+          {/*  details like tax compliance.*/}
+          {/*</p>*/}
         </div>
         <Tab.Group
           as="div"
