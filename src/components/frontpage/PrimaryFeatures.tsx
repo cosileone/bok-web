@@ -12,9 +12,9 @@ import {
 } from "framer-motion";
 import { useDebouncedCallback } from "use-debounce";
 import Image from "next/image";
-import bokCardImage from "~/images/1.png";
-import roundupsImage from "~/images/2.png";
-import moviesImage from "~/images/3.png";
+import bokCardImage from "~/images/11.png";
+import roundupsImage from "~/images/22.png";
+import moviesImage from "~/images/33.png";
 
 import { AppScreen } from "~/components/frontpage/AppScreen";
 import { CircleBackground } from "~/components/frontpage/CircleBackground";
@@ -136,8 +136,10 @@ function RoundupScreen(props: ScreenProps) {
           <div className="h-full space-y-6">
             <Image
               unoptimized
-              className={"h-full scale-[200%] object-cover object-left"}
-              style={{ objectPosition: "-80px 0px" }}
+              className={
+                "h-full scale-[105%] rounded-lg object-cover object-left"
+              }
+              style={{ objectPosition: "-30px 0px" }}
               src={bokCardImage}
               alt={""}
             />
@@ -163,9 +165,9 @@ function SwearJarScreen(props: ScreenProps) {
             <Image
               unoptimized
               className={
-                "h-full scale-[175%] rounded-lg object-cover object-left"
+                "h-full scale-[100%] rounded-lg object-cover object-left"
               }
-              style={{ objectPosition: "-70px 0px" }}
+              style={{ objectPosition: "-30px 0px" }}
               src={roundupsImage}
               alt={""}
             />
@@ -193,9 +195,9 @@ function VideoBitsScreen(props: ScreenProps) {
             <Image
               unoptimized
               className={
-                "h-full scale-[175%] rounded-lg object-cover object-left"
+                "h-full scale-[100%] rounded-lg object-cover object-left"
               }
-              style={{ objectPosition: "-50px 0px" }}
+              style={{ objectPosition: "-30px 0px" }}
               src={moviesImage}
               alt={""}
             />{" "}
@@ -356,7 +358,7 @@ function FeaturesMobile() {
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-neutral-800/95 p-6 backdrop-blur sm:p-10">
+              <div className="absolute inset-x-0 bottom-0 bg-neutral-800/75 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
                 <h3 className="unbounded mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}

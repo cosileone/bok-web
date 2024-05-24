@@ -8,28 +8,29 @@ import clsx from "clsx";
 import { Container } from "~/components/salient/Container";
 import backgroundImage from "~/images/salient/background-features.jpg";
 import screenshotExpenses from "~/images/salient/screenshots/expenses.png";
-import screenshotPayroll from "~/images/salient/screenshots/payroll.png";
 import screenshotReporting from "~/images/salient/screenshots/reporting.png";
 import screenshotVatReturns from "~/images/salient/screenshots/vat-returns.png";
+import matteoScreenshot from "~/images/salient/screenshots/1b.jpg";
+import purpleScreenshot from "~/images/salient/screenshots/2b-3b.png";
 
 const features = [
   {
     title: "Contenuti Finanziari",
     description:
       "Contenuti da Gen Z per Gen Z, dalle techniche di risparmio a quelle di investimento passando per curiose nozioni e notizie di attualità economico finanziaria!",
-    image: screenshotPayroll,
+    image: matteoScreenshot,
   },
   {
     title: "App di risparmio",
     description:
       "Sei un Gen Z  e stai cercando la tua app per risparmiare divertendoti? A breve disponibile tante nuove funzioni con risparmio a regole, competizione e tanti elementi di Gamification.  Resta aggiornato/a qui e su @bokfinanza",
-    image: screenshotExpenses,
+    image: purpleScreenshot,
   },
   {
     title: "Investi con noi",
     description:
-      "I risparmi cher hai creato sono finalmente pronti a fruttare. Comincia adesso ad accrescere il tuo patrimonio,  utilizza la nostra IA per settare obiettivi e profilo d’investimento",
-    image: screenshotVatReturns,
+      "I risparmi che hai creato sono finalmente pronti a fruttare. Comincia adesso ad accrescere il tuo patrimonio,  utilizza la nostra IA per settare obiettivi e profilo d’investimento",
+    image: purpleScreenshot,
   },
   // {
   //   title: "Reporting",
@@ -138,13 +139,12 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-10 max-h-[888px] w-[500px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0">
                       <Image
                         className="w-full"
                         src={feature.image}
                         alt=""
                         priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
                       />
                     </div>
                   </Tab.Panel>
