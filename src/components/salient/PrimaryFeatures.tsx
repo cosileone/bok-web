@@ -139,7 +139,7 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 max-h-[888px] w-[500px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0">
+                    <div className="mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[500px]">
                       <Image
                         className="w-full"
                         src={feature.image}
