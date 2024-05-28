@@ -34,7 +34,7 @@ export function Footer() {
                 </p>
               </div>
             </div>
-            <nav className="mt-11 flex gap-8">
+            <nav className="mt-11 flex flex-wrap gap-8">
               <NavLinks
                 className={"text-gray-800"}
                 extraLinks={[["Privacy Policy", "/privacy-policy"]]}
