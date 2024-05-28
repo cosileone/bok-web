@@ -109,7 +109,7 @@ export function Hero() {
     <div className="relative overflow-hidden bg-[#2E01F9] py-20 sm:py-32 lg:pb-32 xl:pb-80 xl:pt-64">
       <div
         className={
-          "absolute left-6 top-40 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
+          "absolute left-6 top-0 z-10 w-[130px] lg:left-36 lg:z-auto lg:-mt-6 lg:w-[200px]"
         }
       >
         <Image

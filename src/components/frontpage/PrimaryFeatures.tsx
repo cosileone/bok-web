@@ -20,6 +20,7 @@ import { AppScreen } from "~/components/frontpage/AppScreen";
 import { CircleBackground } from "~/components/frontpage/CircleBackground";
 import { Container } from "~/components/frontpage/Container";
 import { PhoneFrame } from "~/components/frontpage/PhoneFrame";
+import { cn } from "~/lib/utils";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
@@ -305,6 +306,7 @@ function FeaturesDesktop() {
 }
 
 function FeaturesMobile() {
+  const [isVisible, setIsVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const slideContainerRef = useRef<React.ElementRef<"div">>(null);
   const slideRefs = useRef<Array<React.ElementRef<"div">>>([]);
@@ -341,6 +343,7 @@ function FeaturesMobile() {
       <div
         ref={slideContainerRef}
         className="-mb-4 flex snap-x snap-mandatory -space-x-4 overflow-x-auto overscroll-x-contain scroll-smooth pb-4 [scrollbar-width:none] sm:-space-x-6 [&::-webkit-scrollbar]:hidden"
+        onClick={() => setIsVisible((prevState) => !prevState)}
       >
         {features.map((feature, featureIndex) => (
           <div
@@ -358,12 +361,19 @@ function FeaturesMobile() {
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-neutral-800/75 p-6 backdrop-blur sm:p-10">
+              <div
+                className={cn(
+                  "absolute inset-x-0 bottom-0 bg-neutral-800/90 p-6 backdrop-blur transition-transform sm:p-10",
+                  {
+                    "translate-y-full": !isVisible,
+                  },
+                )}
+              >
                 <feature.icon className="h-8 w-8" />
                 <h3 className="unbounded mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <span className="urbanist mt-2 text-sm text-neutral-200">
+                <span className={cn("urbanist mt-2 text-sm text-neutral-200")}>
                   {feature.description}
                 </span>
               </div>
