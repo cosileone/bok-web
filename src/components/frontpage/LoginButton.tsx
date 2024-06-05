@@ -1,6 +1,6 @@
 import { Button } from "~/components/frontpage/Button";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { cn } from "~/lib/utils";
+import { cn } from "~/utils";
 
 type LoginButtonProps = {
   className?: string;

@@ -1,7 +1,7 @@
 import bokLogo from "/public/bok_logo.svg";
 import Image from "next/image";
 import { type StaticImport } from "next/dist/shared/lib/get-img-props";
-import { cn } from "~/lib/utils";
+import { cn } from "~/utils";
 
 export function Logomark(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
