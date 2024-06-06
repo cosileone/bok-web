@@ -5,7 +5,7 @@ import clsx from "clsx";
 import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { ClerkProvider } from "@clerk/nextjs";
+import Contexts from "~/components/Contexts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <ClerkProvider>
+    <Contexts>
       <html
         lang="en"
         className={clsx("h-full bg-neutral-50 antialiased", inter.variable)}
@@ -35,6 +35,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Analytics />
         </body>
       </html>
-    </ClerkProvider>
+    </Contexts>
   );
 }

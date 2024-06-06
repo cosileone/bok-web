@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CirclesBackground } from "~/components/frontpage/CirclesBackground";
 import bokLogo from "/public/bok-logo.png";
 import Image from "next/image";
+import { Logo } from "~/components/salient/Logo";
 
 export function AuthLayout({
   title,
@@ -25,12 +26,17 @@ export function AuthLayout({
         {/*    className={"mx-auto h-24 w-auto"}*/}
         {/*  />*/}
         {/*</Link>*/}
-        <div className="relative mt-12 sm:mt-16">
+        <div className="relative">
           <CirclesBackground
             width="1090"
             height="1090"
             className="absolute -top-7 left-1/2 -z-10 h-[788px] -translate-x-1/2 stroke-neutral-300/30 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:-top-9 sm:h-auto"
           />
+          <div className={"flex justify-center"}>
+            <Link href={"/"}>
+              <Logo className={"lg:ml-0"} />
+            </Link>
+          </div>
           <h1 className="text-center text-2xl font-medium tracking-tight text-neutral-900">
             {title}
           </h1>
