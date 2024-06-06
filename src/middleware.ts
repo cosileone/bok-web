@@ -5,12 +5,19 @@ const isDevProcess = process.env.NODE_ENV === "development";
 // https://clerk.com/docs/references/nextjs/clerk-middleware#configure-clerk-middleware
 const isProtectedRoute = createRouteMatcher([
   "/dashboard(.*)",
-  // "/business(.*)",
+  "/business/(.*)",
+]);
+
+const isPublicRoute = createRouteMatcher([
+  "/login(.*)",
+  "/register(.*)",
+  "/business/login(.*)",
+  "/business/register(.*)",
 ]);
 
 export default clerkMiddleware(
   (auth, request) => {
-    if (isProtectedRoute(request)) auth().protect();
+    if (isProtectedRoute(request) && !isPublicRoute(request)) auth().protect();
   },
   { debug: isDevProcess },
 );

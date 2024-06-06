@@ -14,7 +14,7 @@ export default function Login() {
   return (
     <SlimLayout>
       <div className="flex">
-        <Link href="/" aria-label="Home">
+        <Link href="/public" aria-label="Home">
           <Logo className="" />
         </Link>
       </div>
