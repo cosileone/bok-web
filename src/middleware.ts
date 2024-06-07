@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import createMiddleware from "next-intl/middleware";
-import { locales } from "~/i18n";
+import { defaultLocale, locales } from "~/i18n";
 
 const isDevProcess = process.env.NODE_ENV === "development";
 
@@ -22,7 +22,7 @@ const i18nMiddleware = createMiddleware({
   locales: locales,
 
   // Used when no locale matches
-  defaultLocale: "it",
+  defaultLocale: defaultLocale,
   localePrefix: "as-needed",
 });
 
