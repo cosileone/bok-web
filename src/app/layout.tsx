@@ -6,6 +6,8 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Contexts from "~/components/Contexts";
+import { getLocale, getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,15 +25,26 @@ export const metadata: Metadata = {
     "Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed investi in modo semplice ed efficace. Dalla Generazione Z per la generazione Z",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
     <Contexts>
       <html
-        lang="en"
+        lang={locale}
         className={clsx("h-full bg-neutral-50 antialiased", inter.variable)}
       >
         <body className="flex h-full flex-col">
-          <div className="flex h-full flex-col">{children}</div>
+          <div className="flex h-full flex-col">
+            <NextIntlClientProvider messages={messages}>
+              {children}
+            </NextIntlClientProvider>
+          </div>
           <Analytics />
         </body>
       </html>
