@@ -11,7 +11,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { cn } from "~/utils";
+import { cn } from "~/lib/utils";
 import { Card } from "~/components/ui/card";
 
 const data1 = [

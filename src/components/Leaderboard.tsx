@@ -18,7 +18,7 @@ import {
   TableBody,
   Table,
 } from "~/components/ui/table";
-import { cn } from "~/utils";
+import { cn } from "~/lib/utils";
 import { type Preregistration } from "@prisma/client";
 import Image from "next/image";
 import { getAllQuizResults } from "~/server/actions/quizResults";

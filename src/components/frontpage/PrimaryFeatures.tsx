@@ -20,7 +20,7 @@ import { AppScreen } from "~/components/frontpage/AppScreen";
 import { CircleBackground } from "~/components/frontpage/CircleBackground";
 import { Container } from "~/components/frontpage/Container";
 import { PhoneFrame } from "~/components/frontpage/PhoneFrame";
-import { cn } from "~/utils";
+import { cn } from "~/lib/utils";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
