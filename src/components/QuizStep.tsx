@@ -7,7 +7,7 @@ import { CardHeader, CardContent, Card } from "~/components/ui/card";
 import { RadioGroupItem, RadioGroup } from "~/components/ui/radio-group";
 import { Label } from "~/components/ui/label";
 import { Button } from "~/components/ui/button";
-import { type Question } from "~/app/onboarding/quiz/questionsConfig";
+import { type Question } from "~/app/[locale]/onboarding/quiz/questionsConfig";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import useUserStore from "~/state/useUserStore";

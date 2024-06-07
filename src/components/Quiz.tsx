@@ -6,7 +6,7 @@ import {
   question2,
   question3,
   question4,
-} from "~/app/onboarding/quiz/questionsConfig";
+} from "~/app/[locale]/onboarding/quiz/questionsConfig";
 import { useState } from "react";
 import useUserStore from "~/state/useUserStore";
 import { useRouter } from "next/navigation";
