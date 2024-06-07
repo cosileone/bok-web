@@ -11,6 +11,7 @@ import { NavLink } from "~/components/salient/NavLink";
 import bokLogo from "/public/bok_logo_black.svg";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import LocalePicker from "~/components/LocalePicker";
 
 function MobileNavLink({
   href,
@@ -138,6 +139,7 @@ export function Header() {
               {/*  Get started <span className="hidden lg:inline">today</span>*/}
               {/*</span>*/}
             </Button>
+            <LocalePicker />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
