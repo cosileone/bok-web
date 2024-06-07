@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { Button } from "~/components/frontpage/Button";
 import { Container } from "~/components/frontpage/Container";
 import { Logo } from "~/components/frontpage/Logo";
 import {
@@ -12,6 +11,7 @@ import {
   NavLinks,
 } from "~/components/frontpage/NavLinks";
 import LoginButton from "~/components/frontpage/LoginButton";
+import LocalePicker from "~/components/LocalePicker";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -70,6 +70,7 @@ export function Header() {
             <div className="hidden w-full items-center lg:flex lg:justify-end lg:gap-10">
               <NavLinks />
               <LoginButton />
+              <LocalePicker />
             </div>
           </div>
           <div className="flex items-center gap-6">
