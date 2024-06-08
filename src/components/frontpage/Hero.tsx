@@ -21,6 +21,7 @@ import handImage from "/public/blue-hero-gfx.jpeg";
 import eyes from "/public/eyes.gif";
 import blob from "/public/blob.gif";
 import LoginButton from "~/components/frontpage/LoginButton";
+import { useTranslations } from "next-intl";
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<"div">) {
   const id = useId();
@@ -105,6 +106,7 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export function Hero() {
+  const t = useTranslations("Index");
   return (
     <div className="relative overflow-hidden bg-[#2E01F9] py-20 sm:py-32 lg:pb-32 xl:pb-80 xl:pt-64">
       <div
@@ -147,11 +149,10 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pl-28 lg:pt-6 xl:col-span-6">
             <h1 className="unbounded text-4xl font-medium tracking-tight text-white">
-              La finanza <br className={"sm:hidden"} /> degli Z
+              {t("hero.title")}
             </h1>
             <p className="urbanist mt-6 text-lg text-neutral-200">
-              Risparmia divertendoti e accresci il tuo patrimonio con le nostre
-              fantastiche funzioni. Registrati ora!
+              {t("hero.subtitle")}
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <LoginButton />

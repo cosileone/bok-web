@@ -4,26 +4,28 @@ import { TextField } from "~/components/frontpage/Fields";
 import { Button } from "~/components/frontpage/Button";
 import { env } from "~/env.mjs";
 import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 
 const portalId = 141068097;
 const formId = "270dcd4c-7a55-4637-aea6-8fe08df6bc90";
 const formUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
 
 const NewsletterMiniForm = () => {
+  const t = useTranslations("Index");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [email, setEmail] = useState("");
 
   const buttonText = submitting
-    ? "Invio in corso..."
+    ? `${t("ctaSection.ctaButton.textLoading")}`
     : success
-    ? "Iscrizione completata!"
-    : "Pre-Iscriviti Ora";
+    ? `${t("ctaSection.ctaButton.textSuccess")}`
+    : `${t("ctaSection.ctaButton.text")}`;
   const buttonTextMobile = submitting
-    ? "Invio in corso..."
+    ? `${t("ctaSection.ctaButton.textLoading")}`
     : success
-    ? "Iscrizione completata!"
-    : "Pre-Iscriviti";
+    ? `${t("ctaSection.ctaButton.textMobileSuccess")}`
+    : `${t("ctaSection.ctaButton.textMobile")}`;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -73,7 +75,7 @@ const NewsletterMiniForm = () => {
       <TextField
         type="email"
         aria-label="Email address"
-        placeholder="indirizzo email"
+        placeholder={t("ctaSection.inputPlaceholder")}
         autoComplete="email"
         required
         className="w-60 min-w-0 shrink"

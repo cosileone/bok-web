@@ -3,6 +3,7 @@ import Image from "next/image";
 import matteoImage from "~/images/headshots/matteo.png";
 import eugeniaImage from "~/images/headshots/eugenia.png";
 import cosimoImage from "~/images/headshots/cosi.png";
+import { useTranslations } from "next-intl";
 
 const people = [
   {
@@ -32,23 +33,24 @@ const people = [
 ];
 
 export default function Team() {
+  const t = useTranslations("Index");
+
   return (
     <div id="team" className="bg-white py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="unbounded text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-            La nostra squadra
+            {t("team.title")}
           </h2>
           <p className="urbanist mt-4 text-lg leading-8 text-neutral-600">
-            Se sei sulla nostra pagina non possiamo fare altro che darti il
-            nostro benvenuto!
+            {t("team.subtitle")}
           </p>
         </div>
         <ul
           role="list"
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
-          {people.map((person) => (
+          {people.map((person, personIndex) => (
             <li key={person.name}>
               <Image
                 unoptimized
@@ -61,6 +63,9 @@ export default function Team() {
               </h3>
               <p className="text-sm leading-6 text-neutral-600">
                 {person.role}
+              </p>
+              <p className="text-sm italic leading-6 text-neutral-600">
+                {t(`team.member${personIndex + 1}.description`)}
               </p>
               <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {/*{person.twitterUrl && (<li>*/}

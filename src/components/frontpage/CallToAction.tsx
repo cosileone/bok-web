@@ -2,8 +2,11 @@ import { AppStoreLink } from "~/components/frontpage/AppStoreLink";
 import { CircleBackground } from "~/components/frontpage/CircleBackground";
 import { Container } from "~/components/frontpage/Container";
 import NewsletterMiniForm from "~/components/frontpage/NewsletterMiniForm";
+import { useTranslations } from "next-intl";
 
 export function CallToAction() {
+  const t = useTranslations("Index");
+
   return (
     <section
       id="get-free-shares-today"
@@ -15,10 +18,10 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-md sm:text-center">
           <h2 className="unbounded text-3xl font-medium tracking-tight text-white sm:text-4xl">
-            Ricevi i primi <br /> consigli da subito!
+            {t("ctaSection.title")}
           </h2>
           <p className="urbanist mt-4 text-lg text-neutral-300">
-            Iscriviti alla nostra newsletter
+            {t("ctaSection.subtitle")}
           </p>
           <br />
           <NewsletterMiniForm />

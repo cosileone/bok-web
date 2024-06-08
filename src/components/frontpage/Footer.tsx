@@ -6,6 +6,7 @@ import { Logomark } from "~/components/frontpage/Logo";
 import { NavLinks } from "~/components/frontpage/NavLinks";
 import qrCode from "~/images/qr-code.svg";
 import NewsletterMiniForm from "~/components/frontpage/NewsletterMiniForm";
+import { useTranslations } from "next-intl";
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -20,6 +21,8 @@ function QrCodeBorder(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export function Footer() {
+  const t = useTranslations("Index");
+
   return (
     <footer className="border-t border-neutral-200">
       <Container>
@@ -28,16 +31,18 @@ export function Footer() {
             <div className="flex items-center text-neutral-900">
               {/*<Logomark className="h-10 w-10 flex-none fill-blue-600" />*/}
               <div className="">
-                <p className="unbounded text-base font-semibold">BOK Italia</p>
-                <p className="urbanist mt-1">
-                  Raggiungi la tua indipendenza finanziaria
+                <p className="unbounded text-base font-semibold">
+                  {t("footer.title")}
                 </p>
+                <p className="urbanist mt-1">{t("footer.subtitle")}</p>
               </div>
             </div>
             <nav className="mt-11 flex flex-wrap gap-8">
               <NavLinks
                 className={"text-gray-800"}
-                extraLinks={[["Privacy Policy", "/privacy-policy"]]}
+                extraLinks={[
+                  [`${t("footer.links.privacyPolicy")}`, "/privacy-policy"],
+                ]}
               />
             </nav>
           </div>

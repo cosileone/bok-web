@@ -1,43 +1,41 @@
 import { Container } from "~/components/frontpage/Container";
+import { useTranslations } from "next-intl";
 
-const faqs = [
+const getFAQs = (t: (arg0: string) => string) => [
   [
     {
-      question: "Quale è la nostra visione?",
-      answer:
-        "Che tutti i Gen Z Italiani ed Europei raggiungano la stabilità finanziaria",
+      question: `${t("faq.question1.question")}`,
+      answer: `${t("faq.question1.answer")}`,
     },
     {
-      question: "Come Funziona BOK?",
-      answer:
-        "BOK è una app per aiutare la generazione Z a salvare ed investire denaro in modo semplice e con il minimo sforzo. Ci saranno investimenti con amici, tornei e tanti altri modi per arricchirti, sempre divertendoti!",
+      question: `${t("faq.question2.question")}`,
+      answer: `${t("faq.question2.answer")}`,
     },
     {
-      question: "Quanto costa BOK?",
-      answer:
-        "Tutto gratuito! Esisterà una versione pro con funzioni amplificate a pagamento, ma vogliamo che chiunque possa avere accesso alla propria libertà finanziaria. Oltre alla spedizione della tua carta personalizzabile BOK, non pagherai nulla :)",
+      question: `${t("faq.question3.question")}`,
+      answer: `${t("faq.question3.answer")}`,
     },
   ],
   [
     {
-      question: "Per chi è pensato BOK?",
-      answer:
-        "Se hai fra i 18-27 anni e stai cercando di mettere da parte soldi, investire denaro e raggiungere la tua indipendenza finanziaria, questo è il posto e il momento giusto!",
+      question: `${t("faq.question4.question")}`,
+      answer: `${t("faq.question4.answer")}`,
     },
     {
-      question: "Pre-Iscrizione",
-      answer:
-        "Lascia i tuoi dati e verrai notificato non appena la app sarà disponibile. Tieniti aggiornato sulla nostra newsletter e social media Instagram e TikTok per rimanere sempre al passo",
+      question: `${t("faq.question5.question")}`,
+      answer: `${t("faq.question5.answer")}`,
     },
     {
-      question: "Devo già avere un conto?",
-      answer:
-        "Non necessariamente! Potrai connettere il tuo conto alla app e ordinare la nostra carta personalizzabile BOK. Fatta a seconda delle tue preferenze ti verrà inviata entro il 30 Novembre.",
+      question: `${t("faq.question6.question")}`,
+      answer: `${t("faq.question6.answer")}`,
     },
   ],
 ];
 
 export function Faqs() {
+  const t = useTranslations("Index");
+  const faqs = getFAQs(t);
+
   return (
     <section
       id="faqs"
@@ -50,17 +48,16 @@ export function Faqs() {
             id="faqs-title"
             className="unbounded text-3xl font-medium tracking-tight text-neutral-100"
           >
-            FAQ
+            {t("faq.title")}
           </h2>
           <p className="urbanist mt-2 text-lg text-neutral-200">
-            Se hai qualsiasi altra domanda, non esitare a{" "}
+            {t("faq.subtitle")}{" "}
             <a
               href="mailto:info@billsofknowledge.com"
               className="text-neutral-200 underline"
             >
-              contattarci
+              Email
             </a>
-            !
           </p>
         </div>
         <ul

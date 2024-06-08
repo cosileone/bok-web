@@ -21,6 +21,7 @@ import { CircleBackground } from "~/components/frontpage/CircleBackground";
 import { Container } from "~/components/frontpage/Container";
 import { PhoneFrame } from "~/components/frontpage/PhoneFrame";
 import { cn } from "~/lib/utils";
+import { useTranslations } from "next-intl";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
@@ -30,30 +31,28 @@ interface CustomAnimationProps {
   changeCount: number;
 }
 
-const features = [
-  {
-    name: "Arrotondamenti",
-    description:
-      "Gli arrotondamenti con la nostra carta sono come il tuo assistente di risparmio personale. Ogni volta che fai un acquisto il sistema arrotonda l'importo al numero intero successivo e mette da parte la differenza. Ad esempio, se spendi 1,20€ per un caffè, verranno addebitati 2€ sul tuo conto e i restanti 80 centesimi  andranno direttamente nel tuo salvadanaio digitale. È un modo semplice e automatico per accumulare risparmi senza neanche renderci conto!",
-    icon: RocketEmoji,
-    screen: RoundupScreen,
-  },
-  {
-    name: "Risparmio a regole e Gamification",
-    description:
-      'Con questa funzionalità, puoi inventare regole che ti fanno risparmiare soldi ogni volta che succede qualcosa che stabilisci tu Ad esempio, potresti dire: "Ogni volta che Elon Musk twitta risparmia 20 centesimi”, et voila 20 centesimi vanno direttamente nel tuo salvadanaio digitale! Potrai inoltre partecipare a competizioni avvincenti per chi risparmia di più e vincere premi in denaro',
-    icon: DeviceNotificationIcon,
-    screen: SwearJarScreen,
-  },
-  {
-    name: "Pillole Finanziarie: Le nostre “bills of knowledge”",
-    description:
-      "Video con temi sempre attuali sulla finanza, l’economia, il risparmio e gli investimenti. I contenuti saranno sempre nuovi ed i nostri formati stile Gen Z ti terranno sempre sul pezzo!\n" +
-      "\nTi aspettiamo :)",
-    icon: DeviceTouchIcon,
-    screen: VideoBitsScreen,
-  },
-];
+const getFeatures = (t: (arg0: string) => string) => {
+  return [
+    {
+      name: `${t("primaryFeatures.feature1.title")}`,
+      description: `${t("primaryFeatures.feature1.description")}`,
+      icon: RocketEmoji,
+      screen: RoundupScreen,
+    },
+    {
+      name: `${t("primaryFeatures.feature2.title")}`,
+      description: `${t("primaryFeatures.feature2.description")}`,
+      icon: DeviceNotificationIcon,
+      screen: SwearJarScreen,
+    },
+    {
+      name: `${t("primaryFeatures.feature3.title")}`,
+      description: `${t("primaryFeatures.feature3.description")}`,
+      icon: DeviceTouchIcon,
+      screen: VideoBitsScreen,
+    },
+  ];
+};
 
 function RocketEmoji(props: React.ComponentPropsWithoutRef<"svg">) {
   return <span className="text-[32px]">🚀</span>;
@@ -121,10 +120,13 @@ type ScreenProps =
   | { animated?: false };
 
 function RoundupScreen(props: ScreenProps) {
+  const t = useTranslations("Index");
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Arrotondamenti</AppScreen.Title>
+        <AppScreen.Title>
+          {t("primaryFeatures.feature1.shortTitle")}
+        </AppScreen.Title>
         {/*<AppScreen.Subtitle>*/}
         {/*  Get tips <span className="text-white">5s sooner</span> for every*/}
         {/*  invite.*/}
@@ -152,10 +154,13 @@ function RoundupScreen(props: ScreenProps) {
 }
 
 function SwearJarScreen(props: ScreenProps) {
+  const t = useTranslations("Index");
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Risparmio a regole</AppScreen.Title>
+        <AppScreen.Title>
+          {t("primaryFeatures.feature2.shortTitle")}
+        </AppScreen.Title>
         {/*<AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>*/}
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -180,10 +185,14 @@ function SwearJarScreen(props: ScreenProps) {
 }
 
 function VideoBitsScreen(props: ScreenProps) {
+  const t = useTranslations("Index");
+
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Pillole Finanziarie</AppScreen.Title>
+        <AppScreen.Title>
+          {t("primaryFeatures.feature3.shortTitle")}
+        </AppScreen.Title>
         {/*<AppScreen.Subtitle>*/}
         {/*  <span className="text-white">$34.28</span> per share*/}
         {/*</AppScreen.Subtitle>*/}
@@ -236,6 +245,9 @@ function FeaturesDesktop() {
     100,
     { leading: true },
   );
+
+  const t = useTranslations("Index");
+  const features = getFeatures(t);
 
   return (
     <Tab.Group
@@ -338,6 +350,9 @@ function FeaturesMobile() {
     };
   }, [slideContainerRef, slideRefs]);
 
+  const t = useTranslations("Index");
+  const features = getFeatures(t);
+
   return (
     <>
       <div
@@ -409,6 +424,7 @@ function FeaturesMobile() {
 }
 
 export function PrimaryFeatures() {
+  const t = useTranslations("Index");
   return (
     <section
       id="features"
@@ -418,11 +434,10 @@ export function PrimaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl lg:max-w-3xl lg:text-center">
           <h2 className="unbounded text-3xl font-medium tracking-tight text-white">
-            Scopri le funzionalità di BOK Italia
+            {t("primaryFeatures.title")}
           </h2>
           <p className="urbanist mt-2 text-lg text-neutral-200">
-            Sblocca il potenziale delle nostre molteplici funzionalità e
-            raggiungi la tua indipendenza finanziaria
+            {t("primaryFeatures.subtitle")}
           </p>
         </div>
       </Container>

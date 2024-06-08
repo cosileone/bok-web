@@ -7,11 +7,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "~/components/frontpage/Container";
 import { Logo } from "~/components/frontpage/Logo";
 import {
-  homepageNavigationItems,
+  getHomepageNavigationItems,
   NavLinks,
 } from "~/components/frontpage/NavLinks";
 import LoginButton from "~/components/frontpage/LoginButton";
 import LocalePicker from "~/components/LocalePicker";
+import { useTranslations } from "next-intl";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -55,6 +56,8 @@ function MobileNavLink(
 }
 
 export function Header() {
+  const t = useTranslations("Index");
+
   return (
     <header className={"bg-[#2e00f9]"}>
       <nav>
@@ -113,13 +116,14 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-neutral-50 px-6 pb-6 pt-32 shadow-2xl shadow-neutral-900/20"
                         >
                           <div className="space-y-4">
-                            {homepageNavigationItems.map(
+                            {getHomepageNavigationItems(t).map(
                               ([label, href], index) => (
                                 <MobileNavLink key={label} href={href ?? ""}>
                                   {label}
                                 </MobileNavLink>
                               ),
                             )}
+                            <LocalePicker />
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
                             {/*  <Button href="/login" variant="outline">*/}

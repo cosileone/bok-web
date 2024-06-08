@@ -4,14 +4,15 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "~/lib/utils";
+import { useTranslations } from "next-intl";
 
-export const homepageNavigationItems = [
-  ["Business", "/business"],
-  ["Funzioni", "/#features"],
+export const getHomepageNavigationItems = (t: (arg0: string) => string) => [
+  [`${t("navigation.business")}`, "/business"],
+  [`${t("navigation.features")}`, "/#features"],
   // ['Reviews', '/#reviews'],
   // ['Pricing', '/#pricing'],
-  ["Chi Siamo", "/#team"],
-  ["FAQ", "/#faqs"],
+  [`${t("navigation.aboutUs")}`, "/#team"],
+  [`${t("navigation.faq")}`, "/#faqs"],
 ];
 
 export function NavLinks({
@@ -23,8 +24,9 @@ export function NavLinks({
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const timeoutRef = useRef<number | null>(null);
+  const t = useTranslations("Index");
 
-  return homepageNavigationItems
+  return getHomepageNavigationItems(t)
     .concat(extraLinks)
     .map(([label, href], index) => (
       <Link

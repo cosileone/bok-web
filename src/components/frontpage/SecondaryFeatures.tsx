@@ -1,6 +1,7 @@
 import { useId } from "react";
 
 import { Container } from "~/components/frontpage/Container";
+import { useTranslations } from "next-intl";
 
 const features = [
   {
@@ -187,6 +188,8 @@ function DeviceChartIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export function SecondaryFeatures() {
+  const t = useTranslations("Index");
+
   return (
     <section
       id="secondary-features"
@@ -196,7 +199,7 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="unbounded text-3xl font-medium tracking-tight text-neutral-900">
-            Perché aspettare? Comincia a ricevere I primi consigli già da ora!
+            {t("secondaryFeatures.title")}
           </h2>
           {/*<p className="mt-2 text-lg text-neutral-600">*/}
           {/*  With typical market returns, you have to start young to secure your*/}
@@ -207,16 +210,22 @@ export function SecondaryFeatures() {
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
-          {features.map((feature) => (
+          {features.map((feature, featureIndex) => (
             <li
               key={feature.name}
               className="rounded-2xl border border-neutral-200 p-8"
             >
               <feature.icon className="h-8 w-8" />
               <h3 className="mt-6 font-semibold text-neutral-900">
-                {feature.name}
+                {t("secondaryFeatures.feature" + (featureIndex + 1) + ".title")}
               </h3>
-              <p className="mt-2 text-neutral-700">{feature.description}</p>
+              <p className="mt-2 text-neutral-700">
+                {t(
+                  "secondaryFeatures.feature" +
+                    (featureIndex + 1) +
+                    ".description",
+                )}
+              </p>
             </li>
           ))}
         </ul>
