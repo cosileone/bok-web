@@ -8,8 +8,12 @@ import { SecondaryFeatures } from "~/components/frontpage/SecondaryFeatures";
 import Team from "~/components/frontpage/Team";
 import "~/styles/cursor.css";
 import "~/styles/google-fonts.css";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default function Home({ params }: { params?: { locale: string } }) {
+  const locale = params?.locale ?? "en";
+  unstable_setRequestLocale(locale);
+
   return (
     <>
       <Hero />
