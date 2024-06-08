@@ -1,5 +1,140 @@
 {
   "Index": {
-    "title": "Hello world!"
+    "navigation": {
+      "business": "For Business",
+      "features": "Features",
+      "aboutUs": "About Us",
+      "faq": "FAQ",
+      "testimonials": "Testimonials"
+    },
+    "hero": {
+      "title": "The finance app for Gen Z",
+      "subtitle": "Have fun saving and investing money with your friends and our fantastic features"
+    },
+    "ctaButton": {
+      "register": "Register",
+      "loggedIn": "Your Dashboard"
+    },
+    "primaryFeatures": {
+      "title": "Discover our features",
+      "subtitle": "Unlock the full potential of our platform and reach your financial independence",
+      "feature1": {
+        "title": "Roundups",
+        "shortTitle": "Roundups",
+        "description": "Roundups with our card help as a personal assistant would. Everytime you make a purchase with our card the system rounds up to the next nearest whole euro and saves the differences in your personal savings account"
+      },
+      "feature2": {
+        "title": "Rule based savings and gamification",
+        "shortTitle": "Rule based savings",
+        "description": "With this feature you can create rules that allow you to save in a fun and engaging way. You can create a rule such as “every time Elon Musk tweets, save 20 cents” and voila, your 20 cents go directly in your savings account if and when the rule you created actually occurs. You will also be able to participate in community competitions and win prizes"
+      },
+      "feature3": {
+        "title": "Financial Pills: Our “Bills of Knowledge”",
+        "shortTitle": "Financial Pills",
+        "description": "Our videos with made for Gen Z by Gen Z. With a range of interesting and relevant topics such as how to save, investments and current news. All content is tailored and we'll also have a series of guests demystify the world of finance."
+      }
+    },
+    "secondaryFeatures": {
+      "title": "Why wait? Start getting your first suggestions now!",
+      "feature1": {
+        "title": "Pre-subscribe now",
+        "description": "Se sei fra i primi 5000 e fai iscrivere 5 amici, vinci un premio fantastico"
+      },
+      "feature2": {
+        "title": "Our app will launch in 2024",
+        "description": "Fai il Log In e ordina la tua carta di debito BOK per cominciare subito"
+      },
+      "feature3": {
+        "title": "Order your new card",
+        "description": "Una volta arrivata a casa, carica i tuoi primi soldi e comincia subito a risparmiare ed investire."
+      },
+      "feature4": {
+        "title": "Start using your new card",
+        "description": "Ogni volta che farai un acquisto con la tua carta BOK potrai scegliere quanto e se mettere da parte il resto di ogni acquisto, che andrà direttamente sul tuo conto sulla nostra app. Potrai in ogni momento accedere ai tuoi soldi."
+      },
+      "feature5": {
+        "title": "Win Prizes",
+        "description": "Ogni mese premi speciali per chi risparmia di più, iscriviti a tutte le competizioni aperte per guadagnare il più possibile"
+      },
+      "feature6": {
+        "title": "Unlock higher status levels",
+        "description": "Più risparmi, più sali di livello, e arriva così ad ottenere il bollino di utente GOLD, per avere benefici a vita e cashback importanti. Cosa aspetti? Comincia ora!"
+      }
+    },
+    "ctaSection": {
+      "title": "Get your first financial advice right now!",
+      "subtitle": "Subscribe to our newsletter",
+      "inputPlaceholder": "email address",
+      "ctaButton": {
+        "text": "Subscribe now",
+        "textMobile": "Subscribe",
+        "textSuccess": "Subscribed!",
+        "textLoading": "Submitting..."
+      }
+    },
+    "team": {
+      "title": "Meet the Team",
+      "subtitle": "Since you made it this far, we might as well give you a warm welcome from the team!",
+      "member1": {
+        "name": "Matteo Damiani",
+        "role": "Co-Founder & CEO",
+        "description": "Ex-Revolut e appassionato di Fintech e Finanza! Il sognatore del gruppo."
+      },
+      "member2": {
+        "name": "Eugenia Vitali",
+        "role": "Co-Founder CMO",
+        "description": "Ex-Station F e con un passato nel venture building, parla 5 lingue ed ha una passione per il design e l'innovazione creativa"
+      },
+      "member3": {
+        "name": "Cosimo Leone",
+        "role": "Co-Founder & CTO",
+        "description": "Ex-Amazon AWS, Software Engineer e appassionato di tecnologia. Se hai un problema... chiama Cosimo!"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "If you have any questions that aren't answered here, feel free to reach out to us!",
+      "question1": {
+        "question": "Quale è la nostra visione?",
+        "answer": "Che tutti i Gen Z Italiani ed Europei raggiungano la stabilità finanziaria"
+      },
+      "question2": {
+        "question": "Come Funziona BOK?",
+        "answer": "BOK è una app per aiutare la generazione Z a salvare ed investire denaro in modo semplice e con il minimo sforzo. Ci saranno investimenti con amici, tornei e tanti altri modi per arricchirti, sempre divertendoti!"
+      },
+      "question3": {
+        "question": "Quanto costa BOK?",
+        "answer": "Tutto gratuito! Esisterà una versione Pro con funzioni amplificate a pagamento, ma vogliamo che chiunque possa avere accesso alla propria libertà finanziaria. Oltre alla spedizione della tua carta personalizzabile BOK, non pagherai nulla :)"
+      },
+      "question4": {
+        "question": "Per chi è pensato BOK?",
+        "answer": "Se hai fra i 18-27 anni e stai cercando di mettere da parte soldi, investire denaro e raggiungere la tua indipendenza finanziaria, questo è il posto e il momento giusto!"
+      },
+      "question5": {
+        "question": "Pre-Iscrizione",
+        "answer": "Lascia i tuoi dati e verrai notificato non appena la app sarà disponibile. Tieniti aggiornato sulla nostra newsletter e social media Instagram e TikTok per rimanere sempre al passo"
+      },
+      "question6": {
+        "question": "Devo già avere un conto?",
+        "answer": "Non necessariamente! Potrai connettere il tuo conto alla app e ordinare la nostra carta personalizzabile BOK. Fatta a seconda delle tue preferenze ti verrà inviata entro il 30 Novembre."
+      }
+    },
+    "footer": {
+      "title": "BOK Italia",
+      "subtitle": "Achieve your financial independence",
+      "links": {
+        "privacyPolicy": "Privacy Policy"
+      },
+      "copyright": "© Copyright 2024. All rights reserved."
+    }
+  },
+  "BusinessIndex": {
+    "navigation": {
+      "consumer": "For Gen Z",
+      "business": "For Business",
+      "features": "Features",
+      "pricing": "Prices",
+      "testimonials": "Testimonials"
+    }
   }
 }

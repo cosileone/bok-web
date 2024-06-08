@@ -1,5 +1,140 @@
 {
   "Index": {
-    "title": "Ciao Mondo!"
+    "navigation": {
+      "business": "For Business",
+      "features": "Funzioni",
+      "aboutUs": "Chi Siamo",
+      "faq": "FAQ",
+      "testimonials": "Testimonianze"
+    },
+    "hero": {
+      "title": "La finanza degli Z",
+      "subtitle": "Risparmia divertendoti e accresci il tuo patrimonio con le nostre fantastiche funzioni. Registrati ora!"
+    },
+    "ctaButton": {
+      "register": "Registrati",
+      "loggedIn": "Vai al dashboard"
+    },
+    "primaryFeatures": {
+      "title": "Scopri le funzionalità di BOK Italia",
+      "subtitle": "Sblocca il potenziale delle nostre molteplici funzionalità e raggiungi la tua indipendenza finanziaria",
+      "feature1": {
+        "title": "Arrotondamenti",
+        "shortTitle": "Arrotondamenti",
+        "description": "Gli arrotondamenti con la nostra carta sono come il tuo assistente di risparmio personale. Ogni volta che fai un acquisto il sistema arrotonda l'importo al numero intero successivo e mette da parte la differenza. Ad esempio, se spendi 1,20€ per un caffè, verranno addebitati 2€ sul tuo conto e i restanti 80 centesimi  andranno direttamente nel tuo salvadanaio digitale. È un modo semplice e automatico per accumulare risparmi senza neanche renderci conto!"
+      },
+      "feature2": {
+        "title": "Risparmio a regole e Gamification",
+        "shortTitle": "Risparmio a regole",
+        "description": "Con questa funzionalità, puoi inventare regole che ti fanno risparmiare soldi ogni volta che succede qualcosa che stabilisci tu Ad esempio, potresti dire: \"Ogni volta che Elon Musk twitta risparmia 20 centesimi”, et voila 20 centesimi vanno direttamente nel tuo salvadanaio digitale! Potrai inoltre partecipare a competizioni avvincenti per chi risparmia di più e vincere premi in denaro"
+      },
+      "feature3": {
+        "title": "Pillole Finanziarie: Le nostre “bills of knowledge”",
+        "shortTitle": "Pillole Finanziarie",
+        "description": "Video con temi sempre attuali sulla finanza, l’economia, il risparmio e gli investimenti. I contenuti saranno sempre nuovi ed i nostri formati stile Gen Z ti terranno sempre sul pezzo!\n\nTi aspettiamo :)"
+      }
+    },
+    "secondaryFeatures": {
+      "title": "Altre funzionalità",
+      "feature1": {
+        "title": "Pre-Iscriviti subito",
+        "description": "Se sei fra i primi 5000 e fai iscrivere 5 amici, vinci un premio fantastico"
+      },
+      "feature2": {
+        "title": "Nel 2024 esce la app ufficiale",
+        "description": "Fai il Log In e ordina la tua carta di debito BOK per cominciare subito"
+      },
+      "feature3": {
+        "title": "Ordina la carta",
+        "description": "Una volta arrivata a casa, carica i tuoi primi soldi e comincia subito a risparmiare ed investire."
+      },
+      "feature4": {
+        "title": "Comincia ad utilizzare",
+        "description": "Ogni volta che farai un acquisto con la tua carta BOK potrai scegliere quanto e se mettere da parte il resto di ogni acquisto, che andrà direttamente sul tuo conto sulla nostra app. Potrai in ogni momento accedere ai tuoi soldi."
+      },
+      "feature5": {
+        "title": "Vinci Premi",
+        "description": "Ogni mese premi speciali per chi risparmia di più, iscriviti a tutte le competizioni aperte per guadagnare il più possibile"
+      },
+      "feature6": {
+        "title": "Sblocca i vari livelli disponibili ad ogni utente",
+        "description": "Più risparmi, più sali di livello, e arriva così ad ottenere il bollino di utente GOLD, per avere benefici a vita e cashback importanti. Cosa aspetti? Comincia ora!"
+      }
+    },
+    "ctaSection": {
+      "title": "Ricevi i primiconsigli da subito!",
+      "subtitle": "Iscriviti alla nostra newsletter",
+      "inputPlaceholder": "indirizzo email",
+      "ctaButton": {
+        "text": "Pre-Iscriviti Ora",
+        "textMobile": "Pre-Iscriviti",
+        "textSuccess": "Iscrizione Completata!",
+        "textLoading": "Invio in corso..."
+      }
+    },
+    "team": {
+      "title": "La nostra squadra",
+      "subtitle": "Se sei sulla nostra pagina non possiamo fare altro che darti il nostro benvenuto!",
+      "member1": {
+        "name": "Matteo Damiani",
+        "role": "Co-Founder & CEO",
+        "description": "Ex-Revolut e appassionato di Fintech e Finanza! Il sognatore del gruppo."
+      },
+      "member2": {
+        "name": "Eugenia Vitali",
+        "role": "Co-Founder CMO",
+        "description": "Ex-Station F e con un passato nel venture building, parla 5 lingue ed ha una passione per il design e l'innovazione creativa"
+      },
+      "member3": {
+        "name": "Cosimo Leone",
+        "role": "Co-Founder & CTO",
+        "description": "Ex-Amazon AWS, Software Engineer e appassionato di tecnologia. Se hai un problema... chiama Cosimo!"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Se hai qualsiasi altra domanda, non esitare a contattarci!",
+      "question1": {
+        "question": "Quale è la nostra visione?",
+        "answer": "Che tutti i Gen Z Italiani ed Europei raggiungano la stabilità finanziaria"
+      },
+      "question2": {
+        "question": "Come Funziona BOK?",
+        "answer": "BOK è una app per aiutare la generazione Z a salvare ed investire denaro in modo semplice e con il minimo sforzo. Ci saranno investimenti con amici, tornei e tanti altri modi per arricchirti, sempre divertendoti!"
+      },
+      "question3": {
+        "question": "Quanto costa BOK?",
+        "answer": "Tutto gratuito! Esisterà una versione Pro con funzioni amplificate a pagamento, ma vogliamo che chiunque possa avere accesso alla propria libertà finanziaria. Oltre alla spedizione della tua carta personalizzabile BOK, non pagherai nulla :)"
+      },
+      "question4": {
+        "question": "Per chi è pensato BOK?",
+        "answer": "Se hai fra i 18-27 anni e stai cercando di mettere da parte soldi, investire denaro e raggiungere la tua indipendenza finanziaria, questo è il posto e il momento giusto!"
+      },
+      "question5": {
+        "question": "Pre-Iscrizione",
+        "answer": "Lascia i tuoi dati e verrai notificato non appena la app sarà disponibile. Tieniti aggiornato sulla nostra newsletter e social media Instagram e TikTok per rimanere sempre al passo"
+      },
+      "question6": {
+        "question": "Devo già avere un conto?",
+        "answer": "Non necessariamente! Potrai connettere il tuo conto alla app e ordinare la nostra carta personalizzabile BOK. Fatta a seconda delle tue preferenze ti verrà inviata entro il 30 Novembre."
+      }
+    },
+    "footer": {
+      "title": "BOK Italia",
+      "subtitle": "Raggiungi la tua indipendenza finanziaria",
+      "links": {
+        "privacyPolicy": "Privacy Policy"
+      },
+      "copyright": "© Copyright 2024. All rights reserved."
+    }
+  },
+  "BusinessIndex": {
+    "navigation": {
+      "consumer": "Per Gen Z",
+      "business": "Per Banche",
+      "features": "Funzioni",
+      "pricing": "Prezzi",
+      "testimonials": "Testimonianze"
+    }
   }
 }
