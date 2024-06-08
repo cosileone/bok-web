@@ -38,7 +38,7 @@ const LocalePicker = ({
   useEffect(() => {
     if (selectedLocale === locale) return;
     void router.push(pathname, { locale: selectedLocale });
-  }, [pathname, router, selectedLocale, locale]);
+  }, [selectedLocale]);
   return (
     <>
       <Select
