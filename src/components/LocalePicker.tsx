@@ -31,8 +31,7 @@ const LocalePicker = ({
   const completePathname = usePathname();
   const removeLocale = completePathname.replace(`/${locale}`, "");
 
-  const pathname =
-    urlOverride ?? removeLocale.length === 0 ? "/" : removeLocale;
+  const pathname = urlOverride ?? removeLocale.length <= 1 ? "/" : removeLocale;
 
   const [selectedLocale, setSelectedLocale] = useState(locale);
 
