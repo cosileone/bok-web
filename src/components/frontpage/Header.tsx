@@ -62,6 +62,9 @@ export function Header() {
     <header className={"bg-[#2e00f9]"}>
       <nav>
         <Container className="relative z-50 flex justify-between lg:pt-8">
+          <div className={"flex items-center lg:hidden"}>
+            <LocalePicker />
+          </div>
           <div className="relative z-10 flex w-full items-center justify-center gap-16">
             <Link href="/" aria-label="Home" className={""}>
               <Logo className={"-top-10 lg:absolute lg:ml-0 lg:h-40 lg:pl-0"} />
@@ -123,7 +126,6 @@ export function Header() {
                                 </MobileNavLink>
                               ),
                             )}
-                            <LocalePicker />
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
                             {/*  <Button href="/login" variant="outline">*/}
