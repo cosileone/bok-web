@@ -11,7 +11,7 @@ import "~/styles/google-fonts.css";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 export default function Home({ params }: { params?: { locale: string } }) {
-  const locale = params?.locale ?? "en";
+  const locale = params?.locale ?? "it";
   unstable_setRequestLocale(locale);
 
   return (

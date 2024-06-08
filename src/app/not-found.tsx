@@ -4,11 +4,8 @@ import { Container } from "~/components/frontpage/Container";
 import { Layout } from "~/components/frontpage/Layout";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function NotFound({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export default function NotFound({ params }: { params?: { locale: string } }) {
+  const locale = params?.locale ?? "it";
   unstable_setRequestLocale(locale);
 
   return (

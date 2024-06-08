@@ -24,7 +24,7 @@ export default function Layout({
   params?: { locale: string };
   children: ReactNode;
 }) {
-  const locale = params?.locale ?? "en";
+  const locale = params?.locale ?? "it";
   unstable_setRequestLocale(locale);
   return <div className="flex h-full flex-col">{children}</div>;
 }
