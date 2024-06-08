@@ -31,13 +31,16 @@ const LocalePicker = ({
   const completePathname = usePathname();
   const removeLocale = completePathname.replace(`/${locale}`, "");
 
-  const pathname = urlOverride ?? removeLocale.length <= 1 ? "/" : removeLocale;
-
   const [selectedLocale, setSelectedLocale] = useState(locale);
 
   useEffect(() => {
+    const pathname =
+      urlOverride ?? removeLocale.length <= 1
+        ? `/${selectedLocale}`
+        : removeLocale;
+
     if (selectedLocale === locale) return;
-    void router.push(pathname, { locale: selectedLocale });
+    router.push(pathname, { locale: selectedLocale });
   }, [selectedLocale]);
   return (
     <>
