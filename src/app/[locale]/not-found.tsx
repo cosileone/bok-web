@@ -2,8 +2,12 @@ import { Button } from "~/components/frontpage/Button";
 import { CirclesBackground } from "~/components/frontpage/CirclesBackground";
 import { Container } from "~/components/frontpage/Container";
 import { Layout } from "~/components/frontpage/Layout";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function NotFound() {
+export default function NotFound({ params }: { params?: { locale: string } }) {
+  const locale = params?.locale ?? "it";
+  unstable_setRequestLocale(locale);
+
   return (
     <Layout>
       <Container className="relative isolate flex h-full flex-col items-center justify-center py-20 text-center sm:py-32">

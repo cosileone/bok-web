@@ -6,7 +6,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Contexts from "~/components/Contexts";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
 const inter = Inter({
@@ -27,11 +27,12 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params?: { locale: string };
 }) {
+  const locale = params?.locale ?? "it";
   const messages = await getMessages();
 
   return (
