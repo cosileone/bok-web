@@ -1,23 +1,32 @@
 import { type ReactNode } from "react";
-import { type Metadata } from "next";
 import { locales } from "~/i18n";
-import { unstable_setRequestLocale } from "next-intl/server";
-
-export const metadata: Metadata = {
-  title: {
-    template: "%s - BOK",
-    default:
-      "BOK - L’app che rende l’indipendenza finanziaria un gioco da ragazzi!",
-  },
-  description:
-    "Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed investi in modo semplice ed efficace. Dalla Generazione Z per la generazione Z",
-};
+import { getMessages, getTranslations } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function Layout({
+export async function generateMetadata({
+  params,
+}: {
+  params?: { locale: string };
+}) {
+  const locale = params?.locale ?? "it";
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: {
+      template: "%s - BOK",
+      default:
+        "BOK - L’app che rende l’indipendenza finanziaria un gioco da ragazzi!",
+    },
+    description:
+      "Raggiungi la tua indipendenza finanziaria con BOK! Risparmia ed investi in modo semplice ed efficace. Dalla Generazione Z per la generazione Z",
+  };
+}
+
+export default async function Layout({
   params,
   children,
 }: {
@@ -25,6 +34,10 @@ export default function Layout({
   children: ReactNode;
 }) {
   const locale = params?.locale ?? "it";
-  unstable_setRequestLocale(locale);
-  return <div className="flex h-full flex-col">{children}</div>;
+  const messages = await getMessages();
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <>{children}</>
+    </NextIntlClientProvider>
+  );
 }
