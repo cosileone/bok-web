@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { SignOutButton, UserButton } from "@clerk/nextjs";
 import { unstable_setRequestLocale } from "next-intl/server";
+import FullWidthThreeColumnLayout from "~/components/tailwindui/MultiColumnLayouts/FullWidthThreeColumnLayout";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -14,11 +15,8 @@ export default function Dashboard({
   unstable_setRequestLocale(locale);
 
   return (
-    <div>
-      <UserButton />
-      Dashboard
-      <br />
-      <SignOutButton redirectUrl={"/"} />
-    </div>
+    <>
+      <FullWidthThreeColumnLayout />
+    </>
   );
 }
