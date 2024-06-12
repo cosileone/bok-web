@@ -18,20 +18,21 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { cn } from "~/lib/utils";
-import { UserButton, UserProfile } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
+import { Logo } from "~/components/salient/Logo";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
   { name: "Team", href: "#", icon: UsersIcon, current: false },
   { name: "Projects", href: "#", icon: FolderIcon, current: false },
   { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
+  { name: "Assets", href: "#", icon: DocumentDuplicateIcon, current: false },
   { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
 ];
 const teams = [
-  { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
-  { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
-  { id: 3, name: "Workcation", href: "#", initial: "W", current: false },
+  { id: 1, name: "Nike Campaign", href: "#", initial: "1", current: false },
+  { id: 2, name: "2024 Programming", href: "#", initial: "2", current: false },
+  { id: 3, name: "Marketing Team", href: "#", initial: "3", current: false },
 ];
 
 export default function FullWidthThreeColumnLayout() {
@@ -88,11 +89,7 @@ export default function FullWidthThreeColumnLayout() {
                   {/* Sidebar component, swap this element with another sidebar if you like */}
                   <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
                     <div className="flex h-16 shrink-0 items-center">
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="Your Company"
-                      />
+                      <Logo className={"h-16"} />
                     </div>
                     <nav className="flex flex-1 flex-col">
                       <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -104,16 +101,16 @@ export default function FullWidthThreeColumnLayout() {
                                   href={item.href}
                                   className={cn(
                                     item.current
-                                      ? "bg-gray-50 text-indigo-600"
-                                      : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600",
+                                      ? "bg-gray-50 text-blue-600"
+                                      : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
                                     "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                                   )}
                                 >
                                   <item.icon
                                     className={cn(
                                       item.current
-                                        ? "text-indigo-600"
-                                        : "text-gray-400 group-hover:text-indigo-600",
+                                        ? "text-blue-600"
+                                        : "text-gray-400 group-hover:text-blue-600",
                                       "h-6 w-6 shrink-0",
                                     )}
                                     aria-hidden="true"
@@ -135,16 +132,16 @@ export default function FullWidthThreeColumnLayout() {
                                   href={team.href}
                                   className={cn(
                                     team.current
-                                      ? "bg-gray-50 text-indigo-600"
-                                      : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600",
+                                      ? "bg-gray-50 text-blue-600"
+                                      : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
                                     "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                                   )}
                                 >
                                   <span
                                     className={cn(
                                       team.current
-                                        ? "border-indigo-600 text-indigo-600"
-                                        : "border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600",
+                                        ? "border-blue-600 text-blue-600"
+                                        : "border-gray-200 text-gray-400 group-hover:border-blue-600 group-hover:text-blue-600",
                                       "flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium",
                                     )}
                                   >
@@ -170,11 +167,7 @@ export default function FullWidthThreeColumnLayout() {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
             <div className="flex h-16 shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt="Your Company"
-              />
+              <Logo className={"h-16"} />
             </div>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -186,16 +179,16 @@ export default function FullWidthThreeColumnLayout() {
                           href={item.href}
                           className={cn(
                             item.current
-                              ? "bg-gray-50 text-indigo-600"
-                              : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600",
+                              ? "bg-gray-50 text-blue-600"
+                              : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
                             "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                           )}
                         >
                           <item.icon
                             className={cn(
                               item.current
-                                ? "text-indigo-600"
-                                : "text-gray-400 group-hover:text-indigo-600",
+                                ? "text-blue-600"
+                                : "text-gray-400 group-hover:text-blue-600",
                               "h-6 w-6 shrink-0",
                             )}
                             aria-hidden="true"
@@ -217,16 +210,16 @@ export default function FullWidthThreeColumnLayout() {
                           href={team.href}
                           className={cn(
                             team.current
-                              ? "bg-gray-50 text-indigo-600"
-                              : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600",
+                              ? "bg-gray-50 text-blue-600"
+                              : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
                             "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                           )}
                         >
                           <span
                             className={cn(
                               team.current
-                                ? "border-indigo-600 text-indigo-600"
-                                : "border-gray-200 text-gray-400 group-hover:border-indigo-600 group-hover:text-indigo-600",
+                                ? "border-blue-600 text-blue-600"
+                                : "border-gray-200 text-gray-400 group-hover:border-blue-600 group-hover:text-blue-600",
                               "flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium",
                             )}
                           >

@@ -9,10 +9,7 @@ export function Logo(props: React.ComponentPropsWithoutRef<"svg">) {
       unoptimized
       src={bokLogo as StaticImport}
       alt={""}
-      className={cn(
-        "h-24 w-auto drop-shadow lg:ml-20 lg:pl-0",
-        props.className,
-      )}
+      className={cn("h-24 w-auto drop-shadow", props.className)}
     />
   );
 }

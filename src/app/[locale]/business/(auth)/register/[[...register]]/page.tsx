@@ -14,7 +14,7 @@ export default function Register() {
   return (
     <SlimLayout>
       <Link href="/business" aria-label="Home">
-        <Logo className={"lg:ml-auto lg:mr-auto"} />
+        <Logo className={"ml-auto mr-auto"} />
       </Link>
       <ClerkLoading>
         <div className={"h-[550px] text-center"}>
