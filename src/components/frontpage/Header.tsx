@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -13,6 +12,7 @@ import {
 import LoginButton from "~/components/frontpage/LoginButton";
 import LocalePicker from "~/components/LocalePicker";
 import { useTranslations } from "next-intl";
+import { Link } from "~/lib/i18n/navigation";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (

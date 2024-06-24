@@ -8,14 +8,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
-import { useParams } from "next/navigation";
 import { cn } from "~/lib/utils";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "~/lib/i18n/navigation";
 import { resolveLocaleEmoji } from "~/i18n";
+import { useLocale } from "next-intl";
 
 const LocalePicker = ({
-  urlOverride,
   className,
 }: {
   urlOverride?: string;
@@ -24,23 +23,15 @@ const LocalePicker = ({
   const itaMoji = resolveLocaleEmoji("it");
   const engMoji = resolveLocaleEmoji("en");
 
-  const params = useParams();
-  const locale = params.locale as string | undefined;
-
+  const locale = useLocale();
   const router = useRouter();
-  const completePathname = usePathname();
-  const removeLocale = completePathname.replace(`/${locale}`, "");
+  const pathnameNoLocale = usePathname();
 
   const [selectedLocale, setSelectedLocale] = useState(locale);
 
   useEffect(() => {
-    const pathname =
-      urlOverride ?? removeLocale.length <= 1
-        ? `/${selectedLocale}`
-        : removeLocale;
-
     if (selectedLocale === locale) return;
-    router.push(pathname, { locale: selectedLocale });
+    router.push(pathnameNoLocale, { locale: selectedLocale });
   }, [selectedLocale]);
   return (
     <>

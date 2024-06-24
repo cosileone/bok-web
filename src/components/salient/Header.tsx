@@ -1,7 +1,6 @@
 "use client";
 
 import { Fragment } from "react";
-import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
@@ -12,6 +11,7 @@ import bokLogo from "/public/bok_logo_black.svg";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import LocalePicker from "~/components/LocalePicker";
+import { Link } from "~/lib/i18n/navigation";
 
 function MobileNavLink({
   href,
