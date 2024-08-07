@@ -27,11 +27,12 @@ const RangeChart = ({ data, height = 300 }: RangeChartProps) => {
             Number(data[0]?.["savings (\u20AC)"]) || 0,
             Number(data.at(-1)?.["savings (\u20AC)"]) || "auto",
           ]}
-          tickFormatter={(value: string) => {
-            return Number(value).toLocaleString("it-IT", {
+          tickFormatter={(value: string) =>
+            Number(value).toLocaleString("en-EN", {
               maximumFractionDigits: 0,
-            });
-          }}
+              notation: "compact",
+            })
+          }
         />
         <Tooltip
           contentStyle={{
