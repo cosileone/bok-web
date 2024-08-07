@@ -1,11 +1,21 @@
-import React from "react";
+import { type FC } from "react";
 import { currentUser } from "@clerk/nextjs/server";
+import { cn } from "~/lib/utils";
 
-const FinancialOverview: React.FC = async () => {
+interface FinancialOverviewProps {
+  className?: string;
+}
+
+const FinancialOverview: FC<FinancialOverviewProps> = async ({ className }) => {
   const user = await currentUser();
 
   return (
-    <div className="mx-auto w-full max-w-sm rounded-lg bg-white p-6 font-sans dark:bg-black dark:text-white">
+    <div
+      className={cn(
+        "mx-auto w-full max-w-md rounded-lg bg-white p-6 font-sans dark:bg-black dark:text-white",
+        className,
+      )}
+    >
       <div className="mb-5 flex flex-col items-center">
         <img
           src={user?.imageUrl}

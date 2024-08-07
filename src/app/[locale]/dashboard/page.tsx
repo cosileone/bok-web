@@ -2,6 +2,7 @@ import { type Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
 import FullWidthThreeColumnLayout from "~/components/tailwindui/MultiColumnLayouts/FullWidthThreeColumnLayout";
 import DashboardContent from "~/components/DashboardContent";
+import InvestmentTypePicker from "~/components/InvestmentTypePicker";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -17,7 +18,8 @@ export default function Dashboard({
   return (
     <>
       <FullWidthThreeColumnLayout>
-        <DashboardContent />
+        <DashboardContent className={"mb-4"} />
+        <InvestmentTypePicker />
       </FullWidthThreeColumnLayout>
     </>
   );

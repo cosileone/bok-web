@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  darkMode: "selector",
+  // darkMode: "selector",
   theme: {
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
