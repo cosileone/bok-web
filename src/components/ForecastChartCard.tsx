@@ -7,12 +7,12 @@ import RangeChart from "~/components/RangeChart";
 const data1 = [
   {
     name: "1 mese",
-    risparmi: 10,
+    savings: 10,
     range: [0, 20],
   },
   {
     name: "2 mesi",
-    risparmi: 20,
+    savings: 20,
     range: [10, 40],
   },
 ];
@@ -23,7 +23,7 @@ export type DoubleRangeType = {
   name: string;
   range: string[];
   range2: string[];
-  "risparmi (\u20AC)": string;
+  "savings (\u20AC)": string;
 };
 
 export const createData = (
@@ -33,39 +33,39 @@ export const createData = (
 ) => {
   const savingsRate = 0.1; // get value from userProfile
   const interestRateLow = 0.09;
-  const interestRateLow2 = 0.08;
+  const interestRateLow2 = 0.075;
   const interestRateHigh = 0.11;
-  const interestRateHigh2 = 0.12;
+  const interestRateHigh2 = 0.125;
 
   const data: DoubleRangeType[] = [];
   for (let i = 0; i < numberOfDataPoints; i++) {
-    const risparmi =
-      principal *
+    const savings =
+      (principal + contribution * i) *
       Math.pow(
         1 + savingsRate / numberOfDataPoints,
         (numberOfDataPoints * i) / 12,
       );
     const rangeLow =
-      principal *
+      (principal + contribution * i) *
       Math.pow(
         1 + interestRateLow / numberOfDataPoints,
         (numberOfDataPoints * i) / 12,
       );
     const rangeHigh =
-      principal *
+      (principal + contribution * i) *
       Math.pow(
         1 + interestRateHigh / numberOfDataPoints,
         (numberOfDataPoints * i) / 12,
       );
 
     const rangeLow2 =
-      principal *
+      (principal + contribution * i) *
       Math.pow(
         1 + interestRateLow2 / numberOfDataPoints,
         (numberOfDataPoints * i) / 12,
       );
     const rangeHigh2 =
-      principal *
+      (principal + contribution * i) *
       Math.pow(
         1 + interestRateHigh2 / numberOfDataPoints,
         (numberOfDataPoints * i) / 12,
@@ -76,7 +76,7 @@ export const createData = (
 
     data.push({
       name: `${i + 1} mes${i + 1 === 1 ? "e" : "i"}`,
-      "risparmi (\u20AC)": risparmi.toFixed(2),
+      "savings (\u20AC)": savings.toFixed(2),
       range,
       range2,
     });
@@ -89,7 +89,7 @@ const ForecastChartCard = ({ className }: { className?: string }) => {
   return (
     <Card className={cn("pb-5 pr-10 pt-10", className)}>
       <h2 className={"mb-10 text-center text-2xl font-bold"}>
-        Possibili risultati <br /> dei nostri risparmi a regola
+        Possibili risultati <br /> dei nostri savings a regola
       </h2>
       <RangeChart data={data} />
     </Card>

@@ -1,10 +1,9 @@
 import { type Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
 import FullWidthThreeColumnLayout from "~/components/tailwindui/MultiColumnLayouts/FullWidthThreeColumnLayout";
-import DashboardContent from "~/components/DashboardContent";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Profile",
 };
 
 export default function Dashboard({
@@ -16,9 +15,7 @@ export default function Dashboard({
 
   return (
     <>
-      <FullWidthThreeColumnLayout>
-        <DashboardContent className={"mb-4"} />
-      </FullWidthThreeColumnLayout>
+      <FullWidthThreeColumnLayout></FullWidthThreeColumnLayout>
     </>
   );
 }

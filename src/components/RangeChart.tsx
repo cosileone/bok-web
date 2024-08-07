@@ -22,7 +22,17 @@ const RangeChart = ({ data, height = 300 }: RangeChartProps) => {
       <ComposedChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
-        <YAxis domain={[Number(data[0]?.["risparmi (\u20AC)"]) || 0, "auto"]} />
+        <YAxis
+          domain={[
+            Number(data[0]?.["savings (\u20AC)"]) || 0,
+            Number(data.at(-1)?.["savings (\u20AC)"]) || "auto",
+          ]}
+          tickFormatter={(value: string) => {
+            return Number(value).toLocaleString("it-IT", {
+              maximumFractionDigits: 0,
+            });
+          }}
+        />
         <Tooltip
           contentStyle={{
             borderRadius: "0.25rem",
@@ -31,7 +41,7 @@ const RangeChart = ({ data, height = 300 }: RangeChartProps) => {
           separator={": "}
         />
         <Legend />
-        <Line type="monotone" dataKey="risparmi (€)" stroke="#1184d8" />
+        <Line type="monotone" dataKey="savings (€)" stroke="#1184d8" />
         <Area
           type="monotone"
           dataKey="range"

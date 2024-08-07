@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, PropsWithChildren, useState } from "react";
+import { type PropsWithChildren, useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -11,10 +11,20 @@ import { Bars3Icon, HomeIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { cn } from "~/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import { Logo } from "~/components/salient/Logo";
+import { UserIcon } from "lucide-react";
+import { GearIcon, LightningBoltIcon } from "@radix-ui/react-icons";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  // { name: "Team", href: "#", icon: UsersIcon, current: false },
+  { name: "Home", href: "/dashboard", icon: HomeIcon, current: true },
+  {
+    name: "Activity",
+    href: "/dashboard",
+    icon: LightningBoltIcon,
+    current: false,
+  },
+  // { name: "Goals", href: "/dashboard", icon: FireIcon, current: false },
+  { name: "Profile", href: "/profile", icon: UserIcon, current: false },
+  { name: "Settings", href: "/settings", icon: GearIcon, current: false },
   // { name: "Projects", href: "#", icon: FolderIcon, current: false },
   // { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
   // { name: "Assets", href: "#", icon: DocumentDuplicateIcon, current: false },
