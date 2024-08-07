@@ -10,13 +10,13 @@ const FinancialOverview: React.FC = async () => {
         <img
           src={user?.imageUrl}
           alt="User profile image"
-          className="mr-4 h-12 w-12 rounded-full ring-4 ring-gray-800"
+          className="mr-4 h-12 w-12 rounded-full ring-4 dark:ring-gray-800"
         />
         <div className={"text-center"}>
           <p className="my-2 text-sm font-bold">
             {user?.firstName}, this month is looking good!
           </p>
-          <h2 className="mb-1 text-2xl font-light text-green-400">
+          <h2 className="mb-1 text-2xl font-light text-green-600 dark:text-green-400">
             <div className={"relative mx-auto w-fit"}>
               <span className={"absolute -left-8"}>💰</span>
               €4,050.00
@@ -24,7 +24,7 @@ const FinancialOverview: React.FC = async () => {
           </h2>
           <a
             href="#forecast"
-            className="text-xs font-semibold text-lime-300 hover:underline"
+            className="text-xs font-semibold text-lime-600 hover:underline dark:text-lime-300"
           >
             see forecast projection
           </a>
