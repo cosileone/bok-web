@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, PropsWithChildren, useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -35,7 +35,9 @@ const teams = [
   { id: 3, name: "Marketing Team", href: "#", initial: "3", current: false },
 ];
 
-export default function FullWidthThreeColumnLayout() {
+export default function FullWidthThreeColumnLayout({
+  children,
+}: PropsWithChildren) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -278,6 +280,7 @@ export default function FullWidthThreeColumnLayout() {
           <div className="xl:pl-96">
             <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
               {/* Main area */}
+              {children}
             </div>
           </div>
         </main>
