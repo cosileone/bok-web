@@ -7,32 +7,31 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import {
-  Bars3Icon,
-  CalendarIcon,
-  ChartPieIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, HomeIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { cn } from "~/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import { Logo } from "~/components/salient/Logo";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Assets", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+  // { name: "Team", href: "#", icon: UsersIcon, current: false },
+  // { name: "Projects", href: "#", icon: FolderIcon, current: false },
+  // { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
+  // { name: "Assets", href: "#", icon: DocumentDuplicateIcon, current: false },
+  // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
 ];
-const teams = [
-  { id: 1, name: "Nike Campaign", href: "#", initial: "1", current: false },
-  { id: 2, name: "2024 Programming", href: "#", initial: "2", current: false },
-  { id: 3, name: "Marketing Team", href: "#", initial: "3", current: false },
+
+type Team = {
+  id: number;
+  name: string;
+  href: string;
+  initial: string;
+  current: boolean;
+};
+const teams: Team[] = [
+  // { id: 1, name: "Nike Campaign", href: "#", initial: "1", current: false },
+  // { id: 2, name: "2024 Programming", href: "#", initial: "2", current: false },
+  // { id: 3, name: "Marketing Team", href: "#", initial: "3", current: false },
 ];
 
 export default function FullWidthThreeColumnLayout({

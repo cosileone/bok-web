@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { currentUser } from "@clerk/nextjs/server";
 import { cn } from "~/lib/utils";
+import ForecastProjection from "~/components/ForecastProjection";
 
 interface FinancialOverviewProps {
   className?: string;
@@ -8,6 +9,8 @@ interface FinancialOverviewProps {
 
 const FinancialOverview: FC<FinancialOverviewProps> = async ({ className }) => {
   const user = await currentUser();
+  const userSavings = 4_050;
+  const userGoal = 30_000;
 
   return (
     <div
@@ -29,16 +32,15 @@ const FinancialOverview: FC<FinancialOverviewProps> = async ({ className }) => {
           <h2 className="mb-1 text-2xl font-light text-green-600 dark:text-green-400">
             <div className={"relative mx-auto w-fit"}>
               <span className={"absolute -left-8"}>💰</span>
-              €4,050.00
+              {userSavings.toLocaleString("it-IT", {
+                style: "currency",
+                currency: "EUR",
+                minimumFractionDigits: 2,
+              })}
             </div>
           </h2>
-          <a
-            href="#forecast"
-            className="text-xs font-semibold text-lime-600 hover:underline dark:text-lime-300"
-          >
-            see forecast projection
-          </a>
         </div>
+        <ForecastProjection principal={userSavings} contributions={200} />
       </div>
 
       <div className="mt-6">
@@ -67,7 +69,17 @@ const FinancialOverview: FC<FinancialOverviewProps> = async ({ className }) => {
               </div>
             </div>
             <span className="text-xs text-gray-600 dark:text-gray-400">
-              €40.5k / €300k
+              {userSavings.toLocaleString("en-EN", {
+                style: "currency",
+                currency: "EUR",
+                notation: "compact",
+              })}{" "}
+              /{" "}
+              {userGoal.toLocaleString("en-EN", {
+                style: "currency",
+                currency: "EUR",
+                notation: "compact",
+              })}
             </span>
           </div>
         </div>
