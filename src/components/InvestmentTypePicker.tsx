@@ -18,10 +18,14 @@ const categories: InvestmentCategory[] = [
 ];
 
 const InvestmentTypePicker: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
 
   const handleCategorySelect = (id: number) => {
-    setSelectedCategory(id);
+    setSelectedCategories((prevSelected) =>
+      prevSelected.includes(id)
+        ? prevSelected.filter((categoryId) => categoryId !== id)
+        : [...prevSelected, id],
+    );
   };
 
   return (
@@ -35,25 +39,33 @@ const InvestmentTypePicker: React.FC = () => {
       </h3>
       <div className="space-y-4">
         {categories.map((category) => (
-          <div
+          <label
             key={category.id}
             className={`flex cursor-pointer items-center justify-between rounded-lg bg-gray-100 p-3 dark:bg-gray-900 ${
-              selectedCategory === category.id ? "ring-2 ring-lime-400" : ""
+              selectedCategories.includes(category.id)
+                ? "ring-2 ring-lime-400"
+                : ""
             }`}
-            onClick={() => handleCategorySelect(category.id)}
           >
             <div className="flex items-center">
               <span className="mr-3 text-lg">{category.icon}</span>
               <span className="text-sm">{category.name}</span>
             </div>
             <div
-              className={`h-6 w-6 rounded-full border-2 ${
-                selectedCategory === category.id
-                  ? "border-lime-400 bg-lime-400"
-                  : "border-gray-600"
+              className={`h-6 w-6 rounded-full ${
+                selectedCategories.includes(category.id)
+                  ? "bg-lime-400"
+                  : "border-2 bg-gray-100 dark:border-gray-600 dark:bg-gray-900"
               }`}
+              onClick={() => handleCategorySelect(category.id)}
+            ></div>
+            <input
+              type="checkbox"
+              className="hidden"
+              checked={selectedCategories.includes(category.id)}
+              onChange={() => handleCategorySelect(category.id)}
             />
-          </div>
+          </label>
         ))}
       </div>
 
