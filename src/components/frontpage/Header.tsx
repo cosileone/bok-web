@@ -1,6 +1,11 @@
 "use client";
 
-import { Popover } from "@headlessui/react";
+import {
+  Popover,
+  PopoverButton,
+  PopoverOverlay,
+  PopoverPanel,
+} from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { Container } from "~/components/frontpage/Container";
@@ -42,12 +47,12 @@ function ChevronUpIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 function MobileNavLink(
   props: Omit<
-    React.ComponentPropsWithoutRef<typeof Popover.Button<typeof Link>>,
+    React.ComponentPropsWithoutRef<typeof PopoverButton<typeof Link>>,
     "as" | "className"
   >,
 ) {
   return (
-    <Popover.Button
+    <PopoverButton
       as={Link}
       className="block text-base leading-7 tracking-tight text-neutral-700"
       {...props}
@@ -83,7 +88,7 @@ export function Header() {
             <Popover className="lg:hidden">
               {({ open }) => (
                 <>
-                  <Popover.Button
+                  <PopoverButton
                     className="ui-not-focus-visible:outline-none relative z-10 -m-2 inline-flex items-center rounded-lg stroke-neutral-200 p-2 hover:bg-neutral-200/50 hover:stroke-white active:stroke-neutral-300"
                     aria-label="Toggle site navigation"
                   >
@@ -94,11 +99,11 @@ export function Header() {
                         <MenuIcon className="h-6 w-6" />
                       )
                     }
-                  </Popover.Button>
+                  </PopoverButton>
                   <AnimatePresence initial={false}>
                     {open && (
                       <>
-                        <Popover.Overlay
+                        <PopoverOverlay
                           static
                           as={motion.div}
                           initial={{ opacity: 0 }}
@@ -106,7 +111,7 @@ export function Header() {
                           exit={{ opacity: 0 }}
                           className="fixed inset-0 z-0 bg-neutral-300/60 backdrop-blur"
                         />
-                        <Popover.Panel
+                        <PopoverPanel
                           static
                           as={motion.div}
                           initial={{ opacity: 0, y: -32 }}
@@ -134,7 +139,7 @@ export function Header() {
                             {/*  <Button href="#">Download the app</Button>*/}
                             <LoginButton />
                           </div>
-                        </Popover.Panel>
+                        </PopoverPanel>
                       </>
                     )}
                   </AnimatePresence>

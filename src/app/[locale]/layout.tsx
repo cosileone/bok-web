@@ -34,7 +34,7 @@ export default async function Layout({
   children: ReactNode;
 }) {
   const locale = params?.locale ?? "it";
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <>{children}</>
