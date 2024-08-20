@@ -13,22 +13,22 @@ import { UserButton } from "@clerk/nextjs";
 import { Logo } from "~/components/salient/Logo";
 import { UserIcon } from "lucide-react";
 import { GearIcon, LightningBoltIcon } from "@radix-ui/react-icons";
+import { usePathname } from "~/lib/i18n/navigation";
 
 const navigation = [
-  { name: "Home", href: "/dashboard", icon: HomeIcon, current: true },
+  { name: "Home", href: "/dashboard", icon: HomeIcon },
   {
     name: "Activity",
-    href: "/dashboard",
+    href: "#activity",
     icon: LightningBoltIcon,
-    current: false,
   },
-  // { name: "Goals", href: "/dashboard", icon: FireIcon, current: false },
-  { name: "Profile", href: "/profile", icon: UserIcon, current: false },
-  { name: "Settings", href: "/settings", icon: GearIcon, current: false },
-  // { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  // { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  // { name: "Assets", href: "#", icon: DocumentDuplicateIcon, current: false },
-  // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+  // { name: "Goals", href: "/dashboard", icon: FireIcon },
+  { name: "Profile", href: "/profile", icon: UserIcon },
+  { name: "Settings", href: "/settings", icon: GearIcon },
+  // { name: "Projects", href: "#", icon: FolderIcon },
+  // { name: "Calendar", href: "#", icon: CalendarIcon },
+  // { name: "Assets", href: "#", icon: DocumentDuplicateIcon },
+  // { name: "Reports", href: "#", icon: ChartPieIcon },
 ];
 
 type Team = {
@@ -48,6 +48,8 @@ export default function FullWidthThreeColumnLayout({
   children,
 }: PropsWithChildren) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const currentPath = usePathname();
+  console.log("currentPath", currentPath);
 
   return (
     <>
@@ -111,7 +113,7 @@ export default function FullWidthThreeColumnLayout({
                                 <a
                                   href={item.href}
                                   className={cn(
-                                    item.current
+                                    currentPath === item.href
                                       ? "bg-gray-50 text-blue-600"
                                       : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
                                     "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
@@ -119,7 +121,7 @@ export default function FullWidthThreeColumnLayout({
                                 >
                                   <item.icon
                                     className={cn(
-                                      item.current
+                                      currentPath === item.href
                                         ? "text-blue-600"
                                         : "text-gray-400 group-hover:text-blue-600",
                                       "h-6 w-6 shrink-0",
@@ -189,7 +191,7 @@ export default function FullWidthThreeColumnLayout({
                         <a
                           href={item.href}
                           className={cn(
-                            item.current
+                            currentPath === item.href
                               ? "bg-gray-50 text-blue-600"
                               : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
                             "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
@@ -197,7 +199,7 @@ export default function FullWidthThreeColumnLayout({
                         >
                           <item.icon
                             className={cn(
-                              item.current
+                              currentPath === item.href
                                 ? "text-blue-600"
                                 : "text-gray-400 group-hover:text-blue-600",
                               "h-6 w-6 shrink-0",

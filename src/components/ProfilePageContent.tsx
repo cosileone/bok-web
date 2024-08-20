@@ -14,7 +14,6 @@ const ProfilePageContent = () => {
   const membership = organizations?.at(0);
   if (!membership) return null;
 
-  console.log("tacos", membership);
   const { name: companyName, imageUrl: companyLogoUrl } =
     membership.organization;
 
