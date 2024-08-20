@@ -25,7 +25,7 @@ const ProfilePageContent = () => {
         <img
           src={user?.imageUrl}
           alt="Profile Picture"
-          className="h-16 w-16 rounded-full"
+          className="h-12 w-12 rounded-full"
         />
         <h1 className="font-serif text-2xl font-bold text-gray-700">
           Your Profile
