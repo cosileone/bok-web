@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { useLocalStorage } from "@uidotdev/usehooks";
 
 interface InvestmentCategory {
   id: number;
@@ -19,7 +20,12 @@ const categories: InvestmentCategory[] = [
 ];
 
 const InvestmentTypePicker: React.FC = () => {
-  const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
+  const [savedCategories, saveSelectedCategories] = useLocalStorage<number[]>(
+    "bokSelectedCategories",
+    [],
+  );
+  const [selectedCategories, setSelectedCategories] =
+    useState<number[]>(savedCategories);
 
   const handleCategorySelect = (id: number) => {
     setSelectedCategories((prevSelected) =>
@@ -28,6 +34,10 @@ const InvestmentTypePicker: React.FC = () => {
         : [...prevSelected, id],
     );
   };
+
+  useEffect(() => {
+    saveSelectedCategories(selectedCategories);
+  }, [selectedCategories]);
 
   return (
     <div className="mx-auto w-full max-w-md rounded-lg bg-white p-6 font-sans dark:bg-black dark:text-white">
