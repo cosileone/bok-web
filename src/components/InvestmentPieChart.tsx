@@ -1,6 +1,5 @@
 import React from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
-import { type ValueType } from "recharts/types/component/DefaultTooltipContent";
 
 // Sample data
 const data = [
@@ -10,27 +9,27 @@ const data = [
   { name: "Crypto", value: 800, color: "#EE6C52" },
 ];
 
-const CustomTooltip = ({
-  active,
-  payload,
-}: {
-  active: boolean;
-  payload: ValueType;
-}) => {
-  if (active && payload && payload.length) {
-    return (
-      <div
-        className="custom-tooltip rounded bg-black p-2 text-white shadow-lg"
-        style={{ border: `1px solid ${payload[0].payload.color}` }}
-      >
-        <p className="label">{`${payload[0].name}`}</p>
-        <p className="intro">* €{payload[0].value.toLocaleString()}</p>
-      </div>
-    );
-  }
-
-  return null;
-};
+// const CustomTooltip = ({
+//   active,
+//   payload,
+// }: {
+//   active: boolean;
+//   payload: ValueType;
+// }) => {
+//   if (active && payload && payload.length) {
+//     return (
+//       <div
+//         className="custom-tooltip rounded bg-black p-2 text-white shadow-lg"
+//         style={{ border: `1px solid ${payload[0].payload.color}` }}
+//       >
+//         <p className="label">{`${payload[0].name}`}</p>
+//         <p className="intro">* €{payload[0].value.toLocaleString()}</p>
+//       </div>
+//     );
+//   }
+//
+//   return null;
+// };
 
 const InvestmentPieChart: React.FC = () => {
   return (
