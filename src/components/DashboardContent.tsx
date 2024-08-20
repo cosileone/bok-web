@@ -1,14 +1,17 @@
+"use client";
+
 import { type FC } from "react";
-import { currentUser } from "@clerk/nextjs/server";
 import { cn } from "~/lib/utils";
 import ForecastProjection from "~/components/ForecastProjection";
+import InvestmentPieChart from "~/components/InvestmentPieChart";
+import { useUser } from "@clerk/nextjs";
 
 interface FinancialOverviewProps {
   className?: string;
 }
 
-const FinancialOverview: FC<FinancialOverviewProps> = async ({ className }) => {
-  const user = await currentUser();
+const FinancialOverview: FC<FinancialOverviewProps> = ({ className }) => {
+  const { user } = useUser();
   const userSavings = 4_050;
   const userGoal = 30_000;
 
@@ -44,6 +47,9 @@ const FinancialOverview: FC<FinancialOverviewProps> = async ({ className }) => {
       </div>
 
       <div className="mt-6">
+        <div>
+          <InvestmentPieChart />
+        </div>
         <h3 className="mb-3 text-lg font-semibold">YOUR GOALS</h3>
         <div className="rounded-md p-4 dark:bg-gray-800">
           <p className="mb-3 text-sm">The power of Compound Interest</p>
