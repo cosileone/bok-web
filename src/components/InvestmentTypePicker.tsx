@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { toast } from "sonner";
 
 interface InvestmentCategory {
   id: number;
@@ -69,7 +70,12 @@ const InvestmentTypePicker: React.FC = () => {
         ))}
       </div>
 
-      <button className="mt-6 w-full rounded-lg bg-lime-400 py-2 font-semibold text-black hover:bg-lime-500">
+      <button
+        className="mt-6 w-full rounded-lg bg-lime-400 py-2 font-semibold text-black hover:bg-lime-500"
+        onClick={(e) =>
+          toast("Investment category preferences have been saved")
+        }
+      >
         NEXT
       </button>
     </div>

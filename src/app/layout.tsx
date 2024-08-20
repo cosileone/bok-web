@@ -6,6 +6,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import Contexts from "~/components/Contexts";
+import { Toaster } from "~/components/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <body className="flex h-full flex-col">
           <div className="flex h-full flex-col">{children}</div>
+          <Toaster />
           <Analytics />
         </body>
       </html>
