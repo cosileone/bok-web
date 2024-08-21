@@ -9,23 +9,23 @@ import {
 
 // Sample data
 const data = [
-  { subject: "A", A: 120, fullMark: 150 },
-  { subject: "B", A: 98, fullMark: 150 },
-  { subject: "C", A: 86, fullMark: 150 },
-  { subject: "D", A: 99, fullMark: 150 },
-  { subject: "E", A: 85, fullMark: 150 },
+  { subject: "Risk Tolerance", current: 95, fullMark: 100 },
+  { subject: "Age", current: 22, fullMark: 100 },
+  { subject: "Saving Rate", current: 50, fullMark: 100 },
+  { subject: "Debt Ratio", current: 50, fullMark: 100 },
+  { subject: "BOK Score", current: 85, fullMark: 100 },
 ];
 
 const InvestmentRadarChart: React.FC = () => {
   return (
     <ResponsiveContainer width="100%" height={300}>
-      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+      <RadarChart cx="50%" cy="50%" outerRadius="63%" data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" />
         {/*<PolarRadiusAxis angle={30} domain={[0, 150]} />*/}
         <Radar
           name="Investment"
-          dataKey="A"
+          dataKey={"current"}
           stroke="#8884d8"
           fill="#8884d8"
           fillOpacity={0.6}
