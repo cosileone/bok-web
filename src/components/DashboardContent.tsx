@@ -26,7 +26,7 @@ const FinancialOverview: FC<FinancialOverviewProps> = ({ className }) => {
         <img
           src={user?.imageUrl}
           alt="User profile image"
-          className="mr-4 h-12 w-12 rounded-full ring-4 dark:ring-gray-800"
+          className="mr-4 h-12 w-12 overflow-hidden rounded-full ring-4 dark:ring-gray-800"
         />
         <div className={"text-center"}>
           <p className="my-2 text-sm font-bold">
