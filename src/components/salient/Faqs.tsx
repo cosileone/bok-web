@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container } from "~/components/salient/Container";
 import backgroundImage from "~/images/salient/background-faqs.jpg";
 
-const faqs = [
+const faqsOld = [
   [
     {
       question:
@@ -58,6 +58,59 @@ const faqs = [
   ],
 ];
 
+const faqs = [
+  [
+    {
+      question: "Who is BOK aimed at?",
+      answer:
+        "Any company looking to retain their Gen Z employees by providing real and tangible value. As well to fellow Gen Z’s looking to build their wealth and investment profile in the stage in which it matters the most!",
+    },
+    {
+      question: "How does it work specifically?",
+      answer:
+        "As a company you purchase the service for x amount of Gen Z employees. Consequently, you will have a dashboard with all signed up users and their roles in the firm. The employees instead will download the app and answer a few questions to set up their profiles to be officially investment ready!",
+    },
+    {
+      question: "As a company what influence do I have on investment choice?",
+      answer:
+        "We make sure that our partners are always satisfied with the service. While the specific categories your employees want to invest in are up to them exclusively, there can be custom agreements on what asset classes might be available for workers in your firm.",
+    },
+  ],
+  [
+    {
+      question: "Investment advice provided?",
+      answer:
+        "BOK strives to help users through the learning component available in app, although does not actively suggest or refer users to investments. Users will just choose the areas of investment based on categories of interest. The content section will serve as a hub where users can develop and foster their understanding and knowledge of finance",
+    },
+    {
+      question:
+        "In terms of pricing is there any other fee other than the monthly subscription",
+      answer:
+        "Our pricing is transparent and thought to be advantageous for our partner companies too. Therefore, the subscription is the only cost.",
+    },
+    {
+      question: "How long is the contract for?",
+      answer:
+        "Contracts tend to be on a yearly basis, and have the option to be automatically renewed.",
+    },
+  ],
+  [
+    {
+      question:
+        "Is the service available everywhere or do you have geographic restrictions",
+      answer:
+        "Indeed! BOK is available to any partner company regardless of location",
+    },
+    {
+      question: "Is there a contact number in case more information is needed?",
+      answer:
+        "To speak with one of our operators, you can dial the \n" +
+        "+39 3312495678\n" +
+        "or reach out to us on LinkedIn or our social medias @bokfinanz",
+    },
+  ],
+];
+
 export function Faqs() {
   return (
     <section
@@ -82,12 +135,19 @@ export function Faqs() {
             FAQ
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Se hai qualsiasi altra domanda, non esitare a{" "}
+            If you have additional questions, don&apos;t hesitate to contact us{" "}
             <a href="mailto:info@billsofknowledge.com" className="underline">
-              contattarci
+              via email
             </a>
             !
           </p>
+          {/*<p className="mt-4 text-lg tracking-tight text-slate-700">*/}
+          {/*  Se hai qualsiasi altra domanda, non esitare a{" "}*/}
+          {/*  <a href="mailto:info@billsofknowledge.com" className="underline">*/}
+          {/*    contattarci*/}
+          {/*  </a>*/}
+          {/*  !*/}
+          {/*</p>*/}
         </div>
         <ul
           role="list"
