@@ -105,7 +105,7 @@ function Plan({
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
-        Contattaci
+        Buy now
       </Button>
     </section>
   );
@@ -123,35 +123,41 @@ export function Pricing() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">I nostri pacchetti</span>
+              <span className="relative">Simple pricing,</span>
             </span>{" "}
+            for everyone.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            Guardate i nostri diversi abbonamenti per iniziare a creare
+            Take a look at all the plans we offer and choose the one that fits
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Base"
-            price="€800 / mese"
-            description="Comincia con un set di 10 nostri video, toccheremo temi di risparmio, tecniche da poter in maniera pratica  e tanti temi con ogni episodio dedicato. Rendi i Gen Z nella tua banca partecipi. Comincia ora!"
+            price="€20 / month"
+            description="For companies with 1-15 Gn Z employees. Pricing is specified on per user basis"
             href="/register"
             features={[]}
           />
           <Plan
             featured
-            name="Pro"
-            price="€1500 / mese"
-            description="Ottieni un contratto di un anno con una promessa di 15 video contenuti, di cui 5 su commissione e specifici per le tue necessità, in qualsiasi momento dell’anno. Il contratto mensile può essere annullato in qualsiasi momento"
+            name="Standard"
+            price="€15 / month"
+            description="From 16-50 Gen Z employees. Pricing is on a per user basis and includes:"
             href="/register"
-            features={[]}
+            features={[
+              "Access to tailored financial content",
+              "Investment options for users",
+              "Seamless integration for HR",
+              "User investment profiling based on personal information",
+            ]}
           />
           <Plan
-            name="Custom"
-            price="€---"
-            description="Siediti a tavolino con il nostro team di esperti di comunicazione e finanza per giovani. Crea una personale richiesta per contenuti su tutti itemi di finanza, risparmi ed investimenti o temi utili per il tuo istituto finanziario, la parola chiave qui è flessibilità!"
+            name="Pro"
+            price="€10 / month"
+            description="From 50+ Gen Z employees"
             href="/register"
-            features={["Contattaci per un preventivo"]}
+            features={["Contact us for larger company headcounts"]}
           />
         </div>
       </Container>

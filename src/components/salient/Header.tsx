@@ -101,9 +101,9 @@ function MobileNavigation() {
 }
 
 const navigationLinks = [
-  { href: "/", text: "Per Gen Z" },
-  { href: "#funzioni", text: "Funzioni" },
-  { href: "#prezzi", text: "Prezzi" },
+  { href: "/", text: "Home" },
+  { href: "#funzioni", text: "Features" },
+  { href: "#prezzi", text: "Prices" },
   // { href: "#testimonials", text: "Testimonials" },
 ];
 
