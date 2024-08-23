@@ -92,7 +92,7 @@ function MobileNavigation() {
             <MobileNavLink href="#funzioni">Funzioni</MobileNavLink>
             <MobileNavLink href="#prezzi">Prezzi</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/business/login">Sign in</MobileNavLink>
+            <MobileNavLink href="/login">Sign in</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -131,9 +131,9 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="/business/login">Accedi</NavLink>
+              <NavLink href="/login">Accedi</NavLink>
             </div>
-            <Button href="/business/register" color="blue">
+            <Button href="/register" color="blue">
               Comincia qui
               {/*<span>*/}
               {/*  Get started <span className="hidden lg:inline">today</span>*/}

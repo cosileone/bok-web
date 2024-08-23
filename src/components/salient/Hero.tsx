@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Button } from "~/components/salient/Button";
 import { Container } from "~/components/salient/Container";
 import logoLaravel from "~/images/salient/logos/laravel.svg";
@@ -44,7 +42,7 @@ export function Hero() {
         i nostri contenuti pensati apposta per il tuo pubblico di giovani.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/business/register">Prova Subito</Button>
+        <Button href="/register">Prova Subito</Button>
         <Button href="https://vimeo.com/946554155" variant="outline">
           <svg
             aria-hidden="true"

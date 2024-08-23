@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Register() {
   return (
     <SlimLayout>
-      <Link href="/business" aria-label="Home">
+      <Link href="/" aria-label="Home">
         <Logo className={"ml-auto mr-auto"} />
       </Link>
       <ClerkLoading>
