@@ -7,9 +7,6 @@ import clsx from "clsx";
 
 import { Container } from "~/components/salient/Container";
 import backgroundImage from "~/images/salient/background-features.jpg";
-import screenshotExpenses from "~/images/salient/screenshots/expenses.png";
-import screenshotReporting from "~/images/salient/screenshots/reporting.png";
-import screenshotVatReturns from "~/images/salient/screenshots/vat-returns.png";
 import matteoScreenshot from "~/images/salient/screenshots/1b.jpg";
 import purpleScreenshot from "~/images/salient/screenshots/2b-3b.png";
 
@@ -76,8 +73,8 @@ export function PrimaryFeatures() {
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Il nostro prodotto ad un tiro di schioppo!
+          <h2 className="font-display text-balance text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+            Everything you need to manage your employee investments.
           </h2>
           {/*<p className="mt-6 text-lg tracking-tight text-blue-100">*/}
           {/*  Well everything you need if you aren’t that picky about minor*/}
