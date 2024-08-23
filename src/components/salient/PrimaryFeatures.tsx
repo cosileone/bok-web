@@ -7,27 +7,28 @@ import clsx from "clsx";
 
 import { Container } from "~/components/salient/Container";
 import backgroundImage from "~/images/salient/background-features.jpg";
-import matteoScreenshot from "~/images/salient/screenshots/1b.jpg";
-import purpleScreenshot from "~/images/salient/screenshots/2b-3b.png";
+import ss1 from "~/images/salient/screenshots/leaderboard.png";
+import ss2 from "~/images/salient/screenshots/profile.png";
+import ss3 from "~/images/salient/screenshots/predictive-ai.png";
 
 const features = [
   {
-    title: "Contenuti Finanziari",
+    title: "Employee sign up",
     description:
-      "Contenuti da Gen Z per Gen Z, dalle techniche di risparmio a quelle di investimento passando per curiose nozioni e notizie di attualità economico finanziaria!",
-    image: matteoScreenshot,
+      "Onboard your Gen Z employees. Keep track of the progress your workers are making",
+    image: ss1,
   },
   {
-    title: "App di risparmio",
+    title: "User profile",
     description:
-      "Sei un Gen Z  e stai cercando la tua app per risparmiare divertendoti? A breve disponibile tante nuove funzioni con risparmio a regole, competizione e tanti elementi di Gamification.  Resta aggiornato/a qui e su @bokfinanza",
-    image: purpleScreenshot,
+      "Once logged in, users will have access to their personal in-pp dashboard with a wide variety of functions and have their balance and progress always at a glance.",
+    image: ss2,
   },
   {
-    title: "Investi con noi",
+    title: "Predictive AI",
     description:
-      "I risparmi che hai creato sono finalmente pronti a fruttare. Comincia adesso ad accrescere il tuo patrimonio,  utilizza la nostra IA per settare obiettivi e profilo d’investimento",
-    image: purpleScreenshot,
+      "Our very own predictive AI soon to be available. Have users replicate portfolios and be matched to investment that fir their profile best",
+    image: ss3,
   },
   // {
   //   title: "Reporting",
