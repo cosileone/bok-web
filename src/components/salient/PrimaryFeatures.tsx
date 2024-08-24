@@ -6,7 +6,6 @@ import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "~/components/salient/Container";
-import backgroundImage from "~/images/salient/background-features.jpg";
 import ss1 from "~/images/salient/screenshots/leaderboard.png";
 import ss2 from "~/images/salient/screenshots/profile.png";
 import ss3 from "~/images/salient/screenshots/predictive-ai.png";
@@ -62,16 +61,16 @@ export function PrimaryFeatures() {
     <section
       id="funzioni"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="bg-bokpurple relative overflow-hidden pb-28 pt-20 sm:py-32"
     >
-      <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
-        width={2245}
-        height={1636}
-        unoptimized
-      />
+      {/*<Image*/}
+      {/*  className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"*/}
+      {/*  src={backgroundImage}*/}
+      {/*  alt=""*/}
+      {/*  width={2245}*/}
+      {/*  height={1636}*/}
+      {/*  unoptimized*/}
+      {/*/>*/}
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-balance text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
