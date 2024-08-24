@@ -2,13 +2,13 @@ import Link from "next/link";
 
 import { Container } from "~/components/salient/Container";
 import { NavLink } from "~/components/salient/NavLink";
-import bokLogo from "public/bok_logo_black.svg";
+import bokLogo from "public/bok_logo.svg";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="bg-bokpurple">
       <Container>
         <div className="py-16">
           <Image
@@ -46,7 +46,7 @@ export function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
+          <p className="mt-6 text-sm text-slate-100 sm:mt-0">
             Copyright &copy; {new Date().getFullYear()} BOK. All rights
             reserved.
           </p>
