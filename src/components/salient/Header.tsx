@@ -7,7 +7,7 @@ import clsx from "clsx";
 import { Button } from "~/components/salient/Button";
 import { Container } from "~/components/salient/Container";
 import { NavLink } from "~/components/salient/NavLink";
-import bokLogo from "/public/bok_logo_black.svg";
+import bokLogo from "/public/bok_logo.svg";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import LocalePicker from "~/components/LocalePicker";
@@ -31,7 +31,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
   return (
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+      className="h-3.5 w-3.5 overflow-visible stroke-slate-50"
       fill="none"
       strokeWidth={2}
       strokeLinecap="round"
@@ -134,7 +134,7 @@ export function Header() {
             <div className="hidden md:block">
               <NavLink href="/login">Log in</NavLink>
             </div>
-            <Button href="/register" color="blue">
+            <Button href="/register" color="green">
               Sign up
               {/*<span>*/}
               {/*  Get started <span className="hidden lg:inline">today</span>*/}

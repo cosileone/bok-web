@@ -36,7 +36,7 @@ export default function RootLayout({
     <Contexts>
       <html
         lang={locale}
-        className={clsx("h-full bg-neutral-50 antialiased", inter.variable)}
+        className={clsx("bg-bokpurple h-full antialiased", inter.variable)}
       >
         <body className="flex h-full flex-col">
           <div className="flex h-full flex-col">{children}</div>

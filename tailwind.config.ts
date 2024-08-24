@@ -34,6 +34,10 @@ const config = {
         "4xl": "2rem",
         "5xl": "2.5rem",
       },
+      colors: {
+        bokpurple: "#5857f1",
+        bokgreen: "#b0ff01",
+      },
       fontFamily: {
         sans: "var(--font-inter)",
       },
