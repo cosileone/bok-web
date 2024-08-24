@@ -25,11 +25,11 @@ export function Footer() {
             </div>
           </nav>
         </div>
-        <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
+        <div className="flex flex-col items-center border-t border-slate-50/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link href="#" className="group" aria-label="TaxPal on X">
               <svg
-                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
+                className="h-6 w-6 fill-slate-300 group-hover:fill-slate-400"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
               >
@@ -38,7 +38,7 @@ export function Footer() {
             </Link>
             <Link href="#" className="group" aria-label="TaxPal on GitHub">
               <svg
-                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
+                className="h-6 w-6 fill-slate-300 group-hover:fill-slate-400"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
               >
