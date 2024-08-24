@@ -88,6 +88,7 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
+            <LocalePicker />
             <MobileNavLink href="/">Home</MobileNavLink>
             <MobileNavLink href="#funzioni">Features</MobileNavLink>
             <MobileNavLink href="#prezzi">Pricing</MobileNavLink>
@@ -139,7 +140,7 @@ export function Header() {
               {/*  Get started <span className="hidden lg:inline">today</span>*/}
               {/*</span>*/}
             </Button>
-            <LocalePicker />
+            <LocalePicker className={"hidden sm:block"} />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
