@@ -69,14 +69,14 @@ function Plan({
     <section
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
-        featured ? "bg-blue-600 py-8 lg:order-none" : "lg:py-8",
+        featured ? "bg-lime-500 py-8 lg:order-none" : "lg:py-8",
       )}
     >
       <h3 className="font-display mt-5 text-lg text-white">{name}</h3>
       <p
         className={clsx(
           "mt-2 text-base",
-          featured ? "text-white" : "text-slate-400",
+          featured ? "text-white" : "text-slate-300",
         )}
       >
         {description}
@@ -93,15 +93,14 @@ function Plan({
       >
         {features.map((feature) => (
           <li key={feature} className="flex">
-            <CheckIcon className={featured ? "text-white" : "text-slate-400"} />
+            <CheckIcon className={featured ? "text-white" : "text-slate-300"} />
             <span className="ml-4">{feature}</span>
           </li>
         ))}
       </ul>
       <Button
         href={href}
-        variant={featured ? "solid" : "outline"}
-        color="white"
+        color={featured ? "white" : "slate"}
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
@@ -116,7 +115,7 @@ export function Pricing() {
     <section
       id="prezzi"
       aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+      className="bg-bokpurple py-20 sm:py-32"
     >
       <Container>
         <div className="md:text-center">
@@ -127,7 +126,7 @@ export function Pricing() {
             </span>{" "}
             for everyone.
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
+          <p className="mt-4 text-lg text-slate-300">
             Take a look at all the plans we offer and choose the one that fits
           </p>
         </div>
