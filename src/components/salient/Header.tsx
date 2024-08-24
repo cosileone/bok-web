@@ -140,7 +140,7 @@ export function Header() {
               {/*  Get started <span className="hidden lg:inline">today</span>*/}
               {/*</span>*/}
             </Button>
-            <LocalePicker className={"hidden sm:block"} />
+            <LocalePicker className={"hidden sm:flex"} />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
