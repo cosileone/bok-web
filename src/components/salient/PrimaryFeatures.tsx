@@ -89,7 +89,7 @@ export function PrimaryFeatures() {
         >
           {({ selectedIndex }) => (
             <>
-              <div className="shadow-r -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 sm:shadow-none lg:col-span-5">
+              <div className="shadow-r -mx-4 flex overflow-x-auto py-2 sm:mx-0 sm:overflow-visible sm:pb-0 sm:shadow-none lg:col-span-5">
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
