@@ -9,6 +9,7 @@ import { Container } from "~/components/salient/Container";
 import ss1 from "~/images/salient/screenshots/leaderboard.png";
 import ss2 from "~/images/salient/screenshots/profile.png";
 import ss3 from "~/images/salient/screenshots/predictive-ai.png";
+import { cn } from "~/lib/utils";
 
 const features = [
   {
@@ -136,7 +137,12 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[500px]">
+                    <div
+                      className={cn(
+                        "mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[500px]",
+                        selectedIndex === 2 ? "lg:w-[700px]" : "",
+                      )}
+                    >
                       <Image
                         className="w-full"
                         src={feature.image}
