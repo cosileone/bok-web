@@ -54,7 +54,9 @@ const LearnPageContent = ({
       >
         {videos.map((video) => (
           <div key={video.url} className="flex min-h-8 w-full flex-col gap-x-4">
-            <Image src={video.thumbnail} alt="" className="" unoptimized />
+            <a href={video.url}>
+              <Image src={video.thumbnail} alt="" className="" unoptimized />
+            </a>
           </div>
         ))}
       </div>
