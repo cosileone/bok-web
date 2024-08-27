@@ -17,7 +17,7 @@ export default function Dashboard({
   return (
     <>
       <FullWidthThreeColumnLayout>
-        <LearnPageContent>Learn Page</LearnPageContent>
+        <LearnPageContent />
       </FullWidthThreeColumnLayout>
     </>
   );
