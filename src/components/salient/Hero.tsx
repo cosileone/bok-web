@@ -1,23 +1,26 @@
 import { Button } from "~/components/salient/Button";
 import { Container } from "~/components/salient/Container";
-import logoLaravel from "~/images/salient/logos/laravel.svg";
-import logoMirage from "~/images/salient/logos/mirage.svg";
-import logoStatamic from "~/images/salient/logos/statamic.svg";
-import logoStaticKit from "~/images/salient/logos/statickit.svg";
-import logoTransistor from "~/images/salient/logos/transistor.svg";
-import logoTuple from "~/images/salient/logos/tuple.svg";
+import logoSifted from "~/images/salient/logos/sifted.svg";
+import Image from "next/image";
 
-const logoGroups: { name: string; logo: unknown }[][] = [
+const logoGroups: { name: string; logo: unknown; url: string }[][] = [
   [
-    { name: "Transistor", logo: logoTransistor },
-    { name: "Tuple", logo: logoTuple },
-    { name: "StaticKit", logo: logoStaticKit },
+    {
+      name: "Sifted",
+      logo: logoSifted,
+      url: "https://sifted.eu/articles/revolut-alumni-founders-latest",
+    },
   ],
-  [
-    { name: "Mirage", logo: logoMirage },
-    { name: "Laravel", logo: logoLaravel },
-    { name: "Statamic", logo: logoStatamic },
-  ],
+  // [
+  //   { name: "Transistor", logo: logoTransistor },
+  //   { name: "Tuple", logo: logoTuple },
+  //   { name: "StaticKit", logo: logoStaticKit },
+  // ],
+  // [
+  //   { name: "Mirage", logo: logoMirage },
+  //   { name: "Laravel", logo: logoLaravel },
+  //   { name: "Statamic", logo: logoStatamic },
+  // ],
 ];
 
 export function Hero() {
@@ -25,7 +28,7 @@ export function Hero() {
     <Container className="pb-16 pt-20 text-center drop-shadow lg:pt-32">
       <h1 className="font-display mx-auto max-w-4xl text-4xl font-medium tracking-tight text-slate-50 sm:text-7xl">
         A wealthier Gen Z?{" "}
-        <span className="text-bokgreen relative sm:whitespace-nowrap">
+        <span className="relative text-bokgreen sm:whitespace-nowrap">
           <svg
             aria-hidden="true"
             viewBox="0 0 418 42"
@@ -57,32 +60,33 @@ export function Hero() {
         </Button>
       </div>
       <div className="mt-36 lg:mt-44">
-        {/*  <p className="font-display text-base text-slate-900">*/}
-        {/*    Trusted by these six companies so far*/}
-        {/*  </p>*/}
-        {/*  <ul*/}
-        {/*    role="list"*/}
-        {/*    className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"*/}
-        {/*  >*/}
-        {/*    {logoGroups.map((group, groupIndex) => (*/}
-        {/*      <li key={groupIndex}>*/}
-        {/*        <ul*/}
-        {/*          role="list"*/}
-        {/*          className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0"*/}
-        {/*        >*/}
-        {/*          {group.map((company) => (*/}
-        {/*            <li key={company.name} className="flex">*/}
-        {/*              <Image*/}
-        {/*                src={company.logo as string}*/}
-        {/*                alt={company.name}*/}
-        {/*                unoptimized*/}
-        {/*              />*/}
-        {/*            </li>*/}
-        {/*          ))}*/}
-        {/*        </ul>*/}
-        {/*      </li>*/}
-        {/*    ))}*/}
-        {/*  </ul>*/}
+        <p className="font-display text-base text-slate-100">As seen on</p>
+        <ul
+          role="list"
+          className="mt-8 flex items-center justify-center gap-x-8 text-slate-200 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+        >
+          {logoGroups.map((group, groupIndex) => (
+            <li key={groupIndex}>
+              <ul
+                role="list"
+                className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0"
+              >
+                {group.map((company) => (
+                  <li key={company.name} className="flex">
+                    <a href={company.url}>
+                      <Image
+                        src={company.logo as string}
+                        alt={company.name}
+                        unoptimized
+                        className={""}
+                      />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </div>
     </Container>
   );
