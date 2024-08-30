@@ -218,38 +218,38 @@ export default function FullWidthThreeColumnLayout({
                     ))}
                   </ul>
                 </li>
-                <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-400">
-                    Your teams
-                  </div>
-                  <ul role="list" className="-mx-2 mt-2 space-y-1">
-                    {teams.map((team) => (
-                      <li key={team.name}>
-                        <a
-                          href={team.href}
-                          className={cn(
-                            team.current
-                              ? "bg-gray-50 text-blue-600"
-                              : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
-                            "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
-                          )}
-                        >
-                          <span
-                            className={cn(
-                              team.current
-                                ? "border-blue-600 text-blue-600"
-                                : "border-gray-200 text-gray-400 group-hover:border-blue-600 group-hover:text-blue-600",
-                              "flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium",
-                            )}
-                          >
-                            {team.initial}
-                          </span>
-                          <span className="truncate">{team.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
+                {/*<li>*/}
+                {/*  <div className="text-xs font-semibold leading-6 text-gray-400">*/}
+                {/*    Your teams*/}
+                {/*  </div>*/}
+                {/*  <ul role="list" className="-mx-2 mt-2 space-y-1">*/}
+                {/*    {teams.map((team) => (*/}
+                {/*      <li key={team.name}>*/}
+                {/*        <a*/}
+                {/*          href={team.href}*/}
+                {/*          className={cn(*/}
+                {/*            team.current*/}
+                {/*              ? "bg-gray-50 text-blue-600"*/}
+                {/*              : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",*/}
+                {/*            "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",*/}
+                {/*          )}*/}
+                {/*        >*/}
+                {/*          <span*/}
+                {/*            className={cn(*/}
+                {/*              team.current*/}
+                {/*                ? "border-blue-600 text-blue-600"*/}
+                {/*                : "border-gray-200 text-gray-400 group-hover:border-blue-600 group-hover:text-blue-600",*/}
+                {/*              "flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium",*/}
+                {/*            )}*/}
+                {/*          >*/}
+                {/*            {team.initial}*/}
+                {/*          </span>*/}
+                {/*          <span className="truncate">{team.name}</span>*/}
+                {/*        </a>*/}
+                {/*      </li>*/}
+                {/*    ))}*/}
+                {/*  </ul>*/}
+                {/*</li>*/}
                 <li className="-mx-6 mt-auto">
                   <span className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900">
                     <UserButton
@@ -302,9 +302,9 @@ export default function FullWidthThreeColumnLayout({
           </div>
         </main>
 
-        <aside className="fixed inset-y-0 left-72 hidden w-96 overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
-          {/* Secondary column (hidden on smaller screens) */}
-        </aside>
+        {/*<aside className="fixed inset-y-0 left-72 hidden w-96 overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">*/}
+        {/*  /!* Secondary column (hidden on smaller screens) *!/*/}
+        {/*</aside>*/}
       </div>
     </>
   );
