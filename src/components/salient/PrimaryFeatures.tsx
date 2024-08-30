@@ -62,7 +62,7 @@ export function PrimaryFeatures() {
     <section
       id="funzioni"
       aria-label="Features for running your books"
-      className="bg-bokpurple relative overflow-hidden pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-bokpurple pb-28 pt-20 sm:py-32"
     >
       {/*<Image*/}
       {/*  className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"*/}
@@ -75,7 +75,9 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-balance text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to manage your employee investments.
+            A dream come true for your employees
+            <br />
+            and their financial future
           </h2>
           {/*<p className="mt-6 text-lg tracking-tight text-blue-100">*/}
           {/*  Well everything you need if you aren’t that picky about minor*/}
@@ -140,7 +142,7 @@ export function PrimaryFeatures() {
                     <div
                       className={cn(
                         "mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[500px]",
-                        selectedIndex === 2 ? "lg:w-[700px]" : "",
+                        selectedIndex === 2 ? "lg:w-[900px]" : "",
                       )}
                     >
                       <Image

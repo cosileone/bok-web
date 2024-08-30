@@ -104,7 +104,7 @@ function MobileNavigation() {
 const navigationLinks = [
   { href: "/", text: "Home" },
   { href: "#funzioni", text: "Features" },
-  { href: "#prezzi", text: "Prices" },
+  { href: "#prezzi", text: "Pricing" },
   // { href: "#testimonials", text: "Testimonials" },
 ];
 
