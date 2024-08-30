@@ -3,6 +3,7 @@
 import React from "react";
 import { useOrganizationList, useUser } from "@clerk/nextjs";
 import InvestmentRadarChart from "~/components/InvestmentRadarChart";
+import { Link } from "~/lib/i18n/navigation";
 
 const ProfilePageContent = () => {
   const { user } = useUser();
@@ -62,9 +63,12 @@ const ProfilePageContent = () => {
       </div>
 
       {/* Call-to-Action Button */}
-      <button className="mt-8 w-full rounded-2xl bg-indigo-600 px-6 py-3 font-bold uppercase text-white shadow-md hover:bg-indigo-700">
+      <Link
+        href={"/profile/get-started"}
+        className="mt-8 w-full rounded-2xl bg-indigo-600 px-6 py-3 text-center font-bold uppercase text-white shadow-md hover:bg-indigo-700"
+      >
         Get Started &gt;
-      </button>
+      </Link>
     </div>
   );
 };

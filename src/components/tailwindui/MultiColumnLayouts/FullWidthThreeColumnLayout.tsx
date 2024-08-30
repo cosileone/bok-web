@@ -120,16 +120,16 @@ export default function FullWidthThreeColumnLayout({
                                   href={item.href}
                                   className={cn(
                                     currentPath === item.href
-                                      ? "bg-gray-50 text-blue-600"
-                                      : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
+                                      ? "bg-gray-50 text-bokpurple"
+                                      : "text-gray-700 hover:bg-gray-50 hover:text-bokpurple",
                                     "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                                   )}
                                 >
                                   <item.icon
                                     className={cn(
                                       currentPath === item.href
-                                        ? "text-blue-600"
-                                        : "text-gray-400 group-hover:text-blue-600",
+                                        ? "text-bokpurple"
+                                        : "text-gray-400 group-hover:text-bokpurple",
                                       "h-6 w-6 shrink-0",
                                     )}
                                     aria-hidden="true"
@@ -198,16 +198,16 @@ export default function FullWidthThreeColumnLayout({
                           href={item.href}
                           className={cn(
                             currentPath === item.href
-                              ? "bg-gray-50 text-blue-600"
-                              : "text-gray-700 hover:bg-gray-50 hover:text-blue-600",
+                              ? "bg-gray-50 text-bokpurple"
+                              : "text-gray-700 hover:bg-gray-50 hover:text-bokpurple",
                             "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6",
                           )}
                         >
                           <item.icon
                             className={cn(
                               currentPath === item.href
-                                ? "text-blue-600"
-                                : "text-gray-400 group-hover:text-blue-600",
+                                ? "text-bokpurple"
+                                : "text-gray-400 group-hover:text-bokpurple",
                               "h-6 w-6 shrink-0",
                             )}
                             aria-hidden="true"

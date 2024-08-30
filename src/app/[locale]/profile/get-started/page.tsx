@@ -1,23 +1,17 @@
-import { type Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
 import FullWidthThreeColumnLayout from "~/components/tailwindui/MultiColumnLayouts/FullWidthThreeColumnLayout";
-import ProfilePageContent from "~/components/ProfilePageContent";
+import GetStartedContent from "~/app/[locale]/profile/get-started/GetStartedContent";
 
-export const metadata: Metadata = {
-  title: "Profile",
-};
-
-export default function ProfilePage({
+export default function GetStartedPage({
   params: { locale },
 }: {
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-
   return (
     <>
       <FullWidthThreeColumnLayout>
-        <ProfilePageContent />
+        <GetStartedContent />
       </FullWidthThreeColumnLayout>
     </>
   );
