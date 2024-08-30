@@ -67,7 +67,7 @@ const ProfilePageContent = () => {
         href={"/profile/get-started"}
         className="mt-8 w-full rounded-2xl bg-indigo-600 px-6 py-3 text-center font-bold uppercase text-white shadow-md hover:bg-indigo-700"
       >
-        Get Started &gt;
+        Get Started
       </Link>
     </div>
   );

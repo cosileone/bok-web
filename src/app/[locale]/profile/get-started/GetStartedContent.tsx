@@ -1,9 +1,10 @@
+import RiskAssessmentForm from "~/app/[locale]/profile/get-started/RiskAssessmentForm";
+
 const GetStartedContent = () => {
   return (
     <>
-      <div className="mx-auto flex max-w-md flex-col items-center rounded-lg bg-white px-12 py-6 shadow-lg">
-        <h1>Get Started</h1>
-        <p>Let's get started!</p>
+      <div className="mx-auto flex max-w-md flex-col items-center rounded-lg bg-white p-6 shadow-lg">
+        <RiskAssessmentForm />
       </div>
     </>
   );
