@@ -55,7 +55,6 @@ export default function FullWidthThreeColumnLayout({
 }: PropsWithChildren) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentPath = usePathname();
-  console.log("currentPath", currentPath);
 
   return (
     <>
