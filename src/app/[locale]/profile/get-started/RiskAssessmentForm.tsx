@@ -61,7 +61,7 @@ export default function RiskAssessmentForm() {
             <Label htmlFor="risk-tolerance">
               When it comes to investing, how much of a risk-taker are you?
             </Label>
-            <p className={"text-xs leading-5"}>
+            <p className={"text-sm text-neutral-500 dark:text-neutral-400"}>
               On a scale from 1 (super cautious) to 10 (all-in for high risks),
               where do you see yourself?
             </p>
