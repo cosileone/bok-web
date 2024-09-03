@@ -21,8 +21,8 @@ const euroSymbol = "\u20AC";
 
 export type DoubleRangeType = {
   name: string;
-  range: string[];
-  range2: string[];
+  conservative: string[];
+  optimistic: string[];
   "savings (\u20AC)": string;
 };
 
@@ -75,10 +75,10 @@ export const createData = (
     const range2 = [rangeLow2.toFixed(2), rangeHigh2.toFixed(2)];
 
     data.push({
-      name: `${i + 1} mes${i + 1 === 1 ? "e" : "i"}`,
+      name: `${i + 1} month${i + 1 === 1 ? "" : "s"}`,
       "savings (\u20AC)": savings.toFixed(2),
-      range,
-      range2,
+      conservative: range,
+      optimistic: range2,
     });
   }
   return data;

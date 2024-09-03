@@ -45,14 +45,14 @@ const RangeChart = ({ data, height = 300 }: RangeChartProps) => {
         <Line type="monotone" dataKey="savings (€)" stroke="#1184d8" />
         <Area
           type="monotone"
-          dataKey="range"
+          dataKey="conservative"
           stroke="#45a368"
           fillOpacity={0.1}
           fill="#45a368"
         />
         <Area
           type="monotone"
-          dataKey="range2"
+          dataKey="optimistic"
           stroke="#82ca9d"
           fillOpacity={0.1}
           fill="#82ca9d"
