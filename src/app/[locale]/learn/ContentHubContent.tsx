@@ -43,7 +43,7 @@ const ContentHubContent: React.FC = () => {
         </Button>
       </div>
 
-      <div className="grid gap-4 p-4 text-slate-900 sm:grid-cols-2">
+      <div className="grid gap-4 rounded-2xl bg-green-950 p-4 text-slate-900 sm:grid-cols-2">
         <div className="rounded-lg bg-lime-300 p-4 text-center shadow-md transition-transform hover:scale-105">
           <h3 className="text-xl font-bold">Add 5% Vanguard ETF</h3>
           <p className="mt-2 text-xs">www.billsofknowledge.com</p>
