@@ -5,12 +5,10 @@ import { defaultLocale, localePrefix, locales } from "~/i18n";
 const isDevProcess = process.env.NODE_ENV === "development";
 
 // https://clerk.com/docs/references/nextjs/clerk-middleware#configure-clerk-middleware
-const isProtectedRoute = createRouteMatcher([
-  "{/:locale}*/(.*)",
-  "{/:locale}*/business/(.*)",
-]);
+const isProtectedRoute = createRouteMatcher(["{/:locale}*/business/(.*)"]);
 
 const isPublicRoute = createRouteMatcher([
+  "{/:locale}*/",
   "{/:locale}*/login(.*)",
   "{/:locale}*/register(.*)",
   "{/:locale}*/business/login(.*)",
