@@ -58,7 +58,7 @@ export default function FullWidthThreeColumnLayout({
 
   return (
     <>
-      <div>
+      <div className={"h-full bg-gray-50"}>
         <Transition show={sidebarOpen}>
           <Dialog className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
             <TransitionChild

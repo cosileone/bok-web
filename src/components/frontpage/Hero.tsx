@@ -1,22 +1,9 @@
 import { useId } from "react";
 import Image from "next/image";
-import clsx from "clsx";
 
 import { AppDemo } from "~/components/frontpage/AppDemo";
-import { AppStoreLink } from "~/components/frontpage/AppStoreLink";
-import { Button } from "~/components/frontpage/Button";
 import { Container } from "~/components/frontpage/Container";
 import { PhoneFrame } from "~/components/frontpage/PhoneFrame";
-import logoBbc from "~/images/logos/bbc.svg";
-import logoCbs from "~/images/logos/cbs.svg";
-import logoCnn from "~/images/logos/cnn.svg";
-import logoFastCompany from "~/images/logos/fast-company.svg";
-import logoForbes from "~/images/logos/forbes.svg";
-import logoHuffpost from "~/images/logos/huffpost.svg";
-import logoTechcrunch from "~/images/logos/techcrunch.svg";
-import logoWired from "~/images/logos/wired.svg";
-import NewsletterMiniForm from "~/components/frontpage/NewsletterMiniForm";
-import welcome from "~/images/welcome.svg";
 import handImage from "/public/blue-hero-gfx.jpeg";
 import eyes from "/public/eyes.gif";
 import blob from "/public/blob.gif";
@@ -108,7 +95,7 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 export function Hero() {
   const t = useTranslations("Index");
   return (
-    <div className="relative overflow-hidden bg-[#2E01F9] py-20 sm:py-32 lg:pb-32 xl:pb-80 xl:pt-64">
+    <div className="relative overflow-hidden bg-bokpurple py-20 sm:py-32 lg:pb-32 xl:pb-80 xl:pt-64">
       <div
         className={
           "absolute left-6 top-0 z-10 w-[130px] lg:left-36 lg:top-40 lg:z-auto lg:-mt-6 lg:w-[200px]"
