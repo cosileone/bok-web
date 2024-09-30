@@ -17,7 +17,7 @@ const LoginButton = ({ className }: LoginButtonProps) => {
         </Button>
       </SignedOut>
       <SignedIn>
-        <Button href={"/dashboard"} className={cn(className)}>
+        <Button href={"/home"} className={cn(className)}>
           {t("ctaButton.loggedIn")}
         </Button>
       </SignedIn>

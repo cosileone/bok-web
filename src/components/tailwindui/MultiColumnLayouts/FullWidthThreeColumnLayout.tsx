@@ -10,27 +10,31 @@ import {
 import {
   AcademicCapIcon,
   Bars3Icon,
+  Cog8ToothIcon,
   HomeIcon,
+  TrophyIcon,
+  UserCircleIcon,
+  UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { cn } from "~/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import { Logo } from "~/components/salient/Logo";
-import { UserIcon } from "lucide-react";
-import { GearIcon } from "@radix-ui/react-icons";
 import { usePathname } from "~/lib/i18n/navigation";
 
 const navigation = [
-  { name: "Home", href: "/dashboard", icon: HomeIcon },
+  { name: "Home", href: "/home", icon: HomeIcon },
+  { name: "Learn", href: "/learn", icon: AcademicCapIcon },
+  { name: "Employees", href: "/employees", icon: UsersIcon },
+  { name: "Leaderboard", href: "/leaderboard", icon: TrophyIcon },
+  { name: "Profile", href: "/profile", icon: UserCircleIcon },
+  { name: "Settings", href: "/settings", icon: Cog8ToothIcon },
   // {
   //   name: "Activity",
   //   href: "#activity",
   //   icon: LightningBoltIcon,
   // },
-  { name: "Learn", href: "/learn", icon: AcademicCapIcon },
   // { name: "Goals", href: "/dashboard", icon: FireIcon },
-  { name: "Profile", href: "/profile", icon: UserIcon },
-  { name: "Settings", href: "/settings", icon: GearIcon },
   // { name: "Projects", href: "#", icon: FolderIcon },
   // { name: "Calendar", href: "#", icon: CalendarIcon },
   // { name: "Assets", href: "#", icon: DocumentDuplicateIcon },

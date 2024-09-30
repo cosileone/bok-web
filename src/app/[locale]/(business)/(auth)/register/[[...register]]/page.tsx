@@ -25,7 +25,7 @@ export default function Register() {
         </div>
       </ClerkLoading>
       <ClerkLoaded>
-        <SignUp forceRedirectUrl={"/dashboard"} />
+        <SignUp path={"/register"} />
       </ClerkLoaded>
     </SlimLayout>
   );

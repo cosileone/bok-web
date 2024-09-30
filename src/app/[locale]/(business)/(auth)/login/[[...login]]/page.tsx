@@ -24,7 +24,7 @@ export default function Login() {
         </div>
       </ClerkLoading>
       <ClerkLoaded>
-        <SignIn forceRedirectUrl={"/dashboard"} />
+        <SignIn path={"/login"} />
       </ClerkLoaded>
     </SlimLayout>
   );
