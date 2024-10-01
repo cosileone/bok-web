@@ -25,7 +25,7 @@ export default function Register() {
         </div>
       </ClerkLoading>
       <ClerkLoaded>
-        <SignUp path={"/register"} />
+        <SignUp />
       </ClerkLoaded>
     </SlimLayout>
   );

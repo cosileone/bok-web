@@ -24,7 +24,7 @@ export default function Login() {
         </div>
       </ClerkLoading>
       <ClerkLoaded>
-        <SignIn path={"/login"} />
+        <SignIn />
       </ClerkLoaded>
     </SlimLayout>
   );
