@@ -28,35 +28,21 @@ datasource db {
 //   @@index([createdById])
 // }
 
-// Necessary for Next auth
-model Account {
-  id                String  @id @default(cuid())
-  userId            Int
-  type              String
-  provider          String
-  providerAccountId String
-  refresh_token     String? @db.Text
-  access_token      String? @db.Text
-  expires_at        Int?
-  token_type        String?
-  scope             String?
-  id_token          String? @db.Text
-  session_state     String?
-  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([provider, providerAccountId])
-  @@index([userId])
-}
-
 model Company {
-  id          Int      @id @default(autoincrement())
-  publicId    String   @unique @default(cuid())
-  name        String   @unique
-  isOnboarded Boolean  @default(false)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id               Int     @id @default(autoincrement())
+  publicId         String  @unique @default(cuid())
+  name             String  @unique
+  isOnboarded      Boolean @default(false)
+  isSubscribed     Boolean @default(false)
+  stripeCustomerId String?
+  subscriptionId   String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   users Employee[]
+
+  @@index(stripeCustomerId)
 }
 
 enum EmployeeRole {
@@ -66,24 +52,25 @@ enum EmployeeRole {
 }
 
 model Employee {
-  id          Int          @id @default(autoincrement())
-  publicId    String       @unique @default(cuid())
-  firstName   String?
-  lastName    String?
-  email       String
-  isVerified  Boolean      @default(false)
-  isOnboarded Boolean      @default(false)
-  isActive    Boolean      @default(false)
-  role        EmployeeRole @default(EMPLOYEE)
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
+  id              Int          @id @default(autoincrement())
+  publicId        String       @unique @default(cuid())
+  firstName       String?
+  lastName        String?
+  email           String
+  externalEmail   String?
+  isEmailVerified Boolean      @default(false)
+  isOnboarded     Boolean      @default(false)
+  isActive        Boolean      @default(false)
+  role            EmployeeRole @default(EMPLOYEE)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
 
   companyId Int
   company   Company @relation(fields: [companyId], references: [id])
   userId    Int?
   User      User?   @relation(fields: [userId], references: [id])
 
-  @@unique([email, companyId])
+  @@index([email, companyId])
 }
 
 model Preregistration {
@@ -124,16 +111,6 @@ model QuizResult {
   @@index([userId])
 }
 
-model Session {
-  id           String   @id @default(cuid())
-  sessionToken String   @unique
-  userId       Int
-  expires      DateTime
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-}
-
 model User {
   id            Int          @id @default(autoincrement())
   publicId      String       @unique @default(cuid())
@@ -143,9 +120,7 @@ model User {
   image         String?
   clerkId       String?      @unique
   accounts      Employee[]
-  sessions      Session[]
   userProfile   UserProfile?
-  Account       Account[]
 
   @@index([clerkId])
 }
@@ -161,12 +136,4 @@ model UserProfile {
   updatedAt              DateTime @updatedAt
 
   @@index([userId])
-}
-
-model VerificationToken {
-  identifier String
-  token      String   @unique
-  expires    DateTime
-
-  @@unique([identifier, token])
 }
