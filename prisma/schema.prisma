@@ -48,6 +48,44 @@ model Account {
   @@index([userId])
 }
 
+model Company {
+  id          Int      @id @default(autoincrement())
+  publicId    String   @unique @default(cuid())
+  name        String   @unique
+  isOnboarded Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  users Employee[]
+}
+
+enum EmployeeRole {
+  ADMIN
+  HR
+  EMPLOYEE
+}
+
+model Employee {
+  id          Int          @id @default(autoincrement())
+  publicId    String       @unique @default(cuid())
+  firstName   String?
+  lastName    String?
+  email       String
+  isVerified  Boolean      @default(false)
+  isOnboarded Boolean      @default(false)
+  isActive    Boolean      @default(false)
+  role        EmployeeRole @default(EMPLOYEE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  companyId Int
+  company   Company @relation(fields: [companyId], references: [id])
+  userId    Int?
+  User      User?   @relation(fields: [userId], references: [id])
+
+  @@unique([email, companyId])
+}
+
 model Preregistration {
   id          Int          @id @default(autoincrement())
   firstName   String
@@ -104,9 +142,10 @@ model User {
   emailVerified DateTime?
   image         String?
   clerkId       String?      @unique
-  accounts      Account[]
+  accounts      Employee[]
   sessions      Session[]
   userProfile   UserProfile?
+  Account       Account[]
 
   @@index([clerkId])
 }
