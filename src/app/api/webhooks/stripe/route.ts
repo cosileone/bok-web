@@ -34,7 +34,7 @@ export async function POST(request: Request) {
           checkoutSession.subscription as string,
         );
 
-        await updateCompanySubscription(subscription, true);
+        await updateCompanySubscription(subscription);
         break;
       }
       case "customer.subscription.created":

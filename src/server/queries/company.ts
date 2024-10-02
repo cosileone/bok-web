@@ -3,13 +3,10 @@ import type Stripe from "stripe";
 
 export const ActiveStripeSubscriptionStatuses = ["active", "trialing"];
 
-const updateCompanySubscription = async (
-  subscription: Stripe.Subscription,
-  isActiveOverride = false,
-) => {
-  const isSubscriptionActive =
-    isActiveOverride ||
-    ActiveStripeSubscriptionStatuses.includes(subscription.status);
+const updateCompanySubscription = async (subscription: Stripe.Subscription) => {
+  const isSubscriptionActive = ActiveStripeSubscriptionStatuses.includes(
+    subscription.status,
+  );
 
   return db.company.update({
     where: {
