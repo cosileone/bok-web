@@ -7,6 +7,11 @@ const isDevProcess = process.env.NODE_ENV === "development";
 // https://clerk.com/docs/references/nextjs/clerk-middleware#configure-clerk-middleware
 const isProtectedRoute = createRouteMatcher([
   "{/:locale}*/home(.*)",
+  "{/:locale}*/learn(.*)",
+  "{/:locale}*/employees(.*)",
+  "{/:locale}*/leaderboard(.*)",
+  "{/:locale}*/profile(.*)",
+  "{/:locale}*/settings(.*)",
   "{/:locale}*/business/(.*)",
 ]);
 
