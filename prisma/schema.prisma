@@ -30,12 +30,15 @@ datasource db {
 
 model Company {
   id               Int     @id @default(autoincrement())
-  publicId         String  @unique @default(cuid())
+  slug             String  @unique @default(cuid())
   name             String  @unique
   isOnboarded      Boolean @default(false)
   isSubscribed     Boolean @default(false)
-  stripeCustomerId String?
+  isActive         Boolean @default(true)
+  stripeCustomerId String? @unique
   subscriptionId   String?
+  clerkId          String? @unique
+  logoUrl          String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
