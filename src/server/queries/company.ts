@@ -1,10 +1,9 @@
 import { db } from "~/server/db";
 import type Stripe from "stripe";
-
-export const ActiveStripeSubscriptionStatuses = ["active", "trialing"];
+import { StripeActiveSubscriptionStatuses } from "~/constants/stripe";
 
 const updateCompanySubscription = async (subscription: Stripe.Subscription) => {
-  const isSubscriptionActive = ActiveStripeSubscriptionStatuses.includes(
+  const isSubscriptionActive = StripeActiveSubscriptionStatuses.includes(
     subscription.status,
   );
 
