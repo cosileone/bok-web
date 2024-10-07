@@ -38,8 +38,8 @@ export default function RootLayout({
         lang={locale}
         className={clsx("h-full antialiased", inter.variable)}
       >
-        <body className="flex h-full flex-col">
-          <div className="flex h-full flex-col">{children}</div>
+        <body className="flex h-full flex-col bg-gray-50">
+          {children}
           <Toaster />
           <Analytics />
         </body>

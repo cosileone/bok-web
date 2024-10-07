@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import backgroundImage from "~/images/salient/background-auth.jpg";
 
-export function SlimLayout({ children }: { children: React.ReactNode }) {
+export function LoginLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="relative flex min-h-full shrink-0 justify-center md:px-12 lg:px-0">

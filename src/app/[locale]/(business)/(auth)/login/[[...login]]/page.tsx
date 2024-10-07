@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "~/components/salient/Logo";
-import { SlimLayout } from "~/components/salient/SlimLayout";
+import { LoginLayout } from "~/components/salient/LoginLayout";
 import { type Metadata } from "next";
 import { ClerkLoaded, ClerkLoading, SignIn } from "@clerk/nextjs";
 import CircleSpinner from "~/components/CircleSpinner";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Login() {
   return (
-    <SlimLayout>
+    <LoginLayout>
       <Link href="/" aria-label="Home">
         <Logo className="lg:ml-20" />
       </Link>
@@ -26,6 +26,6 @@ export default function Login() {
       <ClerkLoaded>
         <SignIn />
       </ClerkLoaded>
-    </SlimLayout>
+    </LoginLayout>
   );
 }

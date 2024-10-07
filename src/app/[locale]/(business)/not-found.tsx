@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import { Button } from "~/components/salient/Button";
 import { Logo } from "~/components/salient/Logo";
-import { SlimLayout } from "~/components/salient/SlimLayout";
+import { LoginLayout } from "~/components/salient/LoginLayout";
 
 export default function NotFound() {
   return (
-    <SlimLayout>
+    <LoginLayout>
       <div className="flex">
         <Link href="/public" aria-label="Home">
           <Logo className="h-10 w-auto" />
@@ -22,6 +22,6 @@ export default function NotFound() {
       <Button href="/" className="mt-10">
         Go back home
       </Button>
-    </SlimLayout>
+    </LoginLayout>
   );
 }
