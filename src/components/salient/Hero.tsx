@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center drop-shadow lg:pt-32">
       <h1 className="font-display mx-auto max-w-4xl text-4xl font-medium tracking-tight text-slate-50 sm:text-7xl">
-        A wealthier Gen Z?{" "}
+        A wealthier workforce?{" "}
         <span className="relative text-bokgreen sm:whitespace-nowrap">
           <svg
             aria-hidden="true"
@@ -42,7 +42,7 @@ export function Hero() {
         together.
       </h1>
       <p className="mx-auto mt-16 max-w-2xl text-balance text-lg tracking-tight text-slate-100">
-        Retain your Gen Z employees by helping them reach their financial goals
+        Improve employee retention by helping them reach their financial goals
         and freedom
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
