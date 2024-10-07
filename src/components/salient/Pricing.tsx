@@ -134,7 +134,7 @@ export function Pricing() {
           <Plan
             name="Base"
             price="€20 / month"
-            description="For companies with 1-15 Gen Z employees. Pricing is specified on per user basis"
+            description="For companies with 1-15 employees. Pricing is specified on per user basis"
             href="/register"
             features={[]}
           />
@@ -142,7 +142,7 @@ export function Pricing() {
             featured
             name="Standard"
             price="€15 / month"
-            description="From 16-50 Gen Z employees. Pricing is on a per user basis and includes:"
+            description="From 16-50 employees. Pricing is on a per user basis and includes:"
             href="/register"
             features={[
               "Access to tailored financial content",
@@ -154,7 +154,7 @@ export function Pricing() {
           <Plan
             name="Pro"
             price="€10 / month"
-            description="From 50+ Gen Z employees"
+            description="From 50+ employees"
             href="/register"
             features={["Contact us for larger company headcounts"]}
           />

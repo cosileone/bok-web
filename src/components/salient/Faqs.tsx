@@ -60,12 +60,12 @@ const faqs = [
     {
       question: "Who is BOK aimed at?",
       answer:
-        "Any company looking to retain their Gen Z employees by providing real and tangible value. As well to fellow Gen Z’s looking to build their wealth and investment profile in the stage in which it matters the most!",
+        "Any company looking to retain their employees by providing real and tangible value. As well to fellow Gen Z’s looking to build their wealth and investment profile in the stage in which it matters the most!",
     },
     {
       question: "How does it work specifically?",
       answer:
-        "As a company you purchase the service for x amount of Gen Z employees. Consequently, you will have a dashboard with all signed up users and their roles in the firm. The employees instead will download the app and answer a few questions to set up their profiles to be officially investment ready!",
+        "As a company you would purchase seats for each one of your full-time employees. After which, you will have a web dashboard with all signed up users and their roles in the firm. The employees instead will download the app and answer a few questions to set up their profiles to be officially investment ready!",
     },
     {
       question: "As a company what influence do I have on investment choice?",
@@ -113,7 +113,7 @@ export function Faqs() {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="bg-bokpurple relative overflow-hidden py-20 sm:py-32"
+      className="relative overflow-hidden bg-bokpurple py-20 sm:py-32"
     >
       {/*<Image*/}
       {/*  className="absolute left-1/2 top-0 max-w-none -translate-y-1/4 translate-x-[-30%]"*/}
