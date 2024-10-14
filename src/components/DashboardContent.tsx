@@ -6,6 +6,18 @@ import ForecastProjection from "~/components/ForecastProjection";
 import InvestmentPieChart from "~/components/InvestmentPieChart";
 import { useUser } from "@clerk/nextjs";
 
+interface DashboardContentProps {
+  className?: string;
+}
+
+const DashboardContent: FC<DashboardContentProps> = ({ className }) => {
+  return (
+    <>
+      <FinancialOverview className={className} />
+    </>
+  );
+};
+
 interface FinancialOverviewProps {
   className?: string;
 }
@@ -94,4 +106,4 @@ const FinancialOverview: FC<FinancialOverviewProps> = ({ className }) => {
   );
 };
 
-export default FinancialOverview;
+export default DashboardContent;
