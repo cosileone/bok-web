@@ -6,6 +6,7 @@ import { type UserJSON, type WebhookEvent } from "@clerk/nextjs/server";
 import { db } from "~/server/db";
 import createStripeCustomer from "~/lib/stripe/createStripeCustomer";
 import { type Prisma } from "@prisma/client";
+import { ClerkRoleToEmployeeRoleMap } from "~/constants";
 
 const createUserFromClerkData = (data: UserJSON) => {
   const googleAccount = data.external_accounts.find(
@@ -102,6 +103,32 @@ export async function POST(req: Request) {
         });
 
         // TODO: Delete/cancel the stripe subscription?
+        break;
+      case "organizationMembership.created":
+        const organizationId = event.data.organization.id;
+        const clerkUser = event.data.public_user_data;
+        const user = await db.user.findUnique({
+          where: { clerkId: clerkUser.user_id },
+        });
+
+        if (!user) {
+          throw new Error(`User with clerkId ${clerkUser.user_id} not found`);
+        }
+
+        await db.employee.create({
+          data: {
+            userId: clerkUser.user_id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email ?? "",
+            externalEmail: user.email ?? "",
+            companyId: organizationId,
+            role: ClerkRoleToEmployeeRoleMap.get(event.data.role),
+          },
+        });
+        break;
+      case "organizationMembership.updated":
+      case "organizationMembership.deleted":
         break;
       case "user.created":
         const newUser = createUserFromClerkData(event.data);
