@@ -24,7 +24,7 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 import { Button } from "~/components/ui/button";
-import { Cog8ToothIcon } from "@heroicons/react/24/outline";
+import { Cog8ToothIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import { shortCurrencyFormat, shortNumberFormat } from "~/util/strings";
 import {
   Pagination,
@@ -32,7 +32,6 @@ import {
   PaginationItem,
 } from "~/components/ui/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { Link } from "~/lib/i18n/navigation";
 
 const employees = [
@@ -146,7 +145,7 @@ export default function EmployeesTable() {
             size={"sm"}
             className={"absolute right-4 top-3 gap-2"}
           >
-            <EnvelopeClosedIcon className="h-3.5 w-3.5" />
+            <EnvelopeIcon className="h-4 w-4" />
             <span>Invite Employee</span>
           </Button>
         </CardHeader>
