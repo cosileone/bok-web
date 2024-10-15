@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <rect width="100%" height="100%" fill="#5857f1"/>
+  <path fill="none" stroke="#b0ff01" d="M0 100q250-50 500 0t500 0" opacity=".3">
+    <animate attributeName="d" dur="20s" repeatCount="indefinite" values="M0 100 Q250 50 500 100 T1000 100; M0 100 Q250 150 500 100 T1000 100; M0 100 Q250 50 500 100 T1000 100"/>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0.3;0.5;0.3"/>
+  </path>
+  <path fill="none" stroke="#b0ff01" d="M0 900q250 50 500 0t500 0" opacity=".3">
+    <animate attributeName="d" dur="25s" repeatCount="indefinite" values="M0 900 Q250 950 500 900 T1000 900; M0 900 Q250 850 500 900 T1000 900; M0 900 Q250 950 500 900 T1000 900"/>
+    <animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0.3;0.5;0.3"/>
+  </path>
+  <circle id="a" r="2" fill="#b0ff01">
+    <animate attributeName="opacity" dur="5s" repeatCount="indefinite" values="0;0.7;0"/>
+  </circle>
+  <use href="#a">
+    <animateMotion dur="30s" path="M100,100 C250 50 750 150 900,100 V900 C750 950 250 850 100,900 V100" repeatCount="indefinite"/>
+  </use>
+  <use href="#a">
+    <animateMotion dur="35s" path="M900,900 C750 950 250 850 100,900 V100 C250 50 750 150 900,100 V900" repeatCount="indefinite"/>
+  </use>
+  <use href="#a">
+    <animateMotion dur="40s" path="M500,100 C750 150 250 850 500,900 H100 C250 850 750 150 900,100 H500" repeatCount="indefinite"/>
+  </use>
+  <use href="#a">
+    <animateMotion dur="25s" path="M200,200 q300,350 600,0 t-600,500" repeatCount="indefinite"/>
+  </use>
+  <use href="#a">
+    <animateMotion dur="28s" path="M800,800 q-300,-350 -600,0 t600,-500" repeatCount="indefinite"/>
+  </use>
+</svg>

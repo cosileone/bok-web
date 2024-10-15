@@ -49,7 +49,10 @@ export function Hero() {
         <Button href="/register" color="green">
           Try it now
         </Button>
-        <Button href="#" color="white">
+        <Button
+          href="https://calendly.com/matteodamiani2/bok-gen-z-finance"
+          color="white"
+        >
           {/*<svg*/}
           {/*  aria-hidden="true"*/}
           {/*  className="h-3 w-3 flex-none fill-lime-600 group-active:fill-current"*/}

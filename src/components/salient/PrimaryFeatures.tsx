@@ -7,15 +7,15 @@ import clsx from "clsx";
 
 import { Container } from "~/components/salient/Container";
 import ss1 from "~/images/salient/screenshots/leaderboard.png";
-import ss2 from "~/images/salient/screenshots/profile.png";
+import ss2 from "~/images/salient/screenshots/user_profile.webp";
 import ss3 from "~/images/salient/screenshots/predictive-ai.png";
 import { cn } from "~/lib/utils";
 
 const features = [
   {
-    title: "Employee sign up",
+    title: "HR Dashboard",
     description:
-      "Onboard your employees. Keep track of the progress your workers are making",
+      "Onboard your employees and have a quick and easy overview of their movements. A holistic dashboard with everything you need to empower your employees at speed!",
     image: ss1,
   },
   {
@@ -142,7 +142,7 @@ export function PrimaryFeatures() {
                     <div
                       className={cn(
                         "mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[400px]",
-                        selectedIndex === 2 ? "lg:w-[900px]" : "",
+                        selectedIndex > 0 ? "lg:w-[900px]" : "",
                       )}
                     >
                       <Image
