@@ -76,11 +76,7 @@ const FinancialOverview: FC<FinancialOverviewProps> = ({ className }) => {
                     "absolute right-0 -translate-y-[1.125rem] translate-x-2 text-xl drop-shadow-sm"
                   }
                 >
-                  <div
-                    className={
-                      "cursor-grab select-none transition-all hover:scale-125"
-                    }
-                  >
+                  <div className={"select-none transition-all hover:scale-125"}>
                     🔥
                   </div>
                 </div>
