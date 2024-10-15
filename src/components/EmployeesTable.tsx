@@ -33,6 +33,7 @@ import {
 } from "~/components/ui/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { Link } from "~/lib/i18n/navigation";
 
 const employees = [
   {
@@ -175,7 +176,11 @@ export default function EmployeesTable() {
                   className={index === 0 ? "bg-accent" : undefined}
                 >
                   <TableCell>
-                    <div className="font-medium">{employee.name}</div>
+                    <div>
+                      <Link href={"#"} className="font-medium">
+                        {employee.name}
+                      </Link>
+                    </div>
                     <div className="text-muted-foreground hidden text-sm md:inline">
                       {employee.email}
                     </div>
