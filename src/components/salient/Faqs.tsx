@@ -60,7 +60,7 @@ const faqs = [
     {
       question: "Who is BOK aimed at?",
       answer:
-        "Any company looking to retain their employees by providing real and tangible value. As well to fellow Gen Z’s looking to build their wealth and investment profile in the stage in which it matters the most!",
+        "Any company looking to retain their employees by providing real and tangible value. As well as fellow professionals looking to build their wealth and investment profile in the early stages—when it matters the most!",
     },
     {
       question: "How does it work specifically?",
