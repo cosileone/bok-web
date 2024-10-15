@@ -15,19 +15,19 @@ const features = [
   {
     title: "Employee sign up",
     description:
-      "Onboard your Gen Z employees. Keep track of the progress your workers are making",
+      "Onboard your employees. Keep track of the progress your workers are making",
     image: ss1,
   },
   {
     title: "User profile",
     description:
-      "Once logged in, users will have access to their personal in-pp dashboard with a wide variety of functions and have their balance and progress always at a glance.",
+      "Once logged in, users will have access to their personal in-app dashboard with a wide variety of functions and have their balance and progress always at a glance.",
     image: ss2,
   },
   {
     title: "Predictive AI",
     description:
-      "Our very own predictive AI soon to be available. Have users replicate portfolios and be matched to investment that fir their profile best",
+      "Our very own predictive AI soon to be available. Have users replicate portfolios and be matched to investment that fit their profile best",
     image: ss3,
   },
   // {
