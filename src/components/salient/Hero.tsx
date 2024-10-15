@@ -66,7 +66,7 @@ export function Hero() {
           A solution that makes investing a company benefit
         </p>
         <div className="mt-10 flex justify-center gap-x-6">
-          <Button href="/register" color="green">
+          <Button href="/login" color="green">
             Try it now
           </Button>
           <Button
