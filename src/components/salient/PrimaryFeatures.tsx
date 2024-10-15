@@ -91,13 +91,13 @@ export function PrimaryFeatures() {
         >
           {({ selectedIndex }) => (
             <>
-              <div className="shadow-r -mx-4 flex overflow-x-auto py-2 sm:mx-0 sm:overflow-visible sm:pb-0 sm:shadow-none lg:col-span-5">
+              <div className="shadow-r -mx-4 flex overflow-x-auto py-2 sm:mx-0 sm:overflow-visible sm:pb-0 sm:shadow-none lg:col-span-5 lg:mr-8">
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
                       key={feature.title}
                       className={clsx(
-                        "group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6",
+                        "group relative rounded-full px-4 py-1 lg:rounded-xl lg:p-6",
                         selectedIndex === featureIndex
                           ? "bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10"
                           : "hover:bg-white/10 lg:hover:bg-white/5",
@@ -141,7 +141,7 @@ export function PrimaryFeatures() {
                     </div>
                     <div
                       className={cn(
-                        "mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[500px]",
+                        "mt-20 max-h-[888px] overflow-hidden rounded-xl shadow-xl shadow-blue-900/20 lg:mt-0 lg:w-[400px]",
                         selectedIndex === 2 ? "lg:w-[900px]" : "",
                       )}
                     >
