@@ -10,11 +10,11 @@ import {
 import {
   AcademicCapIcon,
   Bars3Icon,
+  ChartPieIcon,
   Cog8ToothIcon,
-  HomeIcon,
+  ListBulletIcon,
   TrophyIcon,
   UserCircleIcon,
-  UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { cn } from "~/lib/utils";
@@ -23,9 +23,10 @@ import { Logo } from "~/components/salient/Logo";
 import { usePathname } from "~/lib/i18n/navigation";
 
 const navigation = [
-  { name: "Home", href: "/home", icon: HomeIcon },
+  { name: "Home", href: "/home", icon: ChartPieIcon },
+  { name: "Dashboard", href: "/dashboard", icon: ListBulletIcon },
   { name: "Learn", href: "/learn", icon: AcademicCapIcon },
-  { name: "Employees", href: "/employees", icon: UsersIcon },
+  // { name: "Employees", href: "/employees", icon: UsersIcon },
   { name: "Leaderboard", href: "/leaderboard", icon: TrophyIcon },
   { name: "Profile", href: "/profile", icon: UserCircleIcon },
   { name: "Settings", href: "/settings", icon: Cog8ToothIcon },

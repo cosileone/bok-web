@@ -1,7 +1,7 @@
 import FullWidthThreeColumnLayout from "~/components/tailwindui/MultiColumnLayouts/FullWidthThreeColumnLayout";
 import EmployeesPageContent from "~/components/EmployeesPageContent";
 
-const EmployeesPage = () => {
+const DashboardPage = () => {
   return (
     <>
       <FullWidthThreeColumnLayout>
@@ -11,4 +11,4 @@ const EmployeesPage = () => {
   );
 };
 
-export default EmployeesPage;
+export default DashboardPage;

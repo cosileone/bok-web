@@ -37,7 +37,7 @@ import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 const employees = [
   {
     name: "Liam Johnson",
-    email: "liam@example.com",
+    email: "liam@billsofknowledge.com",
     department: "Sales",
     status: "Inactive",
     salary: Math.random() * 100000,
@@ -46,7 +46,7 @@ const employees = [
   },
   {
     name: "Olivia Smith",
-    email: "olivia@example.com",
+    email: "olivia@billsofknowledge.com",
     department: "HR",
     status: "Active",
     salary: Math.random() * 100000,
@@ -55,7 +55,7 @@ const employees = [
   },
   {
     name: "Noah Williams",
-    email: "noah@example.com",
+    email: "noah@billsofknowledge.com",
     department: "Management",
     status: "Inactive",
     salary: Math.random() * 100000,
@@ -64,7 +64,7 @@ const employees = [
   },
   {
     name: "Emma Brown",
-    email: "emma@example.com",
+    email: "emma@billsofknowledge.com",
     department: "Sales",
     status: "Inactive",
     salary: Math.random() * 100000,
@@ -73,7 +73,7 @@ const employees = [
   },
   {
     name: "Liam Johnson",
-    email: "liam@example.com",
+    email: "liam@billsofknowledge.com",
     department: "Sales",
     status: "Inactive",
     salary: Math.random() * 100000,
@@ -82,7 +82,7 @@ const employees = [
   },
   {
     name: "Liam Johnson",
-    email: "liam@example.com",
+    email: "liam@billsofknowledge.com",
     department: "Sales",
     status: "Inactive",
     salary: Math.random() * 100000,
@@ -91,7 +91,7 @@ const employees = [
   },
   {
     name: "Olivia Smith",
-    email: "olivia@example.com",
+    email: "olivia@billsofknowledge.com",
     department: "HR",
     status: "Active",
     salary: Math.random() * 100000,
@@ -100,7 +100,7 @@ const employees = [
   },
   {
     name: "Emma Brown",
-    email: "emma@example.com",
+    email: "emma@billsofknowledge.com",
     department: "Sales",
     status: "Inactive",
     salary: Math.random() * 100000,
