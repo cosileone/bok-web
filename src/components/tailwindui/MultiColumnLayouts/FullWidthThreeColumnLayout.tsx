@@ -21,11 +21,13 @@ import { cn } from "~/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import { Logo } from "~/components/salient/Logo";
 import { usePathname } from "~/lib/i18n/navigation";
+import { BotIcon } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/home", icon: ChartPieIcon },
   { name: "Dashboard", href: "/dashboard", icon: ListBulletIcon },
   { name: "Learn", href: "/learn", icon: AcademicCapIcon },
+  { name: "AI Advisor", href: "/advisor", icon: BotIcon },
   // { name: "Employees", href: "/employees", icon: UsersIcon },
   { name: "Leaderboard", href: "/leaderboard", icon: TrophyIcon },
   { name: "Profile", href: "/profile", icon: UserCircleIcon },
