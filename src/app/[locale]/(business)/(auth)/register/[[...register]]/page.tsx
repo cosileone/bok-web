@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function Register() {
   return (
     <LoginLayout>
-      <Link href="/" aria-label="Home">
-        <Logo className={"ml-auto mr-auto"} />
+      <Link href="/" aria-label="Home" className={"block"}>
+        <Logo className={"mx-auto"} />
       </Link>
       <ClerkLoading>
         <div className={"h-[550px] text-center"}>

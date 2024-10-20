@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function Login() {
   return (
     <LoginLayout>
-      <Link href="/" aria-label="Home">
-        <Logo className="lg:ml-20" />
+      <Link href="/" aria-label="Home" className={"block"}>
+        <Logo className={"mx-auto"} />
       </Link>
       <ClerkLoading>
         <div className={"h-[550px] text-center"}>
