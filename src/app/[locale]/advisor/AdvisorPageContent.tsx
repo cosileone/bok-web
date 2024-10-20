@@ -64,10 +64,10 @@ const AdvisorPageContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-6">
-      <div className="mb-8 flex items-center justify-between">
+    <div className="min-h-screen p-4 md:p-6">
+      <div className="mb-8 flex flex-col items-start justify-between md:flex-row md:items-center">
         <div>
-          <h1 className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-4xl font-bold text-transparent">
+          <h1 className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
             Welcome back, {user?.firstName}
           </h1>
           <p className="mt-2 text-slate-600">
@@ -75,7 +75,7 @@ const AdvisorPageContent = () => {
           </p>
         </div>
         <Button
-          className={`${
+          className={`mt-4 md:mt-0 ${
             aiEnabled ? "bg-blue-600 hover:bg-blue-700" : "bg-slate-400"
           } flex items-center gap-2`}
           onClick={() => setAiEnabled(!aiEnabled)}
@@ -85,14 +85,16 @@ const AdvisorPageContent = () => {
         </Button>
       </div>
 
-      <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-8">
-          <Card className="h-[400px]">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+        <div className="md:col-span-8">
+          <Card className="h-[300px] md:h-[400px]">
             <CardHeader>
-              <h3 className="text-xl font-semibold">Portfolio Performance</h3>
+              <h3 className="text-lg font-semibold md:text-xl">
+                Portfolio Performance
+              </h3>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%" height="100%">
                 <AreaChart
                   data={generateHistoricalData()}
                   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -130,14 +132,16 @@ const AdvisorPageContent = () => {
           </Card>
         </div>
 
-        <div className="col-span-4 space-y-6">
+        <div className="space-y-6 md:col-span-4">
           <Card>
             <CardContent className="pt-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-blue-600">
+                <h3 className="text-xl font-bold text-blue-600 md:text-2xl">
                   ${(128450).toLocaleString()}
                 </h3>
-                <p className="text-sm text-slate-600">Total Portfolio Value</p>
+                <p className="text-sm text-slate-600 md:text-base">
+                  Total Portfolio Value
+                </p>
               </div>
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <div className="text-center">
@@ -189,62 +193,60 @@ const AdvisorPageContent = () => {
               AI Recommendation Available
             </AlertTitle>
             <AlertDescription>
-              <div className="mt-4 grid grid-cols-12 gap-6">
-                <div className="col-span-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="text-lg font-semibold text-blue-900">
-                          Suggested: {aiSuggestion.asset}
-                        </h4>
-                        <p className="text-sm text-blue-700">
-                          Growth ETF with strong momentum signals
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm text-blue-700">AI Confidence</p>
-                        <p className="text-2xl font-bold text-blue-900">
-                          {aiSuggestion.confidence}%
-                        </p>
-                      </div>
+              <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-12">
+                <div className="space-y-4 md:col-span-8">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-lg font-semibold text-blue-900">
+                        Suggested: {aiSuggestion.asset}
+                      </h4>
+                      <p className="text-sm text-blue-700">
+                        Growth ETF with strong momentum signals
+                      </p>
                     </div>
+                    <div className="text-right">
+                      <p className="text-sm text-blue-700">AI Confidence</p>
+                      <p className="text-2xl font-bold text-blue-900">
+                        {aiSuggestion.confidence}%
+                      </p>
+                    </div>
+                  </div>
 
-                    {showDetails && (
-                      <div className="space-y-3">
-                        {aiSuggestion.reasons.map((reason, index) => (
-                          <div key={index}>
-                            <div className="mb-1 flex justify-between text-sm">
-                              <span className="text-slate-700">
-                                {reason.factor}
-                              </span>
-                              <span className="text-blue-700">
-                                {reason.score}%
-                              </span>
-                            </div>
-                            <Progress value={reason.score} className="h-2" />
+                  {showDetails && (
+                    <div className="space-y-3">
+                      {aiSuggestion.reasons.map((reason, index) => (
+                        <div key={index}>
+                          <div className="mb-1 flex justify-between text-sm">
+                            <span className="text-slate-700">
+                              {reason.factor}
+                            </span>
+                            <span className="text-blue-700">
+                              {reason.score}%
+                            </span>
                           </div>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="pt-2">
-                      <Button
-                        variant="link"
-                        className="p-0 text-blue-600 hover:text-blue-800"
-                        onClick={() => setShowDetails(!showDetails)}
-                      >
-                        {showDetails ? "Hide" : "Show"} analysis details
-                        <ChevronRight
-                          className={`ml-1 h-4 w-4 transform transition-transform ${
-                            showDetails ? "rotate-90" : ""
-                          }`}
-                        />
-                      </Button>
+                          <Progress value={reason.score} className="h-2" />
+                        </div>
+                      ))}
                     </div>
+                  )}
+
+                  <div className="pt-2">
+                    <Button
+                      variant="link"
+                      className="p-0 text-blue-600 hover:text-blue-800"
+                      onClick={() => setShowDetails(!showDetails)}
+                    >
+                      {showDetails ? "Hide" : "Show"} analysis details
+                      <ChevronRight
+                        className={`ml-1 h-4 w-4 transform transition-transform ${
+                          showDetails ? "rotate-90" : ""
+                        }`}
+                      />
+                    </Button>
                   </div>
                 </div>
 
-                <div className="col-span-4 space-y-4">
+                <div className="space-y-4 md:col-span-4">
                   <div>
                     <p className="mb-1 text-sm text-blue-700">
                       Projected Impact
