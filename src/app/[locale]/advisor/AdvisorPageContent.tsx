@@ -87,14 +87,14 @@ const AdvisorPageContent = () => {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
         <div className="md:col-span-8">
-          <Card className="h-[300px] md:h-[400px]">
+          <Card className="h-[400px]">
             <CardHeader>
               <h3 className="text-lg font-semibold md:text-xl">
                 Portfolio Performance
               </h3>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height={300}>
                 <AreaChart
                   data={generateHistoricalData()}
                   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
